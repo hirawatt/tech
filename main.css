@@ -1,0 +1,13 @@
+div {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li { 
+    display: inline;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+}
