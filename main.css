@@ -19,18 +19,25 @@ p,ul,ol {
 }
 
 /* Additional Customisation */
+img {
+    border-radius: 5%;
+}
 
-.hero {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background: tint(#2771ea, 90);
+body {
+    background-color: #e9f3fb;
+    
 }
 
 header {
     align-items: flex-end;
     flex-wrap: wrap;
     flex-direction: column;
+}
+
+.animatedText, .hero {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 span {
