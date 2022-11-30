@@ -1,13 +1,66 @@
-div {
+/* Basic Code */
+
+html {
+    max-width: 70ch;
+    padding: 3em 1em;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.25em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 3em 0 1em;
+}
+
+p,ul,ol {
+    margin-bottom: 2em;
+    color: #1d1d1d;
+    font-family: sans-serif;
+}
+
+/* Additional Customisation */
+
+.hero {
     display: flex;
     justify-content: center;
-}
-
-nav ul li { 
-    display: inline;
-    justify-content: space-between;
-}
-
-h1 {
     text-align: center;
+    background: tint(#2771ea, 90);
+}
+
+header {
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+span {
+    animation: topToBottom ease-in-out infinite;
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+    }
+
+@keyframes topToBottom {
+    0% {
+        opacity: 0;
+    }
+    3% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    28% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    80% {
+        opacity: 0;
+    }
 }
