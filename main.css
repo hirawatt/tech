@@ -1,41 +1,76 @@
 /* Basic Code */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     max-width: 70ch;
-    padding: 3em 1em;
+    padding: 1em 1em;
     margin: auto;
-    line-height: 1.75;
+    line-height: 1.5;
     font-size: 1.25em;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    margin: 3em 0 1em;
+    margin: 1em 0 1em;
 }
 
 p,ul,ol {
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
     color: #1d1d1d;
     font-family: sans-serif;
 }
 
 /* Additional Customisation */
+
 img {
     width: 20rem;
     border-radius: 5%;
 }
 
-body {
-    background-color: #e9f3fb;
+@font-face {
+    font-family: alata;
+    src: url(Alata-Regular.ttf);
 }
 
-header {
+body {
+    font-family: alata;
+    background-color: #e9f3fb;
     align-items: flex-end;
     flex-wrap: wrap;
     flex-direction: column;
 }
 
-.animatedText, .hero {
-    display: flex;
+a {
+    color: #000;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.links {
+    margin: 0.5em 0 0.5em;
+}
+
+.clickToAction {
+    background-color: #001D3B;
+    color: #06F9CB;
+    font-size: large;
+    font-weight: bold;
+    padding: 0.5em;
+    border-radius: 2rem;
+}
+
+.contact {
+    color: #BC50FC;
+}
+
+/* Animated Text CSS */
+
+.animatedText, .hero, .content {
+    display: grid;
     justify-content: center;
     text-align: center;
 }
@@ -45,6 +80,7 @@ span {
     opacity: 0;
     position: absolute;
     overflow: hidden;
+    display: inline-block;
     }
 
 @keyframes topToBottom {
