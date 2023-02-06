@@ -6,6 +6,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-primary: greenyellow;
+    --color-secondary: bisque;
+    --color-bg: midnightblue;
+    --color-bg-hover: aquamarine;
+}
+
 html {
     max-width: 70ch;
     padding: 0em 1em 1em 1em;
@@ -26,7 +33,7 @@ p,ul,ol {
 
 /* Additional Customisation */
 
-img {
+.logo {
     width: 20rem;
     border-radius: 0% 0% 10% 10%;
 }
@@ -66,6 +73,10 @@ button {
     border-radius: 2rem;
 }
 
+button:hover {
+    background-color: var(--color-bg-hover);
+}
+
 .topbutton {
     color: #BC50FC;
 }
@@ -89,6 +100,36 @@ span {
     overflow: hidden;
     display: inline-block;
     }
+
+.animate {
+    animation-duration: 10s;
+}
+
+.animate1 {
+    animation-delay: 0s;
+    color: rgb(129, 42, 243);
+}
+
+.animate2 {
+    animation-delay: 2s;
+    color: rgb(0, 91, 236);
+}
+
+.animate3 {
+    animation-delay: 4s;
+    color: rgb(251, 125, 35);
+}
+
+.animate4 {
+    animation-delay: 6s;
+    color: rgb(29, 228, 158);
+}
+
+.animate5 {
+    animation-delay: 8s;
+    color: rgb(242, 33, 51);
+}
+
 
 @keyframes topToBottom {
     0% {
