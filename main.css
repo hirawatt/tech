@@ -42,6 +42,7 @@ body {
     align-items: flex-end;
     flex-wrap: wrap;
     flex-direction: column;
+    margin: auto;
 }
 
 a {
@@ -65,8 +66,12 @@ button {
     border-radius: 2rem;
 }
 
-.contact {
+.topbutton {
     color: #BC50FC;
+}
+
+.bottombutton {
+    color: orange;
 }
 
 /* Animated Text CSS */
