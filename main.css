@@ -7,10 +7,13 @@
 }
 
 :root {
-    --color-primary: greenyellow;
-    --color-secondary: bisque;
-    --color-bg: midnightblue;
-    --color-bg-hover: aquamarine;
+    --color-primary: #bc50fc;
+    --color-secondary: #06f9cb;
+    --color-bg: #001D3B;
+    --color-bg-hover: #d9d9d9;
+    --color-light: #f2f2f2;
+    --color-dark: #222222;
+    --color-border: #444444;
 }
 
 html {
@@ -45,7 +48,7 @@ p,ul,ol {
 
 body {
     font-family: alata;
-    background-color: #e9f3fb;
+    background: linear-gradient(var(--color-primary), var(--color-secondary));
     align-items: flex-end;
     flex-wrap: wrap;
     flex-direction: column;
@@ -65,24 +68,24 @@ a {
 }
 
 button {
-    background-color: #001D3B;
-    color: #06F9CB;
+    background-color: var(--color-light);
     font-size: large;
     font-weight: bold;
     padding: 0.5em 0.5em;
     border-radius: 2rem;
+    border-color: var(--color-border);
 }
 
 button:hover {
     background-color: var(--color-bg-hover);
 }
 
-.topbutton {
-    color: #BC50FC;
+button:active {
+    box-shadow: 2px 2px 5px #fc894d;
 }
 
-.bottombutton {
-    color: orange;
+.topbutton, .bottombutton {
+    color: var(--color-dark);
 }
 
 /* Animated Text CSS */
