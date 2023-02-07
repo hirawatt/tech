@@ -14,6 +14,7 @@
     --color-light: #f2f2f2;
     --color-dark: #222222;
     --color-border: #444444;
+    --color-font: #1d1d1d;
 }
 
 html {
@@ -30,7 +31,7 @@ h1,h2,h3,h4,h5,h6 {
 
 p,ul,ol {
     margin-bottom: 0.5em;
-    color: #1d1d1d;
+    color: var(--color-font);
     font-family: sans-serif;
 }
 
@@ -38,7 +39,7 @@ p,ul,ol {
 
 .logo {
     width: 20rem;
-    border-radius: 0% 0% 10% 10%;
+    border-radius: 40% 80% 20% 60%;
 }
 
 @font-face {
@@ -53,6 +54,11 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     margin: auto;
+}
+
+#wrapper {
+    border: 0.1em solid var(--color-border);
+    padding: 1em;
 }
 
 a {

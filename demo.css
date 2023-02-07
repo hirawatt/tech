@@ -1,0 +1,61 @@
+/* Basic Code */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #bc50fc;
+    --color-secondary: #06f9cb;
+    --color-bg: #001D3B;
+    --color-bg-hover: #d9d9d9;
+    --color-light: #f2f2f2;
+    --color-dark: #222222;
+    --color-border: #444444;
+    --color-font: #1d1d1d;
+}
+
+html {
+    max-width: 70ch;
+    padding: 0em 1em 1em 1em;
+    margin: auto;
+    line-height: 1.5;
+    font-size: 1.25em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 1em 0 1em;
+}
+
+p,ul,ol {
+    margin-bottom: 0.5em;
+    color: var(--color-font);
+    font-family: sans-serif;
+}
+
+/* Demo Page Design */
+
+img.category {
+    width: 8em;
+    height: auto;
+}
+
+span {
+    display: block;
+}
+
+/* Use to convert HEX to filter - https://codepen.io/sosuke/pen/Pjoqqp */
+
+.one {
+    filter: invert(43%) sepia(31%) saturate(6969%) hue-rotate(195deg) brightness(100%) contrast(102%);
+}
+
+.two {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
+.three {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(75deg);
+}
