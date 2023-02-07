@@ -39,7 +39,7 @@ p,ul,ol {
 
 .logo {
     width: 20rem;
-    border-radius: 40% 80% 20% 60%;
+    border-radius: 20% 20% 20% 20%;
 }
 
 @font-face {
@@ -54,11 +54,6 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     margin: auto;
-}
-
-#wrapper {
-    border: 0.1em solid var(--color-border);
-    padding: 1em;
 }
 
 a {
