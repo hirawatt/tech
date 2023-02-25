@@ -45,6 +45,7 @@ p,ul,ol {
 @font-face {
     font-family: alata;
     src: url(Alata-Regular.ttf);
+    font-display: swap;
 }
 
 body {
