@@ -9,7 +9,7 @@
 :root {
     --color-primary: #bc50fc;
     --color-secondary: #06f9cb;
-    --color-bg: #001D3B;
+    --color-bg: #a6d1ff;
     --color-bg-hover: #d9d9d9;
     --color-light: #f2f2f2;
     --color-dark: #222222;
@@ -50,7 +50,7 @@ p,ul,ol {
 
 body {
     font-family: alata;
-    background: linear-gradient(var(--color-primary), var(--color-secondary));
+    background: var(--color-bg);
     align-items: flex-end;
     flex-wrap: wrap;
     flex-direction: column;
@@ -143,7 +143,7 @@ span {
 
 .animate4 {
     animation-delay: 6s;
-    color: rgb(29, 228, 158);
+    color: rgb(25, 109, 0);
 }
 
 .animate5 {
