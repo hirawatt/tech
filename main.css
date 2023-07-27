@@ -15,6 +15,7 @@
     --color-dark: #222222;
     --color-border: #444444;
     --color-font: #1d1d1d;
+    --color-nav: #c9e3ff;
 }
 
 html {
@@ -67,7 +68,7 @@ body {
     margin-top: 0em;
 }
 
-a {
+.alinks {
     display: flex;
     flex-direction: column;
     padding: 0.5em 0.5em;
@@ -98,6 +99,32 @@ button:active {
 
 .topbutton, .bottombutton {
     color: var(--color-dark);
+}
+
+.banner {
+    text-align: center;
+    background-color: var(--color-nav);
+    overflow: hidden;
+    box-shadow: 4px 8px var(--color-light);
+    border-radius: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.banner a {
+    display: inline-block;
+    color: var(--color-font);
+}
+
+.banner strong {
+    color: var(--color-light);
+}
+
+.banner a.active {
+    text-decoration: underline;
+    text-decoration-color: var(--color-light);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 0.1rem;
 }
 
 /* Animated Text CSS */
@@ -175,4 +202,13 @@ span {
     80% {
         opacity: 0;
     }
+}
+
+.pill {
+    background-color: #f6f6f9;
+    border-radius: 1000px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px 24px;
+    display: flex;
 }

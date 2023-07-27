@@ -1,0 +1,50 @@
+/* Basic Code */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #ccc8ff;
+    --color-secondary: #b3fff1be;
+    --color-bg: #001D3B;
+    --color-bg-hover: #d9d9d9;
+    --color-light: #f2f2f2;
+    --color-dark: #222222;
+    --color-border: #444444;
+    --color-font: #1d1d1d;
+}
+
+html {
+    max-width: 70ch;
+    margin: auto;
+    line-height: 1.5;
+    font-size: 1.25em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 1em 0 1em;
+}
+
+p,ul,ol {
+    margin-bottom: 0.5em;
+    color: var(--color-font);
+    font-family: sans-serif;
+}
+
+/* Additional Code */
+
+body {
+    background: var(--color-primary);
+}
+
+h1 {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: 1rem wavy var(--color-font);
+}
