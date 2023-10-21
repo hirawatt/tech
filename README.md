@@ -2,6 +2,7 @@
 
 ## Web Development
 
+- Python Web Development - Streamlit, Flask, Django
 - SEO - On Page SEO, Technical SEO Audit
 - Web Speed Optimization
 - Web Extensions Development - Chrome, Firefox
