@@ -1,0 +1,56 @@
+/* Basic Code */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #f2c37c;
+    --color-secondary: #6a3d2f;
+    --color-bg: #f6c77e;
+    --color-bg-hover: #d9d9d9;
+    --color-light: #f2f2f2;
+    --color-dark: #222222;
+    --color-font: #390c14;
+}
+
+html {
+    max-width: 70ch;
+    margin: auto;
+    line-height: 1.5;
+    font-size: 1.25em;
+    font-family: "Noto Sans", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 1em 0 1em;
+}
+
+p,ul,ol {
+    color: var(--color-font);
+    font-family: sans-serif;
+}
+
+/* Additional Code */
+
+body {
+    background: var(--color-primary);
+}
+
+h1 {
+    font-size: 1.8em;
+    color: var(--color-secondary);
+}
+
+.logo {
+    margin: 4em 0 0 0;
+}
+
+.hero {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    text-align: center;
+}
