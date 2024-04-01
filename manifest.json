@@ -1,0 +1,17 @@
+{
+    "name": "HirawatTech",
+    "short_name": "HirawatTech",
+    "theme_color": "#a6d1ff",
+    "background_color": "#f2f2f2",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://tech.hirawat.in/",
+    "description": "Technolofy Services & Consulting Company",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://tech.hirawat.in/assets/hirawat-tech-500-logo.webp",
+            "sizes": "500x500"
+        }
+    ]
+}
