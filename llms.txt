@@ -1,0 +1,120 @@
+# HirawatTech - Technology Solutions Overview
+
+## Company Information
+- Name: HirawatTech
+- Location: India
+- Domain: Advanced Technology Solutions
+- Core Specializations: 
+  * 3D & Augmented Reality Technologies
+  * Python Automation
+  * AI Applications
+  * Streamlit Framework Development
+
+## Technical Expertise
+### 3D & Augmented Reality
+- Immersive Technology Development
+- AR/VR Application Engineering
+- 3D Visualization Solutions
+- Interactive Spatial Computing
+- Mixed Reality Prototyping
+
+### Python Automation
+- Robotic Process Automation (RPA)
+- Advanced Scripting Solutions
+- Enterprise Workflow Optimization
+- Machine Learning Automation
+- Intelligent System Integration
+
+### AI Applications
+- Machine Learning Model Development
+- Natural Language Processing
+- Computer Vision Solutions
+- Predictive Analytics
+- Intelligent Decision Support Systems
+
+## Technology Stack
+### Frameworks and Tools
+- 3D/AR Development:
+  * Unity
+  * Unreal Engine
+  * ARCore
+  * ARKit
+  * WebGL
+- Python Ecosystem:
+  * Streamlit
+  * Django
+  * Flask
+  * Pandas
+  * NumPy
+  * Scikit-learn
+- AI/ML Libraries:
+  * TensorFlow
+  * PyTorch
+  * OpenCV
+  * Keras
+
+## Streamlit Framework Specialization
+- Interactive Web Application Development
+- Data Science Dashboard Creation
+- Machine Learning Model Visualization
+- Rapid Prototyping
+- Enterprise-Grade Streamlit Solutions
+
+## Project Domains
+- Industrial Augmented Reality
+- Educational Technology
+- Healthcare Visualization
+- Manufacturing Automation
+- Financial Technology Solutions
+- Research and Development Tools
+
+## Innovation Highlights
+- Custom 3D Visualization Platforms
+- AI-Powered Automation Frameworks
+- Interactive Streamlit Dashboards
+- Immersive AR Experiences
+- Advanced Python Automation Scripts
+
+## Cloud and Deployment
+- Cloud Platforms: 
+  * AWS
+  * Google Cloud
+  * Microsoft Azure
+- Containerization:
+  * Docker
+  * Kubernetes
+- Version Control:
+  * Git
+  * GitHub Enterprise
+
+## Research and Development Focus
+- Emerging AR Technologies
+- AI-Driven Automation
+- Cross-Platform Development
+- User Experience in Immersive Technologies
+- Ethical AI Implementation
+
+## Consultation Services
+- Technology Strategy
+- AR/VR Solution Architecture
+- Python Automation Consulting
+- AI Application Design
+- Streamlit Framework Integration
+
+## Contact Information
+- Website: https://tech.hirawat.in/
+- Email: tech@hirawat.in
+- 3D & AR: contact@tryar.in
+
+## Compliance and Standards
+- Data Privacy Regulations
+- Ethical Technology Development
+- Industry Best Practices
+- Sustainable Technology Solutions
+
+## Key Differentiators
+- Cutting-Edge Technology Integration
+- Custom Solution Development
+- Scalable and Adaptive Frameworks
+- User-Centric Design Approach
+- Continuous Innovation
