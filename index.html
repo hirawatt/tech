@@ -1,82 +1,1866 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    <!-- Meta Tags -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Leading technology agency in India specializing in D2C brand solutions, 3D/AR development, and business automation. Transform your business with cutting-edge technology solutions.">
+    <meta name="theme-color" content="#ffffff">
+    
+    <title>HirawatTech - D2C Brands, 3D/AR & Automation Solutions | India</title>
 
-    <!-- Open Graph Protocol -->
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="/assets/Alata-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/hirawat-tech-500-logo.webp" as="image">
+    
+    <!-- Core CSS -->
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    
+    <!-- Deferred Scripts -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+
+    <!-- Favicon & SEO -->
+    <link rel="icon" href="/assets/hirawat-tech-500-logo.webp" type="image/webp">
+    <meta name="keywords" content="3D, AR, Software Development, D2C Brands, Technology Solutions, India">
+    <meta property="og:title" content="HirawatTech - D2C Brands, 3D/AR & Automation Solutions">
+    <meta property="og:description" content="Transform your D2C brand with cutting-edge 3D/AR experiences and intelligent automation solutions.">
+    <meta property="og:image" content="/assets/hirawat-tech-500-logo.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_IN">
     <meta property="og:site_name" content="HirawatTech">
-    <meta property="og:title" content="HirawatTech" />
-    <meta name="description" content="Software Development & Consultancy Co. Specializing in 3D/AR Technology">
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://tech.hirawat.in" />
-    <meta property="secure_url" content="https://tech.hirawat.in" />
-    <meta property="og:image" content="http://tech.hirawat.in/assests/hirawat-tech-500-logo.png" />
-    <meta property="og:description" content="3D/AR Consultancy Services" />
-    <meta property="twitter:card" content="summary_large_image">
-
-    <!-- Scripts -->
-    <link rel="canonical" href="https://tech.hirawat.in" />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="manifest" href="manifest.json">
-    <script async data-nf='{"formurl":"https://opnform.com/forms/hirawat-tech","emoji":"💬","position":"right","bgcolor":"#62a0ea","width":"500"}' src='https://d3ietpyl4f2d18.cloudfront.net/4710f798-1b71-454b-bd39-ceb40f9f3af1/widgets/embed-min.js'></script>
-    <title>Software Consultancy - HirawatTech</title>
 </head>
 
-<body>
-    <div class="banner">
-        <a class="alinks" href="/">Latest Product➝</a>
-        <a class="alinks active" href="https://tryar.hirawat.in" target="_blank">TryAR</a>
+<body class="antialiased text-gray-800 min-h-screen flex flex-col">
+    <!-- Banner -->
+    <div class="bg-gray-900 text-white py-2 px-4 flex justify-center items-center space-x-4">
+        Latest Product ➝ 
+        <a href="https://tryar.in" target="_blank" class="hover:text-blue-400 transition-colors duration-300"> TryAR</a>
     </div>
-    <!-- Wrapper -->
-    <div class="container wrapper hero">
-        <!-- Header -->
-        <header id="header">
-            <div>
-                <img src="/assets/hirawat-tech-500-logo.webp" alt="hirawat tech logo" height="300" width="300" class="logo">
-            </div>
-        </header>
 
-        <!-- Main -->
-        <main class="content">
-            <h1>Software Solutions for
-                <div class="animatedText">
-                    <span class="animate animate1">Virtual Reality</span>
-                    <span class="animate animate2">Augmented Reality</span>
-                    <span class="animate animate3">3D Technology</span>
-                    <span class="animate animate4">Automation</span>
-                    <span class="animate animate5">E-Commerce</span>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+        Skip to main content
+    </a>
+
+    <!-- Main content area -->
+    <main id="main-content" class="flex-1 relative h-full">
+        <mountpoint>
+            <div>
+                <div id="root">
+                    <script>
+                        // Mobile menu implementation using Alpine.js
+                        document.addEventListener('alpine:init', () => {
+                            Alpine.data('mobileMenu', () => ({
+                                isOpen: false,
+                                init() {
+                                    this.$watch('isOpen', value => {
+                                        document.body.style.overflow = value ? 'hidden' : '';
+                                    });
+                                    
+                                    // Close on escape key
+                                    window.addEventListener('keydown', e => {
+                                        if (e.key === 'Escape' && this.isOpen) {
+                                            this.isOpen = false;
+                                        }
+                                    });
+                                },
+                                toggle() {
+                                    this.isOpen = !this.isOpen;
+                                },
+                                close() {
+                                    this.isOpen = false;
+                                }
+                            }));
+                        });
+                    </script>
+
+                    <header x-data="mobileMenu" class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+                        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div class="flex justify-between items-center h-16">
+                                <!-- Logo -->
+                                <div class="flex-shrink-0 flex items-center">
+                                    <img src="/assets/hirawat-tech-500-logo.webp" alt="HirawatTech Logo" class="h-8 w-auto mr-2" width="32" height="32">
+                                    <span class="font-Inter text-xl font-bold text-gray-900">HirawatTech</span>
+                                </div>
+
+                                <!-- Desktop Navigation -->
+                                <div class="hidden md:flex space-x-8">
+                                    <a href="#hero" class="nav-link">Home</a>
+                                    <a href="#about" class="nav-link">About</a>
+                                    <a href="#services" class="nav-link">Services</a>
+                                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                                    <a href="#contact" class="nav-link">Contact</a>
+                                </div>
+
+                                <!-- Mobile menu button -->
+                                <button @click="toggle" class="md:hidden inline-flex items-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-label="Toggle menu">
+                                    <svg x-show="!isOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                    </svg>
+                                    <svg x-show="isOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Mobile Navigation Menu -->
+                            <div x-show="isOpen" 
+                                x-transition:enter="transition ease-out duration-200"
+                                x-transition:enter-start="opacity-0 -translate-y-1"
+                                x-transition:enter-end="opacity-100 translate-y-0"
+                                x-transition:leave="transition ease-in duration-150"
+                                x-transition:leave-start="opacity-100 translate-y-0"
+                                x-transition:leave-end="opacity-0 -translate-y-1"
+                                @click.away="close"
+                                class="md:hidden">
+                                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                                    <a href="#hero" @click="close" class="nav-link-mobile">Home</a>
+                                    <a href="#about" @click="close" class="nav-link-mobile">About</a>
+                                    <a href="#services" @click="close" class="nav-link-mobile">Services</a>
+                                    <a href="#portfolio" @click="close" class="nav-link-mobile">Portfolio</a>
+                                    <a href="#testimonials" @click="close" class="nav-link-mobile">Testimonials</a>
+                                    <a href="#contact" @click="close" class="nav-link-mobile">Contact</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <style>
+                        .nav-link {
+                            @apply font-Inter text-gray-700 hover:text-blue-600 transition-colors duration-300 text-sm font-medium;
+                        }
+                        .nav-link-mobile {
+                            @apply block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-300;
+                        }
+                    </style>
                 </div>
-            </h1>
-        </main>
-        <div class="links">
-            <nav>
-                <h2>
-                    <a class="alinks" href="/pages/contact.html"><button class="topbutton">Contact Us</button></a>
-                    <a class="alinks" href="https://hirawat.in/projects" target="_blank"><button>Our Work</button></a>
-                    <a class="alinks" href="https://vhirawat.contra.com" target="_blank"><button class="bottombutton">Our Services</button></a>
-                    <hr class="rounded">
-                    <a class="alinks" href="/pages/pricing.html" target="_blank"><button>Pricing</button></a>
-                    <a class="alinks" href="/pages/about.html" target="_blank"><button>About Us</button></a>
-                    <hr class="rounded">
-                    <!-- Contact -->
-                    <a class="alinks" href="https://www.linkedin.com/company/hirawat-tech" target="_blank"><button>Follow on Linkedln</button></a>
-                    <a class="alinks" href="https://contra.com/vhirawat" target="_blank"><button>Hire on Contra</button></a>
-                    <a class="alinks" href="https://www.upwork.com/o/companies/~0163411dd2622fc83f/" target="_blank"><button>Hire on Upwork</button></a>
-                    <hr class="rounded">
-                    <a class="alinks" href="/pages/terms.html" target="_blank"><button>Terms of Service</button></a>
-                    <a class="alinks" href="/pages/privacy.html" target="_blank"><button>Privacy Policy</button></a>
-                    <a class="alinks" href="/pages/refund.html" target="_blank"><button class="bottombutton">Cancellation & Refund Policy</button></a>
-                </h2>
-            </nav>
-        </div>
-        <!-- Work -->
-        <!-- About -->
-    </div>
-    <div class="pill">
-        <div>We use <a href="pages/cookies.html" target="_blank" class="cookie-link">cookies</a></div><div>. <a href="#" fs-cc="allow" class="cookie-link green" role="button" tabindex="0">Okay.</a></div>
-    </div>
+                <div id="root">
+                    <section id="hero"
+                        class="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-900">
+                        <!-- Background Image -->
+                        <div class="absolute inset-0 z-0">
+                            <img src="https://images.unsplash.com/photo-1603847734787-9e8a3f3e9d60?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8aG9sb2dyYXBoaWMlMjUyMGRpc3BsYXklMjUyMGZ1dHVyaXN0aWMlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3Nzc2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                alt="Iridescent holographic plastic textured background"
+                                class="w-full h-full object-cover opacity-20" />
+                            <div class="absolute inset-0 bg-gradient-to-br from-neutral-900/80 to-neutral-800/90"></div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                            <div class="space-y-8">
+                                <!-- Main Headline -->
+                                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
+                                    Software Solutions for
+                                    <div class="animatedText block">
+                                        <span class="animate animate1">Virtual Reality</span>
+                                        <span class="animate animate2">Augmented Reality</span>
+                                        <span class="animate animate3">3D Technology</span>
+                                        <span class="animate animate4">Automation</span>
+                                        <span class="animate animate5">E-Commerce</span>
+                                    </div>
+                                </h1>
+
+                                <!-- Subheadline -->
+                                <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                                    Transforming D2C brands with cutting-edge 3D/AR experiences and intelligent
+                                    automation
+                                </p>
+
+                                <!-- CTA Buttons -->
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+                                    <button
+                                        class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                                        Start Your Project
+                                    </button>
+                                    <button
+                                        class="border-2 border-white text-white hover:bg-white hover:text-neutral-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
+                                        View Our Work
+                                    </button>
+                                </div>
+
+                                <!-- Key Features -->
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 max-w-4xl mx-auto">
+                                    <div class="text-center space-y-3">
+                                        <div
+                                            class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center">
+                                            <span class="text-2xl font-bold text-white">3D</span>
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-white">3D/AR Experiences</h3>
+                                        <p class="text-gray-400">Immersive product visualization</p>
+                                    </div>
+
+                                    <div class="text-center space-y-3">
+                                        <div
+                                            class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mx-auto flex items-center justify-center">
+                                            <span class="text-2xl font-bold text-white">D2C</span>
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-white">D2C Brand Growth</h3>
+                                        <p class="text-gray-400">Direct-to-consumer excellence</p>
+                                    </div>
+
+                                    <div class="text-center space-y-3">
+                                        <div
+                                            class="w-16 h-16 bg-gradient-to-br from-pink-500 to-orange-600 rounded-full mx-auto flex items-center justify-center">
+                                            <span class="text-2xl font-bold text-white">AI</span>
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-white">Smart Automation</h3>
+                                        <p class="text-gray-400">Intelligent workflow solutions</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Animation Elements -->
+                        <div class="absolute inset-0 pointer-events-none">
+                            <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                            <div class="absolute top-3/4 right-1/4 w-3 h-3 bg-purple-400 rounded-full animate-bounce">
+                            </div>
+                            <div class="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-ping">
+                            </div>
+                        </div>
+
+                        <!-- Scroll Indicator -->
+                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+                                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            // Smooth scroll for CTA buttons
+                            const ctaButtons = document.querySelectorAll('#hero button');
+
+                            ctaButtons.forEach(button => {
+                                button.addEventListener('click', function () {
+                                    if (this.textContent.includes('View Our Work')) {
+                                        document.querySelector('#portfolio')?.scrollIntoView({
+                                            behavior: 'smooth'
+                                        });
+                                    } else if (this.textContent.includes('Start Your Project')) {
+                                        document.querySelector('#contact')?.scrollIntoView({
+                                            behavior: 'smooth'
+                                        });
+                                    }
+                                });
+                            });
+
+                            // Parallax effect for background
+                            window.addEventListener('scroll', function () {
+                                const scrolled = window.pageYOffset;
+                                const heroSection = document.querySelector('#hero');
+                                const backgroundImage = heroSection.querySelector('img');
+
+                                if (backgroundImage && scrolled < heroSection.offsetHeight) {
+                                    backgroundImage.style.transform = `translateY(${scrolled * 0.5}px)`;
+                                }
+                            });
+
+                            // Intersection Observer for animations
+                            const observerOptions = {
+                                threshold: 0.1,
+                                rootMargin: '0px 0px -50px 0px'
+                            };
+
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                        entry.target.classList.add('animate-fade-in');
+                                    }
+                                });
+                            }, observerOptions);
+
+                            // Observe hero elements
+                            const heroElements = document.querySelectorAll('#hero h1, #hero p, #hero .grid > div');
+                            heroElements.forEach(el => observer.observe(el));
+                        });
+                    </script>
+
+                    <style>
+                        @keyframes fade-in {
+                            from {
+                                opacity: 0;
+                                transform: translateY(30px);
+                            }
+
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+
+                        .animate-fade-in {
+                            animation: fade-in 0.8s ease-out forwards;
+                        }
+                    </style>
+                </div>
+                <div id="root">
+                    <section id="about" class="py-20 bg-gray-50">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <!-- Section Header -->
+                            <div class="text-center mb-16">
+                                <h2 class="text-4xl font-bold text-gray-900 mb-4">About</h2>
+                                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                                    We're a cutting-edge technology agency from India, specializing in transforming D2C
+                                    brands through innovative 3D/AR experiences and intelligent automation solutions.
+                                </p>
+                            </div>
+
+                            <div class="flex justify-center">
+                                <button onclick="location.href='/pages/about.html'"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                                    Know More
+                                </button>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                // Intersection Observer for animations
+                                const observerOptions = {
+                                    threshold: 0.1,
+                                    rootMargin: '0px 0px -50px 0px'
+                                };
+
+                                const observer = new IntersectionObserver((entries) => {
+                                    entries.forEach(entry => {
+                                        if (entry.isIntersecting) {
+                                            entry.target.classList.add('animate-fade-in-up');
+                                        }
+                                    });
+                                }, observerOptions);
+
+                                // Observe about section elements
+                                const aboutElements = document.querySelectorAll('#about h2, #about h3, #about .grid > div, #about .space-y-4 > div');
+                                aboutElements.forEach(el => observer.observe(el));
+
+                                // Counter animation for stats
+                                const counters = document.querySelectorAll('#about .text-3xl');
+                                counters.forEach(counter => {
+                                    const target = parseInt(counter.textContent);
+                                    let current = 0;
+                                    const increment = target / 50;
+                                    const timer = setInterval(() => {
+                                        current += increment;
+                                        if (current >= target) {
+                                            counter.textContent = target + '+';
+                                            clearInterval(timer);
+                                        } else {
+                                            counter.textContent = Math.floor(current) + '+';
+                                        }
+                                    }, 30);
+                                });
+
+                                // CTA button click handler
+                                const ctaButton = document.querySelector('#about button');
+                                ctaButton.addEventListener('click', function () {
+                                    document.querySelector('#contact')?.scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                });
+                            });
+                        </script>
+
+                        <style>
+                            @keyframes fade-in-up {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(30px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            .animate-fade-in-up {
+                                animation: fade-in-up 0.6s ease-out forwards;
+                            }
+                        </style>
+                    </section>
+                </div>
+                <div id="root">
+                    <section id="services" class="py-20 bg-white">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <!-- Section Header -->
+                            <div class="text-center mb-16">
+                                <h2 class="text-4xl font-bold text-gray-900 mb-4">Services</h2>
+                                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                                    Comprehensive technology solutions designed to accelerate your D2C brand's growth
+                                    through innovation and automation.
+                                </p>
+                            </div>
+
+                            <!-- Services Grid -->
+                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                                <!-- Service 1: D2C Development -->
+                                <div
+                                    class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8dGVjaG5vbG9neSUyNTIwaW50ZXJmYWNlJTI1MjBmdXR1cmlzdGljJTI1MjBjbGVhbiUyNTIwaWxsdXN0cmF0aW9ufGVufDF8MHx8fDE3NDg1NDc4NzV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                            alt="Code on a laptop screen"
+                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold text-gray-900 mb-3">D2C Platform Development
+                                        </h3>
+                                        <p class="text-gray-600 mb-4">
+                                            Custom e-commerce solutions built for direct-to-consumer brands with
+                                            advanced features and seamless user experiences.
+                                        </p>
+                                        <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                                            <li>• Custom Shopify & WooCommerce development</li>
+                                            <li>• Mobile-first responsive design</li>
+                                            <li>• Payment gateway integration</li>
+                                            <li>• Performance optimization</li>
+                                        </ul>
+                                        <button
+                                            class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300">
+                                            Learn More
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Service 2: 3D/AR Solutions -->
+                                <div
+                                    class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8dGVjaG5vbG9neSUyNTIwaW50ZXJmYWNlJTI1MjBmdXR1cmlzdGljJTI1MjBjbGVhbiUyNTIwaWxsdXN0cmF0aW9ufGVufDF8MHx8fDE3NDg1NDc4NzV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                            alt="Technology interface futuristic clean"
+                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold text-gray-900 mb-3">3D/AR Experiences</h3>
+                                        <p class="text-gray-600 mb-4">
+                                            Immersive product visualization and augmented reality solutions that boost
+                                            engagement and reduce return rates.
+                                        </p>
+                                        <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                                            <li>• Interactive 3D product models</li>
+                                            <li>• AR try-on experiences</li>
+                                            <li>• WebGL implementations</li>
+                                            <li>• Virtual showrooms</li>
+                                        </ul>
+                                        <button
+                                            class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300">
+                                            Learn More
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Service 3: Automation -->
+                                <div
+                                    class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8dGVjaG5vbG9neSUyNTIwaW50ZXJmYWNlJTI1MjBmdXR1cmlzdGljJTI1MjBjbGVhbiUyNTIwaWxsdXN0cmF0aW9ufGVufDF8MHx8fDE3NDg1NDc4NzV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                            alt="Female electronics engineer runs vehicle tests"
+                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Automation</h3>
+                                        <p class="text-gray-600 mb-4">
+                                            Intelligent automation solutions that streamline operations, reduce costs,
+                                            and scale your business efficiently.
+                                        </p>
+                                        <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                                            <li>• Workflow automation systems</li>
+                                            <li>• AI-powered chatbots</li>
+                                            <li>• Inventory management</li>
+                                            <li>• Analytics & reporting</li>
+                                        </ul>
+                                        <button
+                                            class="w-full bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300">
+                                            Learn More
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CTA Section -->
+                            <div class="text-center">
+                                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Ready to Elevate Your Brand?</h3>
+                                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                                    Let's discuss how our services can transform your D2C business with innovative
+                                    technology solutions.
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <button
+                                        class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                                        Start Your Project
+                                    </button>
+                                    <button
+                                        class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                                        View Portfolio
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Details Modal -->
+                        <div id="service-modal"
+                            class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
+                            aria-modal="true" aria-hidden="true">
+                            <div class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto">
+                                <div class="p-6">
+                                    <div class="flex justify-between items-center mb-4">
+                                        <h3 id="modal-title" class="text-2xl font-semibold text-gray-900"></h3>
+                                        <button id="close-modal"
+                                            class="text-gray-400 hover:text-gray-600 text-2xl font-bold"
+                                            aria-label="Close modal">
+                                            &times;
+                                        </button>
+                                    </div>
+                                    <div id="modal-content" class="text-gray-600">
+                                        <!-- Dynamic content will be inserted here -->
+                                    </div>
+                                    <div class="mt-6 flex gap-4">
+                                        <button
+                                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
+                                            Get Quote
+                                        </button>
+                                        <button id="close-modal-btn"
+                                            class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg font-medium transition-colors duration-300">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const modal = document.getElementById('service-modal');
+                                const modalTitle = document.getElementById('modal-title');
+                                const modalContent = document.getElementById('modal-content');
+                                const closeModalBtn = document.getElementById('close-modal');
+                                const closeModalBtnBottom = document.getElementById('close-modal-btn');
+                                const learnMoreButtons = document.querySelectorAll('#services button:not(#close-modal):not(#close-modal-btn)');
+
+                                const serviceDetails = {
+                                    'D2C Platform Development': {
+                                        title: 'D2C Platform Development',
+                                        content: `
+              <p class="mb-4">Transform your direct-to-consumer business with our comprehensive e-commerce solutions. We build scalable, high-performance platforms that drive conversions and enhance customer experience.</p>
+              <h4 class="font-semibold mb-2">What's Included:</h4>
+              <ul class="list-disc list-inside space-y-1 mb-4">
+                <li>Custom theme development</li>
+                <li>Advanced product catalog management</li>
+                <li>Multi-payment gateway integration</li>
+                <li>SEO optimization</li>
+                <li>Mobile-responsive design</li>
+                <li>Performance optimization</li>
+              </ul>
+              <h4 class="font-semibold mb-2">Technologies:</h4>
+              <p>Shopify, WooCommerce, React, Node.js, MongoDB</p>
+            `
+                                    },
+                                    '3D/AR Experiences': {
+                                        title: '3D/AR Experiences',
+                                        content: `
+              <p class="mb-4">Create immersive product experiences that allow customers to visualize and interact with your products before purchase, significantly reducing return rates and increasing engagement.</p>
+              <h4 class="font-semibold mb-2">What's Included:</h4>
+              <ul class="list-disc list-inside space-y-1 mb-4">
+                <li>3D product modeling and optimization</li>
+                <li>AR try-on experiences</li>
+                <li>Interactive product configurators</li>
+                <li>Virtual showroom development</li>
+                <li>Cross-platform compatibility</li>
+                <li>Performance optimization</li>
+              </ul>
+              <h4 class="font-semibold mb-2">Technologies:</h4>
+              <p>Three.js, WebGL, ARKit, ARCore, Blender, Unity</p>
+            `
+                                    },
+                                    'Smart Automation': {
+                                        title: 'Smart Automation',
+                                        content: `
+              <p class="mb-4">Streamline your operations with intelligent automation solutions that reduce manual work, improve efficiency, and scale your business operations seamlessly.</p>
+              <h4 class="font-semibold mb-2">What's Included:</h4>
+              <ul class="list-disc list-inside space-y-1 mb-4">
+                <li>Custom workflow automation</li>
+                <li>AI-powered customer support</li>
+                <li>Inventory management systems</li>
+                <li>Automated reporting and analytics</li>
+                <li>Integration with existing tools</li>
+                <li>24/7 monitoring and support</li>
+              </ul>
+              <h4 class="font-semibold mb-2">Technologies:</h4>
+              <p>Python, TensorFlow, Zapier, AWS Lambda, Node.js</p>
+            `
+                                    }
+                                };
+
+                                function openModal(serviceType) {
+                                    const service = serviceDetails[serviceType];
+                                    if (service) {
+                                        modalTitle.textContent = service.title;
+                                        modalContent.innerHTML = service.content;
+                                        modal.classList.remove('hidden');
+                                        modal.setAttribute('aria-hidden', 'false');
+                                        document.body.style.overflow = 'hidden';
+
+                                        // Focus trap
+                                        closeModalBtn.focus();
+                                    }
+                                }
+
+                                function closeModal() {
+                                    modal.classList.add('hidden');
+                                    modal.setAttribute('aria-hidden', 'true');
+                                    document.body.style.overflow = '';
+                                }
+
+                                // Event listeners for Learn More buttons
+                                learnMoreButtons.forEach(button => {
+                                    button.addEventListener('click', function () {
+                                        const serviceCard = this.closest('.bg-gray-50');
+                                        const serviceTitle = serviceCard.querySelector('h3').textContent;
+
+                                        if (this.textContent === 'Learn More') {
+                                            openModal(serviceTitle);
+                                        } else if (this.textContent === 'Start Your Project') {
+                                            document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+                                        } else if (this.textContent === 'View Portfolio') {
+                                            document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    });
+                                });
+
+                                // Close modal event listeners
+                                closeModalBtn.addEventListener('click', closeModal);
+                                closeModalBtnBottom.addEventListener('click', closeModal);
+
+                                // Close modal when clicking outside
+                                modal.addEventListener('click', function (e) {
+                                    if (e.target === modal) {
+                                        closeModal();
+                                    }
+                                });
+
+                                // Close modal on ESC key
+                                document.addEventListener('keydown', function (e) {
+                                    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                                        closeModal();
+                                    }
+                                });
+
+                                // Intersection Observer for animations
+                                const observerOptions = {
+                                    threshold: 0.1,
+                                    rootMargin: '0px 0px -50px 0px'
+                                };
+
+                                const observer = new IntersectionObserver((entries) => {
+                                    entries.forEach(entry => {
+                                        if (entry.isIntersecting) {
+                                            entry.target.classList.add('animate-fade-in-up');
+                                        }
+                                    });
+                                }, observerOptions);
+
+                                // Observe service cards
+                                const serviceCards = document.querySelectorAll('#services .bg-gray-50');
+                                serviceCards.forEach(card => observer.observe(card));
+                            });
+                        </script>
+
+                        <style>
+                            @keyframes fade-in-up {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(30px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            .animate-fade-in-up {
+                                animation: fade-in-up 0.6s ease-out forwards;
+                            }
+                        </style>
+                    </section>
+                </div>
+                <div id="root">
+                    <section id="portfolio" class="py-20 bg-gray-50">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <!-- Section Header -->
+                            <div class="text-center mb-16">
+                                <h2 class="text-4xl font-bold text-gray-900 mb-4">Portfolio</h2>
+                                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                                    Discover how we've transformed D2C brands with innovative 3D/AR experiences and
+                                    smart automation solutions.
+                                </p>
+                            </div>
+
+                            <!-- Filter Tabs -->
+                            <div class="flex justify-center mb-12">
+                                <div class="bg-white rounded-lg p-1 border border-gray-200">
+                                    <button
+                                        class="filter-btn active px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                                        data-filter="all">
+                                        All Projects
+                                    </button>
+                                    <button
+                                        class="filter-btn px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                                        data-filter="3d-ar">
+                                        3D/AR
+                                    </button>
+                                    <button
+                                        class="filter-btn px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                                        data-filter="d2c">
+                                        D2C Platforms
+                                    </button>
+                                    <button
+                                        class="filter-btn px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                                        data-filter="automation">
+                                        Automation
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Portfolio Grid -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                                <!-- Project 1 -->
+                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                                    data-category="3d-ar" data-project="smartwatch">
+                                    <div class="h-64 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                            alt="Android Smartwatch"
+                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span
+                                                class="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">3D/AR</span>
+                                            <span class="text-xs text-gray-500">2024</span>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">SmartWatch 3D Configurator
+                                        </h3>
+                                        <p class="text-gray-600 text-sm">Interactive 3D product visualization with
+                                            real-time customization options.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Project 2 -->
+                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                                    data-category="d2c" data-project="skincare">
+                                    <div class="h-64 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1556228578-567ba127e37f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                            alt="Curology on succulents plants"
+                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span
+                                                class="text-xs font-medium text-purple-600 bg-purple-100 px-2 py-1 rounded">D2C
+                                                Platform</span>
+                                            <span class="text-xs text-gray-500">2024</span>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Skincare D2C Platform</h3>
+                                        <p class="text-gray-600 text-sm">Custom e-commerce solution with personalized
+                                            product recommendations.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Project 3 -->
+                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                                    data-category="3d-ar" data-project="camera">
+                                    <div class="h-64 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                            alt="polaroid 03"
+                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span
+                                                class="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">3D/AR</span>
+                                            <span class="text-xs text-gray-500">2023</span>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Vintage Camera AR
+                                            Experience</h3>
+                                        <p class="text-gray-600 text-sm">Augmented reality showcase for vintage camera
+                                            collection.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Project 4 -->
+                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                                    data-category="automation" data-project="headphones">
+                                    <div class="h-64 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8NHx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                            alt="Pink headphones on a pastel background"
+                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span
+                                                class="text-xs font-medium text-pink-600 bg-pink-100 px-2 py-1 rounded">Automation</span>
+                                            <span class="text-xs text-gray-500">2024</span>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Audio Brand Automation</h3>
+                                        <p class="text-gray-600 text-sm">Smart inventory and customer service automation
+                                            system.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Project 5 -->
+                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                                    data-category="d2c" data-project="juice">
+                                    <div class="h-64 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1525904097878-94fb15835963?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8NXx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                            alt="Mango Cold Pressed Juice"
+                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span
+                                                class="text-xs font-medium text-purple-600 bg-purple-100 px-2 py-1 rounded">D2C
+                                                Platform</span>
+                                            <span class="text-xs text-gray-500">2023</span>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Organic Juice Subscription
+                                        </h3>
+                                        <p class="text-gray-600 text-sm">Subscription-based D2C platform with automated
+                                            delivery system.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Project 6 -->
+                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                                    data-category="3d-ar" data-project="sunglasses">
+                                    <div class="h-64 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1509695507497-903c140c43b0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Nnx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                            alt="Sunglasses product photography"
+                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span
+                                                class="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">3D/AR</span>
+                                            <span class="text-xs text-gray-500">2023</span>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">AR Try-On Sunglasses</h3>
+                                        <p class="text-gray-600 text-sm">Virtual try-on experience for fashion
+                                            sunglasses brand.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Stats Section -->
+                            <div class="bg-white rounded-lg p-8 mb-16">
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                                    <div>
+                                        <div class="text-3xl font-bold text-blue-600 mb-2">50+</div>
+                                        <div class="text-gray-600">Projects Completed</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-3xl font-bold text-purple-600 mb-2">25+</div>
+                                        <div class="text-gray-600">Happy Clients</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-3xl font-bold text-pink-600 mb-2">95%</div>
+                                        <div class="text-gray-600">Client Satisfaction</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-3xl font-bold text-orange-600 mb-2">3+</div>
+                                        <div class="text-gray-600">Years Experience</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CTA Section -->
+                            <div class="text-center">
+                                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Ready to Start Your Project?</h3>
+                                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                                    Let's create something amazing together. Get in touch to discuss your next D2C
+                                    transformation.
+                                </p>
+                                <button
+                                    class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                                    Start Your Project
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Project Detail Modal -->
+                        <div id="project-modal"
+                            class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
+                            aria-modal="true" aria-hidden="true">
+                            <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+                                <div class="p-6">
+                                    <div class="flex justify-between items-center mb-6">
+                                        <h3 id="project-modal-title" class="text-2xl font-semibold text-gray-900"></h3>
+                                        <button id="close-project-modal"
+                                            class="text-gray-400 hover:text-gray-600 text-2xl font-bold"
+                                            aria-label="Close modal">
+                                            &times;
+                                        </button>
+                                    </div>
+                                    <div id="project-modal-content">
+                                        <!-- Dynamic content will be inserted here -->
+                                    </div>
+                                    <div class="mt-6 flex gap-4">
+                                        <button
+                                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
+                                            Start Similar Project
+                                        </button>
+                                        <button id="close-project-modal-btn"
+                                            class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg font-medium transition-colors duration-300">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                // Filter functionality
+                                const filterButtons = document.querySelectorAll('.filter-btn');
+                                const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+                                filterButtons.forEach(button => {
+                                    button.addEventListener('click', function () {
+                                        const filter = this.getAttribute('data-filter');
+
+                                        // Update active button
+                                        filterButtons.forEach(btn => {
+                                            btn.classList.remove('active', 'bg-blue-600', 'text-white');
+                                            btn.classList.add('text-gray-600', 'hover:text-blue-600');
+                                        });
+                                        this.classList.add('active', 'bg-blue-600', 'text-white');
+                                        this.classList.remove('text-gray-600', 'hover:text-blue-600');
+
+                                        // Filter items
+                                        portfolioItems.forEach(item => {
+                                            const category = item.getAttribute('data-category');
+                                            if (filter === 'all' || category === filter) {
+                                                item.style.display = 'block';
+                                                item.classList.add('animate-fade-in');
+                                            } else {
+                                                item.style.display = 'none';
+                                            }
+                                        });
+                                    });
+                                });
+
+                                // Set initial active state
+                                filterButtons[0].classList.add('bg-blue-600', 'text-white');
+
+                                // Modal functionality
+                                const modal = document.getElementById('project-modal');
+                                const modalTitle = document.getElementById('project-modal-title');
+                                const modalContent = document.getElementById('project-modal-content');
+                                const closeModalBtn = document.getElementById('close-project-modal');
+                                const closeModalBtnBottom = document.getElementById('close-project-modal-btn');
+
+                                const projectDetails = {
+                                    'smartwatch': {
+                                        title: 'SmartWatch 3D Configurator',
+                                        content: `
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="SmartWatch" class="w-full rounded-lg">
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold mb-4">Project Overview</h4>
+                  <p class="text-gray-600 mb-4">Interactive 3D product configurator allowing customers to customize smartwatch bands, colors, and features in real-time.</p>
+                  <h4 class="text-lg font-semibold mb-2">Key Features:</h4>
+                  <ul class="list-disc list-inside space-y-1 mb-4 text-gray-600">
+                    <li>Real-time 3D customization</li>
+                    <li>Multiple color options</li>
+                    <li>Band material selection</li>
+                    <li>360-degree product view</li>
+                    <li>Mobile-optimized experience</li>
+                  </ul>
+                  <h4 class="text-lg font-semibold mb-2">Results:</h4>
+                  <ul class="list-disc list-inside space-y-1 text-gray-600">
+                    <li>40% increase in engagement</li>
+                    <li>25% boost in conversions</li>
+                    <li>60% reduction in returns</li>
+                  </ul>
+                </div>
+              </div>
+            `
+                                    },
+                                    'skincare': {
+                                        title: 'Skincare D2C Platform',
+                                        content: `
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <img src="https://images.unsplash.com/photo-1556228578-567ba127e37f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Skincare Products" class="w-full rounded-lg">
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold mb-4">Project Overview</h4>
+                  <p class="text-gray-600 mb-4">Complete D2C e-commerce platform with personalized skincare recommendations and subscription management.</p>
+                  <h4 class="text-lg font-semibold mb-2">Key Features:</h4>
+                  <ul class="list-disc list-inside space-y-1 mb-4 text-gray-600">
+                    <li>Skin analysis quiz</li>
+                    <li>Personalized product recommendations</li>
+                    <li>Subscription management</li>
+                    <li>Customer portal</li>
+                    <li>Automated email marketing</li>
+                  </ul>
+                  <h4 class="text-lg font-semibold mb-2">Results:</h4>
+                  <ul class="list-disc list-inside space-y-1 text-gray-600">
+                    <li>300% increase in online sales</li>
+                    <li>85% customer retention rate</li>
+                    <li>50% growth in subscription base</li>
+                  </ul>
+                </div>
+              </div>
+            `
+                                    }
+                                };
+
+                                function openProjectModal(projectId) {
+                                    const project = projectDetails[projectId];
+                                    if (project) {
+                                        modalTitle.textContent = project.title;
+                                        modalContent.innerHTML = project.content;
+                                        modal.classList.remove('hidden');
+                                        modal.setAttribute('aria-hidden', 'false');
+                                        document.body.style.overflow = 'hidden';
+                                        closeModalBtn.focus();
+                                    }
+                                }
+
+                                function closeProjectModal() {
+                                    modal.classList.add('hidden');
+                                    modal.setAttribute('aria-hidden', 'true');
+                                    document.body.style.overflow = '';
+                                }
+
+                                // Portfolio item click handlers
+                                portfolioItems.forEach(item => {
+                                    item.addEventListener('click', function () {
+                                        const projectId = this.getAttribute('data-project');
+                                        openProjectModal(projectId);
+                                    });
+                                });
+
+                                // Close modal event listeners
+                                closeModalBtn.addEventListener('click', closeProjectModal);
+                                closeModalBtnBottom.addEventListener('click', closeProjectModal);
+
+                                // Close modal when clicking outside
+                                modal.addEventListener('click', function (e) {
+                                    if (e.target === modal) {
+                                        closeProjectModal();
+                                    }
+                                });
+
+                                // Close modal on ESC key
+                                document.addEventListener('keydown', function (e) {
+                                    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                                        closeProjectModal();
+                                    }
+                                });
+
+                                // CTA button click handler
+                                const ctaButton = document.querySelector('#portfolio button:last-child');
+                                ctaButton.addEventListener('click', function () {
+                                    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+                                });
+
+                                // Intersection Observer for animations
+                                const observerOptions = {
+                                    threshold: 0.1,
+                                    rootMargin: '0px 0px -50px 0px'
+                                };
+
+                                const observer = new IntersectionObserver((entries) => {
+                                    entries.forEach(entry => {
+                                        if (entry.isIntersecting) {
+                                            entry.target.classList.add('animate-fade-in-up');
+                                        }
+                                    });
+                                }, observerOptions);
+
+                                // Observe portfolio items
+                                portfolioItems.forEach(item => observer.observe(item));
+                            });
+                        </script>
+
+                        <style>
+                            @keyframes fade-in-up {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(30px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            @keyframes fade-in {
+                                from {
+                                    opacity: 0;
+                                }
+
+                                to {
+                                    opacity: 1;
+                                }
+                            }
+
+                            .animate-fade-in-up {
+                                animation: fade-in-up 0.6s ease-out forwards;
+                            }
+
+                            .animate-fade-in {
+                                animation: fade-in 0.4s ease-out forwards;
+                            }
+                        </style>
+                    </section>
+                </div>
+                <div id="root">
+                    <section id="testimonials" class="py-20 bg-neutral-900 overflow-hidden">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+                            <div class="text-center">
+                                <h2 class="text-4xl font-bold text-white mb-4">Testimonials</h2>
+                                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                                    Hear from D2C brands who've transformed their business with our innovative
+                                    solutions.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Full-width scrolling testimonials -->
+                        <div class="w-full relative">
+                            <div class="scroller" data-speed="slow">
+                                <ul class="tag-list scroller__inner flex gap-8 animate-scroll">
+                                    <!-- Testimonial 1 -->
+                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
+                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
+                                            "TechCraft's 3D product configurator increased our conversion rate by 40%.
+                                            The AR try-on feature is a game-changer for our customers."
+                                        </blockquote>
+                                        <div class="flex items-center">
+                                            <div
+                                                class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                                RS
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold text-gray-900">Rajesh Sharma</div>
+                                                <div class="text-gray-600">CEO, StyleCraft India</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- Testimonial 2 -->
+                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
+                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
+                                            "The automation solutions streamlined our entire workflow. We've reduced
+                                            operational costs by 35% while scaling 3x faster."
+                                        </blockquote>
+                                        <div class="flex items-center">
+                                            <div
+                                                class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                                PK
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold text-gray-900">Priya Kapoor</div>
+                                                <div class="text-gray-600">Founder, EcoBeauty</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- Testimonial 3 -->
+                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
+                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
+                                            "Their D2C platform development exceeded expectations. Mobile-first design
+                                            and seamless checkout boosted our sales by 250%."
+                                        </blockquote>
+                                        <div class="flex items-center">
+                                            <div
+                                                class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                                AM
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold text-gray-900">Arjun Mehta</div>
+                                                <div class="text-gray-600">Co-founder, FitGear Pro</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- Testimonial 4 -->
+                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
+                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
+                                            "The AR jewelry try-on feature reduced our return rate by 60%. Customers
+                                            love the interactive shopping experience."
+                                        </blockquote>
+                                        <div class="flex items-center">
+                                            <div
+                                                class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                                SG
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold text-gray-900">Sneha Gupta</div>
+                                                <div class="text-gray-600">Director, Luxe Ornaments</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- Testimonial 5 -->
+                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
+                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
+                                            "TechCraft transformed our skincare brand with personalized recommendations.
+                                            Customer engagement increased by 180%."
+                                        </blockquote>
+                                        <div class="flex items-center">
+                                            <div
+                                                class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                                VT
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold text-gray-900">Vikram Thakur</div>
+                                                <div class="text-gray-600">Founder, GlowNaturals</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- Testimonial 6 -->
+                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
+                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
+                                            "The smart automation system handles our inventory perfectly. No more
+                                            stockouts or overstock issues. Brilliant solution!"
+                                        </blockquote>
+                                        <div class="flex items-center">
+                                            <div
+                                                class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                                NK
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold text-gray-900">Neha Khanna</div>
+                                                <div class="text-gray-600">Operations Head, TechHome</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- Duplicate testimonials for seamless loop -->
+                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
+                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
+                                            "TechCraft's 3D product configurator increased our conversion rate by 40%.
+                                            The AR try-on feature is a game-changer for our customers."
+                                        </blockquote>
+                                        <div class="flex items-center">
+                                            <div
+                                                class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                                RS
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold text-gray-900">Rajesh Sharma</div>
+                                                <div class="text-gray-600">CEO, StyleCraft India</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
+                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
+                                            "The automation solutions streamlined our entire workflow. We've reduced
+                                            operational costs by 35% while scaling 3x faster."
+                                        </blockquote>
+                                        <div class="flex items-center">
+                                            <div
+                                                class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                                PK
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold text-gray-900">Priya Kapoor</div>
+                                                <div class="text-gray-600">Founder, EcoBeauty</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
+                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
+                                            "Their D2C platform development exceeded expectations. Mobile-first design
+                                            and seamless checkout boosted our sales by 250%."
+                                        </blockquote>
+                                        <div class="flex items-center">
+                                            <div
+                                                class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                                AM
+                                            </div>
+                                            <div>
+                                                <div class="font-semibold text-gray-900">Arjun Mehta</div>
+                                                <div class="text-gray-600">Co-founder, FitGear Pro</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Bottom section with CTA -->
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 text-center">
+                            <h3 class="text-2xl font-semibold text-white mb-4">Join Our Success Stories</h3>
+                            <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                                Ready to transform your D2C brand? Let's create your success story together.
+                            </p>
+                            <button
+                                class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                                Start Your Transformation
+                            </button>
+                        </div>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                // CTA button click handler
+                                const ctaButton = document.querySelector('#testimonials button');
+                                ctaButton.addEventListener('click', function () {
+                                    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+                                });
+
+                                // Pause animation on hover
+                                const scroller = document.querySelector('.scroller__inner');
+                                const scrollerContainer = document.querySelector('.scroller');
+
+                                scrollerContainer.addEventListener('mouseenter', function () {
+                                    scroller.style.animationPlayState = 'paused';
+                                });
+
+                                scrollerContainer.addEventListener('mouseleave', function () {
+                                    scroller.style.animationPlayState = 'running';
+                                });
+
+                                // Intersection Observer for fade-in animation
+                                const observerOptions = {
+                                    threshold: 0.1,
+                                    rootMargin: '0px 0px -50px 0px'
+                                };
+
+                                const observer = new IntersectionObserver((entries) => {
+                                    entries.forEach(entry => {
+                                        if (entry.isIntersecting) {
+                                            entry.target.classList.add('animate-fade-in');
+                                        }
+                                    });
+                                }, observerOptions);
+
+                                // Observe testimonials section elements
+                                const testimonialElements = document.querySelectorAll('#testimonials h2, #testimonials h3, #testimonials p');
+                                testimonialElements.forEach(el => observer.observe(el));
+                            });
+                        </script>
+
+                        <style>
+                            .scroller {
+                                max-width: 100vw;
+                                margin-left: calc(-50vw + 50%);
+                                margin-right: calc(-50vw + 50%);
+                                width: 100vw;
+                                overflow: hidden;
+                                mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+                            }
+
+                            .scroller__inner {
+                                padding-block: 1rem;
+                                display: flex;
+                                flex-wrap: nowrap;
+                                gap: 2rem;
+                            }
+
+                            .animate-scroll {
+                                animation: scroll 30s linear infinite;
+                            }
+
+                            @keyframes scroll {
+                                to {
+                                    transform: translate(calc(-50% - 1rem));
+                                }
+                            }
+
+                            @keyframes fade-in {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(30px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            .animate-fade-in {
+                                animation: fade-in 0.6s ease-out forwards;
+                            }
+
+                            @media (prefers-reduced-motion: reduce) {
+                                .animate-scroll {
+                                    animation-play-state: paused;
+                                }
+                            }
+                        </style>
+                    </section>
+                </div>
+                <div id="root">
+                    <section id="contact" class="py-20 bg-white">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <!-- Section Header -->
+                            <div class="text-center mb-16">
+                                <h2 class="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
+                                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                                    Ready to transform your D2C brand? Let's discuss your project and create something
+                                    amazing together.
+                                </p>
+                            </div>
+
+                            <!-- Main Content Grid -->
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                                <!-- Contact Form -->
+                                <div class="bg-gray-50 rounded-lg p-8">
+                                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Get Started Today</h3>
+                                    <form id="contact-form" class="space-y-6">
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                            <div>
+                                                <label for="firstName"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">First
+                                                    Name</label>
+                                                <input type="text" id="firstName" name="firstName" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                                                    placeholder="John" />
+                                            </div>
+                                            <div>
+                                                <label for="lastName"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">Last
+                                                    Name</label>
+                                                <input type="text" id="lastName" name="lastName" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                                                    placeholder="Doe" />
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label for="email"
+                                                class="block text-sm font-medium text-gray-700 mb-2">Email
+                                                Address</label>
+                                            <input type="email" id="email" name="email" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                                                placeholder="john@example.com" />
+                                        </div>
+
+                                        <div>
+                                            <label for="company"
+                                                class="block text-sm font-medium text-gray-700 mb-2">Company
+                                                Name</label>
+                                            <input type="text" id="company" name="company"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                                                placeholder="Your Company" />
+                                        </div>
+
+                                        <div>
+                                            <label for="service"
+                                                class="block text-sm font-medium text-gray-700 mb-2">Service
+                                                Interest</label>
+                                            <select id="service" name="service" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
+                                                <option value="">Select a service</option>
+                                                <option value="d2c-platform">D2C Platform Development</option>
+                                                <option value="3d-ar">3D/AR Experiences</option>
+                                                <option value="automation">Smart Automation</option>
+                                                <option value="consultation">Consultation</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+
+                                        <div>
+                                            <label for="budget"
+                                                class="block text-sm font-medium text-gray-700 mb-2">Project
+                                                Budget</label>
+                                            <select id="budget" name="budget"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
+                                                <option value="">Select budget range</option>
+                                                <option value="under-50k">Under ₹50,000</option>
+                                                <option value="50k-1l">₹50,000 - ₹1,00,000</option>
+                                                <option value="1l-5l">₹1,00,000 - ₹5,00,000</option>
+                                                <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
+                                                <option value="above-10l">Above ₹10,00,000</option>
+                                            </select>
+                                        </div>
+
+                                        <div>
+                                            <label for="message"
+                                                class="block text-sm font-medium text-gray-700 mb-2">Project
+                                                Details</label>
+                                            <textarea id="message" name="message" rows="4" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 resize-vertical"
+                                                placeholder="Tell us about your project requirements..."></textarea>
+                                        </div>
+
+                                        <button type="submit"
+                                            class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                                            Send Message
+                                        </button>
+                                    </form>
+                                </div>
+
+                                <!-- Contact Information & Office Images -->
+                                <div class="space-y-8">
+                                    <!-- Contact Info -->
+                                    <div>
+                                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Get In Touch</h3>
+                                        <div class="space-y-6">
+                                            <div class="flex items-start space-x-4">
+                                                <div
+                                                    class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <span class="text-white font-bold">📧</span>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-semibold text-gray-900">Email Us</h4>
+                                                    <p class="text-gray-600">hello@techcraft.in</p>
+                                                    <p class="text-gray-600">projects@techcraft.in</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex items-start space-x-4">
+                                                <div
+                                                    class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <span class="text-white font-bold">📱</span>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-semibold text-gray-900">Call Us</h4>
+                                                    <p class="text-gray-600">+91 98765 43210</p>
+                                                    <p class="text-gray-600">+91 87654 32109</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex items-start space-x-4">
+                                                <div
+                                                    class="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <span class="text-white font-bold">📍</span>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-semibold text-gray-900">Visit Us</h4>
+                                                    <p class="text-gray-600">Tech Hub, Sector 18<br>Gurugram, Haryana
+                                                        122015<br>India</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex items-start space-x-4">
+                                                <div
+                                                    class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <span class="text-white font-bold">⏰</span>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-semibold text-gray-900">Business Hours</h4>
+                                                    <p class="text-gray-600">Mon - Fri: 9:00 AM - 7:00 PM</p>
+                                                    <p class="text-gray-600">Sat: 10:00 AM - 4:00 PM</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Office Images -->
+                                    <div class="space-y-4">
+                                        <div class="rounded-lg overflow-hidden">
+                                            <img src="https://images.unsplash.com/photo-1534527489986-3e3394ca569c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8bW9kZXJuJTI1MjB0ZWNoJTI1MjBvZmZpY2UlMjUyMGJyaWdodCUyNTIwbWluaW1hbCUyNTIwcHJvZmVzc2lvbmFsfGVufDF8MHx8fDE3NDg1NDgxMTJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                                alt="Modern tech office bright minimal professional"
+                                                class="w-full h-48 object-cover" />
+                                        </div>
+                                        <div class="rounded-lg overflow-hidden">
+                                            <img src="https://images.unsplash.com/photo-1515923256482-1c04580b477c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8bW9kZXJuJTI1MjB0ZWNoJTI1MjBvZmZpY2UlMjUyMGJyaWdodCUyNTIwbWluaW1hbCUyNTIwcHJvZmVzc2lvbmFsfGVufDF8MHx8fDE3NDg1NDgxMTJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                                alt="Modern office space in blue" class="w-full h-48 object-cover" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Success Modal -->
+                            <div id="success-modal"
+                                class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
+                                aria-modal="true" aria-hidden="true">
+                                <div
+                                    class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all duration-300 scale-95">
+                                    <div class="text-center">
+                                        <div
+                                            class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <span class="text-2xl">✓</span>
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Message Sent Successfully!
+                                        </h3>
+                                        <p class="text-gray-600 mb-6">
+                                            Thank you for reaching out. We'll get back to you within 24 hours.
+                                        </p>
+                                        <button id="close-success-modal"
+                                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    const form = document.getElementById('contact-form');
+                                    const successModal = document.getElementById('success-modal');
+                                    const closeSuccessModal = document.getElementById('close-success-modal');
+
+                                    // Form submission handler
+                                    form.addEventListener('submit', function (e) {
+                                        e.preventDefault();
+
+                                        // Get form data
+                                        const formData = new FormData(form);
+                                        const data = Object.fromEntries(formData);
+
+                                        // Validate required fields
+                                        const requiredFields = ['firstName', 'lastName', 'email', 'service', 'message'];
+                                        let isValid = true;
+
+                                        requiredFields.forEach(field => {
+                                            const input = document.getElementById(field);
+                                            if (!data[field] || data[field].trim() === '') {
+                                                input.classList.add('border-red-500');
+                                                isValid = false;
+                                            } else {
+                                                input.classList.remove('border-red-500');
+                                            }
+                                        });
+
+                                        // Email validation
+                                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                        const emailInput = document.getElementById('email');
+                                        if (!emailRegex.test(data.email)) {
+                                            emailInput.classList.add('border-red-500');
+                                            isValid = false;
+                                        } else {
+                                            emailInput.classList.remove('border-red-500');
+                                        }
+
+                                        if (isValid) {
+                                            // Simulate form submission
+                                            const submitButton = form.querySelector('button[type="submit"]');
+                                            const originalText = submitButton.textContent;
+
+                                            submitButton.textContent = 'Sending...';
+                                            submitButton.disabled = true;
+
+                                            setTimeout(() => {
+                                                // Show success modal
+                                                successModal.classList.remove('hidden');
+                                                successModal.setAttribute('aria-hidden', 'false');
+                                                successModal.querySelector('.transform').classList.remove('scale-95');
+                                                successModal.querySelector('.transform').classList.add('scale-100');
+                                                document.body.style.overflow = 'hidden';
+
+                                                // Reset form
+                                                form.reset();
+                                                submitButton.textContent = originalText;
+                                                submitButton.disabled = false;
+
+                                                // Focus close button
+                                                closeSuccessModal.focus();
+                                            }, 1500);
+                                        }
+                                    });
+
+                                    // Success modal close handlers
+                                    function closeModal() {
+                                        successModal.querySelector('.transform').classList.remove('scale-100');
+                                        successModal.querySelector('.transform').classList.add('scale-95');
+
+                                        setTimeout(() => {
+                                            successModal.classList.add('hidden');
+                                            successModal.setAttribute('aria-hidden', 'true');
+                                            document.body.style.overflow = '';
+                                        }, 300);
+                                    }
+
+                                    closeSuccessModal.addEventListener('click', closeModal);
+
+                                    // Close modal when clicking outside
+                                    successModal.addEventListener('click', function (e) {
+                                        if (e.target === successModal) {
+                                            closeModal();
+                                        }
+                                    });
+
+                                    // Close modal on ESC key
+                                    document.addEventListener('keydown', function (e) {
+                                        if (e.key === 'Escape' && !successModal.classList.contains('hidden')) {
+                                            closeModal();
+                                        }
+                                    });
+
+                                    // Form field focus effects
+                                    const inputs = form.querySelectorAll('input, select, textarea');
+                                    inputs.forEach(input => {
+                                        input.addEventListener('focus', function () {
+                                            this.classList.remove('border-red-500');
+                                        });
+                                    });
+
+                                    // Intersection Observer for animations
+                                    const observerOptions = {
+                                        threshold: 0.1,
+                                        rootMargin: '0px 0px -50px 0px'
+                                    };
+
+                                    const observer = new IntersectionObserver((entries) => {
+                                        entries.forEach(entry => {
+                                            if (entry.isIntersecting) {
+                                                entry.target.classList.add('animate-fade-in-up');
+                                            }
+                                        });
+                                    }, observerOptions);
+
+                                    // Observe contact section elements
+                                    const contactElements = document.querySelectorAll('#contact h2, #contact h3, #contact .bg-gray-50, #contact .space-y-8 > div');
+                                    contactElements.forEach(el => observer.observe(el));
+                                });
+                            </script>
+
+                            <style>
+                                @keyframes fade-in-up {
+                                    from {
+                                        opacity: 0;
+                                        transform: translateY(30px);
+                                    }
+
+                                    to {
+                                        opacity: 1;
+                                        transform: translateY(0);
+                                    }
+                                }
+
+                                .animate-fade-in-up {
+                                    animation: fade-in-up 0.6s ease-out forwards;
+                                }
+
+                                .scale-95 {
+                                    transform: scale(0.95);
+                                }
+
+                                .scale-100 {
+                                    transform: scale(1);
+                                }
+                            </style>
+                    </section>
+                </div>
+                <!-- Error rendering section d2d9b772-ce91-4f31-9130-1afeae54b0a5: Missing helper: "eq" -->
+            </div>
+        </mountpoint>
+
+        <footer class="bg-gray-900 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Grid for Professional and Legal Links -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    <!-- Professional Links -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Professional</h3>
+                        <div class="space-y-3">
+                            <a href="https://www.linkedin.com/company/hirawat-tech" target="_blank" class="block hover:text-blue-400 transition-colors duration-300">Follow on LinkedIn</a>
+                            <a href="https://contra.com/vhirawat" target="_blank" class="block hover:text-blue-400 transition-colors duration-300">Hire on Contra</a>
+                            <a href="https://www.upwork.com/o/companies/~0163411dd2622fc83f/" target="_blank" class="block hover:text-blue-400 transition-colors duration-300">Hire on Upwork</a>
+                            <a href="/pages/about.html" class="block hover:text-blue-400 transition-colors duration-300">About Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Legal Links -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                        <div class="space-y-3">
+                            <a href="/pages/terms.html" target="_blank" class="block hover:text-blue-400 transition-colors duration-300">Terms of Service</a>
+                            <a href="/pages/privacy.html" target="_blank" class="block hover:text-blue-400 transition-colors duration-300">Privacy Policy</a>
+                            <a href="/pages/refund.html" target="_blank" class="block hover:text-blue-400 transition-colors duration-300">Cancellation & Refund Policy</a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Email Us</h3>
+                        <div class="space-y-3">
+                            <p class="text-gray-400">contact@tryar.in</p>
+                            <p class="text-gray-400">tech@hirawat.in</p>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Location</h3>
+                        <div class="space-y-3">
+                            <p class="text-gray-400">India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cookie Notice -->
+                <div class="pt-8 border-t border-gray-800">
+                    <div class="flex items-center justify-center space-x-2 text-sm text-gray-400">
+                        <span>We use</span>
+                        <a href="pages/cookies.html" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors duration-300">cookies</a>
+                        <span>.</span>
+                        <a href="#" fs-cc="allow" class="text-green-400 hover:text-green-300 transition-colors duration-300" role="button" tabindex="0">Okay.</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Core functionality scripts -->
+    <script>
+        // Initialize interactive elements
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add interactive behaviors
+            const interactiveElements = document.querySelectorAll('.interactive-element');
+            interactiveElements.forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    element.classList.add('hover');
+                });
+                element.addEventListener('mouseleave', () => {
+                    element.classList.remove('hover');
+                });
+            });
+
+            // Initialize any dynamic content
+            const dynamicContent = document.querySelectorAll('[data-dynamic]');
+            dynamicContent.forEach(content => {
+                // Add fade-in animation
+                content.classList.add('fade-in');
+            });
+        });
+
+        // Handle navigation
+        function handleNavigation(event) {
+            const link = event.currentTarget;
+            if (link.hasAttribute('data-nav')) {
+                event.preventDefault();
+                const target = link.getAttribute('data-nav');
+                document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Initialize navigation
+        document.querySelectorAll('[data-nav]').forEach(link => {
+            link.addEventListener('click', handleNavigation);
+        });
+    </script>
+
+    <!-- Body Scripts -->
+    <script id="body-scripts">
+        // This script tag will be replaced with actual scripts.body content
+        if (window.scripts && window.scripts.body) {
+            document.getElementById('body-scripts').outerHTML = window.scripts.body;
+        }
+    </script>
 </body>
 </html>
