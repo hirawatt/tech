@@ -20,6 +20,7 @@
     <script src="https://cdn.tailwindcss.com/"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/assets/styles/style.css">
 
     <!-- Deferred Scripts -->
@@ -42,6 +43,7 @@
 <body class="antialiased text-gray-800 min-h-screen flex flex-col">
     <!-- Banner -->
     <div class="bg-gray-900 text-white py-2 px-4 flex justify-center items-center space-x-4">
+        <span class="material-icons text-sm">launch</span>
         Latest Product ➝
         <a href="https://tryar.in" target="_blank" class="hover:text-blue-400 transition-colors duration-300"> TryAR</a>
     </div>
@@ -96,11 +98,11 @@
 
                                 <!-- Desktop Navigation -->
                                 <div class="hidden md:flex space-x-8">
-                                    <a href="#about" class="nav-link">About</a>
-                                    <a href="#services" class="nav-link">Services</a>
-                                    <a href="#portfolio" class="nav-link">Portfolio</a>
-                                    <a href="#testimonials" class="nav-link">Testimonials</a>
-                                    <a href="#contact" class="nav-link">Contact</a>
+                                    <a href="#about" class="nav-link"><span class="material-icons text-sm align-middle mr-1">info</span>About</a>
+                                    <a href="#services" class="nav-link"><span class="material-icons text-sm align-middle mr-1">build</span>Services</a>
+                                    <a href="#portfolio" class="nav-link"><span class="material-icons text-sm align-middle mr-1">work</span>Portfolio</a>
+                                    <a href="#testimonials" class="nav-link"><span class="material-icons text-sm align-middle mr-1">star</span>Testimonials</a>
+                                    <a href="#contact" class="nav-link"><span class="material-icons text-sm align-middle mr-1">contact_mail</span>Contact</a>
                                 </div>
 
                                 <!-- Mobile menu button -->
@@ -180,10 +182,12 @@
                                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
                                     <button
                                         class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                                        <span class="material-icons align-middle mr-2">rocket_launch</span>
                                         Start Your Project
                                     </button>
                                     <button
                                         class="border-2 border-white text-white hover:bg-white hover:text-neutral-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
+                                        <span class="material-icons align-middle mr-2">work</span>
                                         View Our Work
                                     </button>
                                 </div>
@@ -193,7 +197,7 @@
                                     <div class="text-center space-y-3">
                                         <div
                                             class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center">
-                                            <span class="text-2xl font-bold text-white">3D</span>
+                                            <span class="material-icons text-3xl text-white">view_in_ar</span>
                                         </div>
                                         <h3 class="text-xl font-semibold text-white">3D/AR Experiences</h3>
                                         <p class="text-gray-400">Immersive product visualization</p>
@@ -202,7 +206,7 @@
                                     <div class="text-center space-y-3">
                                         <div
                                             class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mx-auto flex items-center justify-center">
-                                            <span class="text-2xl font-bold text-white">D2C</span>
+                                            <span class="material-icons text-3xl text-white">shopping_bag</span>
                                         </div>
                                         <h3 class="text-xl font-semibold text-white">D2C Brand Growth</h3>
                                         <p class="text-gray-400">Direct-to-consumer excellence</p>
@@ -211,7 +215,7 @@
                                     <div class="text-center space-y-3">
                                         <div
                                             class="w-16 h-16 bg-gradient-to-br from-pink-500 to-orange-600 rounded-full mx-auto flex items-center justify-center">
-                                            <span class="text-2xl font-bold text-white">AI</span>
+                                            <span class="material-icons text-3xl text-white">smart_toy</span>
                                         </div>
                                         <h3 class="text-xl font-semibold text-white">Smart Automation</h3>
                                         <p class="text-gray-400">Intelligent workflow solutions</p>
@@ -230,10 +234,8 @@
                         </div>
 
                         <!-- Scroll Indicator -->
-                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-                            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-                                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
-                            </div>
+                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
+                            <span class="material-icons text-3xl">keyboard_arrow_down</span>
                         </div>
                     </section>
 
@@ -310,7 +312,10 @@
                         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <!-- Section Header -->
                             <div class="text-center mb-16">
-                                <h2 class="text-4xl font-bold text-gray-900 mb-4">About</h2>
+                                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                                    <span class="material-icons text-3xl align-middle mr-2">business</span>
+                                    About
+                                </h2>
                                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                                     We're a cutting-edge technology agency from India, specializing in transforming D2C
                                     brands through innovative 3D/AR experiences and intelligent automation solutions.
@@ -320,6 +325,7 @@
                             <div class="flex justify-center">
                                 <button onclick="location.href='/pages/about.html'"
                                     class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                                    <span class="material-icons align-middle mr-2">read_more</span>
                                     Know More
                                 </button>
                             </div>
@@ -702,7 +708,7 @@
                             <div class="text-center mb-16">
                                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Portfolio</h2>
                                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                                    Discover how we've transformed D2C brands with innovative 3D/AR experiences and
+                                    Discover how we've transformed B2B and D2C brands with innovative 3D/AR experiences and
                                     smart automation solutions.
                                 </p>
                             </div>
@@ -862,25 +868,69 @@
                             </div>
 
                             <!-- Stats Section -->
-                            <div class="bg-white rounded-lg p-8 mb-16">
-                                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                                    <div>
-                                        <div class="text-3xl font-bold text-blue-600 mb-2">50+</div>
-                                        <div class="text-gray-600">Projects Completed</div>
-                                    </div>
-                                    <div>
-                                        <div class="text-3xl font-bold text-purple-600 mb-2">25+</div>
-                                        <div class="text-gray-600">Happy Clients</div>
-                                    </div>
-                                    <div>
-                                        <div class="text-3xl font-bold text-pink-600 mb-2">95%</div>
-                                        <div class="text-gray-600">Client Satisfaction</div>
-                                    </div>
-                                    <div>
-                                        <div class="text-3xl font-bold text-orange-600 mb-2">3+</div>
-                                        <div class="text-gray-600">Years Experience</div>
+                            <!-- Client Logos Section -->
+                            <div class="mb-16 bg-white py-12 w-screen relative" style="left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+                                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                    <h3 class="text-2xl font-semibold text-gray-900 mb-8 text-center">Trusted By Industry Leaders</h3>
+                                </div>
+                                <div class="relative overflow-hidden w-full">
+                                    <div class="flex animate-scroll">
+                                        <!-- First set of logos -->
+                                        <div class="flex items-center space-x-50 min-w-full px-15">
+                                            <img src="/assets/client-logos/appletech-soft.png" alt="AppleTech Soft" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/aws.png" alt="AWS" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/fidelity-investment.webp" alt="Fidelity Investment" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/fuzo.png" alt="Fuzo" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/gulpdata.png" alt="Gulp Data" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/jito-youth.jpg" alt="Jito Youth" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/jugni-lifestyle.webp" alt="Jugni Lifestyle" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/kairos-spark.png" alt="Kairos Spark" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/kyzaindia.webp" alt="Kyza India" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/rawrx.avif" alt="RawrX" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/seemore-data.svg" alt="Seemore Data" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/snowflake.png" alt="Snowflake" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/souf-and-school.png" alt="Souf and School" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/truelty.png" alt="Truelty" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/zeminix-uk.webp" alt="Zeminix UK" class="h-8 w-32 object-contain">
+                                        </div>
+                                        <!-- Duplicate set for seamless scrolling -->
+                                        <div class="flex items-center space-x-50 min-w-full px-15">
+                                            <img src="/assets/client-logos/appletech-soft.png" alt="AppleTech Soft" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/aws.png" alt="AWS" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/fidelity-investment.webp" alt="Fidelity Investment" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/fuzo.png" alt="Fuzo" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/gulpdata.png" alt="Gulp Data" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/jito-youth.jpg" alt="Jito Youth" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/jugni-lifestyle.webp" alt="Jugni Lifestyle" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/kairos-spark.png" alt="Kairos Spark" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/kyzaindia.webp" alt="Kyza India" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/rawrx.avif" alt="RawrX" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/seemore-data.svg" alt="Seemore Data" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/snowflake.png" alt="Snowflake" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/souf-and-school.png" alt="Souf and School" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/truelty.png" alt="Truelty" class="h-8 w-32 object-contain">
+                                            <img src="/assets/client-logos/zeminix-uk.webp" alt="Zeminix UK" class="h-8 w-32 object-contain">
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="absolute left-0 w-40 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
+                                <div class="absolute right-0 w-40 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
+                                <style>
+                                    @keyframes scroll {
+                                        0% {
+                                            transform: translateX(0);
+                                        }
+                                        100% {
+                                            transform: translateX(-100%);
+                                        }
+                                    }
+                                    .animate-scroll {
+                                        animation: scroll 45s linear infinite;
+                                    }
+                                    .animate-scroll:hover {
+                                        animation-play-state: paused;
+                                    }
+                                </style>
                             </div>
 
                             <!-- CTA Section -->
@@ -1485,7 +1535,7 @@
                                     </form>
                                 </div>
 
-                                <!-- Contact Information & Office Images -->
+                                <!-- Contact Information -->
                                 <div class="space-y-8">
                                     <!-- Contact Info -->
                                     <div>
@@ -1494,7 +1544,7 @@
                                             <div class="flex items-start space-x-4">
                                                 <div
                                                     class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <span class="text-white font-bold">📧</span>
+                                                    <span class="material-icons text-white text-2xl">mail</span>
                                                 </div>
                                                 <div>
                                                     <h4 class="font-semibold text-gray-900">Email Us</h4>
@@ -1506,7 +1556,7 @@
                                             <div class="flex items-start space-x-4">
                                                 <div
                                                     class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <span class="text-white font-bold">📱</span>
+                                                    <span class="material-icons text-white text-2xl">phone</span>
                                                 </div>
                                                 <div>
                                                     <h4 class="font-semibold text-gray-900">Call Us</h4>
@@ -1517,11 +1567,11 @@
                                             <div class="flex items-start space-x-4">
                                                 <div
                                                     class="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <span class="text-white font-bold">📍</span>
+                                                    <span class="material-icons text-white text-2xl">location_on</span>
                                                 </div>
                                                 <div>
                                                     <h4 class="font-semibold text-gray-900">Visit Us</h4>
-                                                    <p class="text-gray-600">Malleshwaram, Bengaluru
+                                                    <p class="text-gray-600">Malleshwaram <br> Bengaluru
                                                         560003<br>India</p>
                                                 </div>
                                             </div>
@@ -1529,12 +1579,12 @@
                                             <div class="flex items-start space-x-4">
                                                 <div
                                                     class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <span class="text-white font-bold">⏰</span>
+                                                    <span class="material-icons text-white text-2xl">schedule</span>
                                                 </div>
                                                 <div>
                                                     <h4 class="font-semibold text-gray-900">Business Hours</h4>
-                                                    <p class="text-gray-600">Mon - Fri: 9:00 AM - 7:00 PM</p>
-                                                    <p class="text-gray-600">Sat: 10:00 AM - 4:00 PM</p>
+                                                    <p class="text-gray-600">Mon - Fri: <br> 9:00 AM - 7:00 PM</p>
+                                                    <p class="text-gray-600">Sat: <br> 10:00 AM - 4:00 PM</p>
                                                 </div>
                                             </div>
                                         </div>
