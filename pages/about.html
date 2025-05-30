@@ -1,82 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Us - HirawatTech</title>
-    <script src="https://cdn.tailwindcss.com/"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-<body class="bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <!-- Section Header -->
-        <div class="text-center mb-16">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                We're a cutting-edge technology agency from India, specializing in transforming D2C brands through innovative 3D/AR experiences and intelligent automation solutions.
-            </p>
-        </div>
 
-        <!-- Main Content Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-            <!-- Left Content -->
-            <div class="space-y-8">
-                <div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Innovation Meets Excellence</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Founded with a vision to revolutionize digital commerce, we combine cutting-edge technology with creative expertise to deliver exceptional results for D2C brands across India and beyond.
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="/assets/Alata-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/hirawat-tech-500-logo.webp" as="image">
+
+    <!-- Core CSS -->
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+
+    <!-- Deferred Scripts -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/hirawat-tech-500-logo.webp" type="image/webp">
+</head>
+
+<body class="antialiased text-gray-800 min-h-screen flex flex-col">
+    <!-- Banner -->
+    <div class="bg-gray-900 text-white py-2 px-4 flex justify-center items-center space-x-4">
+        Latest Product ➝
+        <a href="https://tryar.in" target="_blank" class="hover:text-blue-400 transition-colors duration-300"> TryAR</a>
+    </div>
+
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+        Skip to main content
+    </a>
+
+    <!-- Main content area -->
+    <main id="main-content" class="flex-1 relative h-full">
+        <div>
+            <header x-data="mobileMenu" class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+                <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between items-center h-16">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0 flex items-center">
+                            <a href="/">
+                                <img src="/assets/hirawat-tech-500-logo.webp" alt="HirawatTech Logo"
+                                    class="h-8 w-auto mr-2" width="32" height="32">
+                                <span class="font-Inter text-xl font-bold text-gray-900">HirawatTech</span>
+                            </a>
+                        </div>
+
+                        <!-- Desktop Navigation -->
+                        <div class="hidden md:flex space-x-8">
+                            <a href="/#about" class="nav-link">About</a>
+                            <a href="/#services" class="nav-link">Services</a>
+                            <a href="/#portfolio" class="nav-link">Portfolio</a>
+                            <a href="/#testimonials" class="nav-link">Testimonials</a>
+                            <a href="/#contact" class="nav-link">Contact</a>
+                        </div>
+
+                        <!-- Mobile menu button -->
+                        <button @click="toggle"
+                            class="md:hidden inline-flex items-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                            aria-label="Toggle menu">
+                            <svg x-show="!isOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                            <svg x-show="isOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Navigation Menu -->
+                    <div x-show="isOpen" x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0 -translate-y-1"
+                        x-transition:enter-end="opacity-100 translate-y-0"
+                        x-transition:leave="transition ease-in duration-150"
+                        x-transition:leave-start="opacity-100 translate-y-0"
+                        x-transition:leave-end="opacity-0 -translate-y-1" @click.away="close" class="md:hidden">
+                        <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                            <a href="/" @click="close" class="nav-link-mobile">Home</a>
+                            <a href="/#about" @click="close" class="nav-link-mobile">About</a>
+                            <a href="/#services" @click="close" class="nav-link-mobile">Services</a>
+                            <a href="/#portfolio" @click="close" class="nav-link-mobile">Portfolio</a>
+                            <a href="/#testimonials" @click="close" class="nav-link-mobile">Testimonials</a>
+                            <a href="/#contact" @click="close" class="nav-link-mobile">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <style>
+                .nav-link {
+                    @apply font-Inter text-gray-700 hover:text-blue-600 transition-colors duration-300 text-sm font-medium;
+                }
+
+                .nav-link-mobile {
+                    @apply block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-300;
+                }
+            </style>
+
+            <!-- Existing content starts here -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        We're a cutting-edge technology agency from India, specializing in transforming D2C brands through innovative 3D/AR experiences and intelligent automation solutions.
                     </p>
                 </div>
 
-                <!-- Stats -->
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="text-center p-6 bg-white rounded-lg border border-gray-200">
-                        <div class="text-3xl font-bold text-blue-600 mb-2">50+</div>
-                        <div class="text-gray-600">Projects Delivered</div>
+                <!-- Main Content Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                    <!-- Left Content -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Innovation Meets Excellence</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Founded with a vision to revolutionize digital commerce, we combine cutting-edge technology with creative expertise to deliver exceptional results for D2C brands across India and beyond.
+                            </p>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center p-6 bg-white rounded-lg border border-gray-200">
+                                <div class="text-3xl font-bold text-blue-600 mb-2">50+</div>
+                                <div class="text-gray-600">Projects Delivered</div>
+                            </div>
+                            <div class="text-center p-6 bg-white rounded-lg border border-gray-200">
+                                <div class="text-3xl font-bold text-blue-600 mb-2">3+</div>
+                                <div class="text-gray-600">Years Experience</div>
+                            </div>
+                        </div>
+
+                        <!-- Key Values -->
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mt-1"></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Innovation First</h4>
+                                    <p class="text-gray-600">Pushing boundaries with latest tech</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-6 h-6 bg-purple-600 rounded-full flex-shrink-0 mt-1"></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Client Success</h4>
+                                    <p class="text-gray-600">Your growth is our priority</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-6 h-6 bg-pink-600 rounded-full flex-shrink-0 mt-1"></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Quality Delivery</h4>
+                                    <p class="text-gray-600">Excellence in every project</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-center p-6 bg-white rounded-lg border border-gray-200">
-                        <div class="text-3xl font-bold text-blue-600 mb-2">3+</div>
-                        <div class="text-gray-600">Years Experience</div>
+
+                    <!-- Right Image -->
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8dGVjaCUyNTIwdGVhbSUyNTIwY29sbGFib3JhdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3ODIxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                            alt="Tech team collaboration modern professional"
+                            class="w-full h-96 object-cover rounded-lg shadow-lg" />
                     </div>
                 </div>
 
-                <!-- Key Values -->
+                <div class="text-center">
+                    <a href="/" class="text-blue-600 hover:text-blue-800">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Company Info -->
                 <div class="space-y-4">
-                    <div class="flex items-start space-x-3">
-                        <div class="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mt-1"></div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Innovation First</h4>
-                            <p class="text-gray-600">Pushing boundaries with latest tech</p>
-                        </div>
+                    <div class="flex items-center space-x-2">
+                        <img src="/assets/hirawat-tech-500-logo.webp" alt="HirawatTech Logo" class="h-8 w-auto">
+                        <span class="font-bold text-xl">HirawatTech</span>
                     </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-6 h-6 bg-purple-600 rounded-full flex-shrink-0 mt-1"></div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Client Success</h4>
-                            <p class="text-gray-600">Your growth is our priority</p>
-                        </div>
+                    <p class="text-gray-400">
+                        Empowering D2C brands with cutting-edge technology solutions.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="/pages/about.html" class="text-gray-400 hover:text-white transition-colors duration-300">About</a>
+                        <a href="/pages/contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a>
+                        <a href="/pages/privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy</a>
+                        <a href="/pages/terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms</a>
+                        <a href="/pages/refund.html" class="text-gray-400 hover:text-white transition-colors duration-300">Refund</a>
+                        <a href="/pages/cookies.html" class="text-gray-400 hover:text-white transition-colors duration-300">Cookies</a>
                     </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-6 h-6 bg-pink-600 rounded-full flex-shrink-0 mt-1"></div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Quality Delivery</h4>
-                            <p class="text-gray-600">Excellence in every project</p>
-                        </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Email Us</h3>
+                    <div class="space-y-3">
+                        <p class="text-gray-400">contact@tryar.in</p>
+                        <p class="text-gray-400">tech@hirawat.in</p>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Location</h3>
+                    <div class="space-y-3">
+                        <p class="text-gray-400">India</p>
+                    </div>
+                </div>
+
+                <!-- Cookie Notice -->
+                <div class="col-span-full pt-8 border-t border-gray-800">
+                    <div class="flex items-center justify-center space-x-2 text-sm text-gray-400">
+                        <span>We use</span>
+                        <a href="/pages/cookies.html"
+                            class="text-blue-400 hover:text-blue-300 transition-colors duration-300">cookies</a>
+                        <span>.</span>
+                        <a href="#" fs-cc="allow"
+                            class="text-green-400 hover:text-green-300 transition-colors duration-300" role="button"
+                            tabindex="0">Okay.</a>
                     </div>
                 </div>
             </div>
+        </footer>
+    </main>
 
-            <!-- Right Image -->
-            <div class="relative">
-                <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8dGVjaCUyNTIwdGVhbSUyNTIwY29sbGFib3JhdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3ODIxfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="Tech team collaboration modern professional"
-                    class="w-full h-96 object-cover rounded-lg shadow-lg" />
-            </div>
-        </div>
-
-        <div class="text-center">
-            <a href="/" class="text-blue-600 hover:text-blue-800">← Back to Home</a>
-        </div>
-    </div>
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('mobileMenu', () => ({
+                isOpen: false,
+                init() {
+                    this.$watch('isOpen', value => {
+                        document.body.style.overflow = value ? 'hidden' : '';
+                    });
+                    window.addEventListener('keydown', e => {
+                        if (e.key === 'Escape' && this.isOpen) {
+                            this.isOpen = false;
+                        }
+                    });
+                },
+                toggle() {
+                    this.isOpen = !this.isOpen;
+                },
+                close() {
+                    this.isOpen = false;
+                }
+            }));
+        });
+    </script>
 </body>
 </html>

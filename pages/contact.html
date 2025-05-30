@@ -1,12 +1,449 @@
-<h2>HirawatTech</h2>
-<p>
-    <b>Registered Address:</b>
-    16, Bonfield Lane, Kolkata - 700001
-    <Address>
-        <a href="mailto:tech@hirawat.in?subject=So, I was on your site and...">mail us</a> - tech@hirawat.in
-        <br>
-        <a href="http://wa.me/+919830301891">call us</a> - +919830301891
-        <br>
-        <a href="http://wa.me/+919830301891">whatsapp us</a>
-    </Address>
-</p>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us - HirawatTech</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="/assets/Alata-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/hirawat-tech-500-logo.webp" as="image">
+
+    <!-- Core CSS -->
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+
+    <!-- Deferred Scripts -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/hirawat-tech-500-logo.webp" type="image/webp">
+</head>
+
+<body class="antialiased text-gray-800 min-h-screen flex flex-col">
+    <!-- Banner -->
+    <div class="bg-gray-900 text-white py-2 px-4 flex justify-center items-center space-x-4">
+        Latest Product ➝
+        <a href="https://tryar.in" target="_blank" class="hover:text-blue-400 transition-colors duration-300"> TryAR</a>
+    </div>
+
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+        Skip to main content
+    </a>
+
+    <!-- Main content area -->
+    <main id="main-content" class="flex-1 relative h-full">
+        <div>
+            <header x-data="mobileMenu" class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+                <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between items-center h-16">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0 flex items-center">
+                            <a href="/">
+                                <img src="/assets/hirawat-tech-500-logo.webp" alt="HirawatTech Logo"
+                                    class="h-8 w-auto mr-2" width="32" height="32">
+                                <span class="font-Inter text-xl font-bold text-gray-900">HirawatTech</span>
+                            </a>
+                        </div>
+
+                        <!-- Desktop Navigation -->
+                        <div class="hidden md:flex space-x-8">
+                            <a href="/#about" class="nav-link">About</a>
+                            <a href="/#services" class="nav-link">Services</a>
+                            <a href="/#portfolio" class="nav-link">Portfolio</a>
+                            <a href="/#testimonials" class="nav-link">Testimonials</a>
+                            <a href="/#contact" class="nav-link">Contact</a>
+                        </div>
+
+                        <!-- Mobile menu button -->
+                        <button @click="toggle"
+                            class="md:hidden inline-flex items-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                            aria-label="Toggle menu">
+                            <svg x-show="!isOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                            <svg x-show="isOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Navigation Menu -->
+                    <div x-show="isOpen" x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0 -translate-y-1"
+                        x-transition:enter-end="opacity-100 translate-y-0"
+                        x-transition:leave="transition ease-in duration-150"
+                        x-transition:leave-start="opacity-100 translate-y-0"
+                        x-transition:leave-end="opacity-0 -translate-y-1" @click.away="close" class="md:hidden">
+                        <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                            <a href="/" @click="close" class="nav-link-mobile">Home</a>
+                            <a href="/#about" @click="close" class="nav-link-mobile">About</a>
+                            <a href="/#services" @click="close" class="nav-link-mobile">Services</a>
+                            <a href="/#portfolio" @click="close" class="nav-link-mobile">Portfolio</a>
+                            <a href="/#testimonials" @click="close" class="nav-link-mobile">Testimonials</a>
+                            <a href="/#contact" @click="close" class="nav-link-mobile">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <style>
+                .nav-link {
+                    font-family: 'Inter', sans-serif;
+                    color: rgb(55, 65, 81);
+                    transition-property: color;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 300ms;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                }
+                .nav-link:hover {
+                    color: rgb(37, 99, 235);
+                }
+
+                .nav-link-mobile {
+                    display: block;
+                    padding: 0.75rem;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: rgb(55, 65, 81);
+                    border-radius: 0.375rem;
+                    transition-property: color, background-color;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 300ms;
+                }
+                .nav-link-mobile:hover {
+                    color: rgb(37, 99, 235);
+                    background-color: rgb(249, 250, 251);
+                }
+            </style>
+
+            <section id="contact" class="py-20 bg-white">
+                <!-- Section Header -->
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Ready to transform your D2C brand? Let's discuss your project and create something amazing together.
+                        </p>
+                    </div>
+
+                    <!-- Main Content Grid -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <div class="bg-gray-50 rounded-lg p-8">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Get Started Today</h3>
+                            <form id="contact-form" class="space-y-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                                        placeholder="john@example.com" />
+                                </div>
+
+                                <div>
+                                    <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Interest</label>
+                                    <select id="service" name="service" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
+                                        <option value="">Select a service</option>
+                                        <option value="d2c-platform">D2C Platform Development</option>
+                                        <option value="3d-ar">3D/AR Experiences</option>
+                                        <option value="automation">Smart Automation</option>
+                                        <option value="consultation">Consultation</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">Project Budget</label>
+                                    <select id="budget" name="budget"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
+                                        <option value="">Select budget range</option>
+                                        <option value="under-50k">Under ₹50,000</option>
+                                        <option value="50k-1l">₹50,000 - ₹1,00,000</option>
+                                        <option value="1l-5l">₹1,00,000 - ₹5,00,000</option>
+                                        <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
+                                        <option value="above-10l">Above ₹10,00,000</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
+                                    <textarea id="message" name="message" rows="4" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 resize-vertical"
+                                        placeholder="Tell us about your project requirements..."></textarea>
+                                </div>
+
+                                <button type="submit"
+                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Contact Information & Office Images -->
+                        <div class="space-y-8">
+                            <!-- Contact Info -->
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-900 mb-6">Get In Touch</h3>
+                                <div class="space-y-6">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="text-white font-bold">📧</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">Email Us</h4>
+                                            <p class="text-gray-600">contact@tryar.in</p>
+                                            <p class="text-gray-600">tech@hirawat.in</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="text-white font-bold">📱</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">Call Us</h4>
+                                            <p class="text-gray-600">+91 98303 01891</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="text-white font-bold">📍</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">Visit Us</h4>
+                                            <p class="text-gray-600">Malleshwaram, Bengaluru 560003<br>India</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="text-white font-bold">⏰</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">Business Hours</h4>
+                                            <p class="text-gray-600">Mon - Fri: 9:00 AM - 7:00 PM</p>
+                                            <p class="text-gray-600">Sat: 10:00 AM - 4:00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Success Modal -->
+            <div id="success-modal"
+                class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
+                aria-modal="true" aria-hidden="true">
+                <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all duration-300 scale-95">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">✓</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Message Sent Successfully!</h3>
+                        <p class="text-gray-600 mb-6">
+                            Thank you for reaching out. We'll get back to you within 24 hours.
+                        </p>
+                        <button id="close-success-modal"
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const form = document.getElementById('contact-form');
+                    const successModal = document.getElementById('success-modal');
+                    const closeSuccessModal = document.getElementById('close-success-modal');
+
+                    // Form submission handler
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+
+                        // Get form data
+                        const formData = new FormData(form);
+                        const data = Object.fromEntries(formData);
+
+                        // Validate required fields
+                        let isValid = true;
+
+                        // Email validation
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        const emailInput = document.getElementById('email');
+                        if (!emailRegex.test(data.email)) {
+                            emailInput.classList.add('border-red-500');
+                            isValid = false;
+                        } else {
+                            emailInput.classList.remove('border-red-500');
+                        }
+
+                        if (isValid) {
+                            // Simulate form submission
+                            const submitButton = form.querySelector('button[type="submit"]');
+                            const originalText = submitButton.textContent;
+
+                            submitButton.textContent = 'Sending...';
+                            submitButton.disabled = true;
+
+                            setTimeout(() => {
+                                // Show success modal
+                                successModal.classList.remove('hidden');
+                                successModal.setAttribute('aria-hidden', 'false');
+                                successModal.querySelector('.transform').classList.remove('scale-95');
+                                successModal.querySelector('.transform').classList.add('scale-100');
+                                document.body.style.overflow = 'hidden';
+
+                                // Reset form
+                                form.reset();
+                                submitButton.textContent = originalText;
+                                submitButton.disabled = false;
+
+                                // Focus close button
+                                closeSuccessModal.focus();
+                            }, 1500);
+                        }
+                    });
+
+                    // Success modal close handlers
+                    function closeModal() {
+                        successModal.querySelector('.transform').classList.remove('scale-100');
+                        successModal.querySelector('.transform').classList.add('scale-95');
+
+                        setTimeout(() => {
+                            successModal.classList.add('hidden');
+                            successModal.setAttribute('aria-hidden', 'true');
+                            document.body.style.overflow = '';
+                        }, 300);
+                    }
+
+                    closeSuccessModal.addEventListener('click', closeModal);
+
+                    // Close modal when clicking outside
+                    successModal.addEventListener('click', function (e) {
+                        if (e.target === successModal) {
+                            closeModal();
+                        }
+                    });
+
+                    // Close modal on ESC key
+                    document.addEventListener('keydown', function (e) {
+                        if (e.key === 'Escape' && !successModal.classList.contains('hidden')) {
+                            closeModal();
+                        }
+                    });
+
+                    // Form field focus effects
+                    const inputs = form.querySelectorAll('input, select, textarea');
+                    inputs.forEach(input => {
+                        input.addEventListener('focus', function () {
+                            this.classList.remove('border-red-500');
+                        });
+                    });
+                });
+            </script>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <img src="/assets/hirawat-tech-500-logo.webp" alt="HirawatTech Logo" class="h-8 w-auto">
+                        <span class="font-bold text-xl">HirawatTech</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Empowering D2C brands with cutting-edge technology solutions.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="/pages/about.html" class="text-gray-400 hover:text-white transition-colors duration-300">About</a>
+                        <a href="/pages/contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a>
+                        <a href="/pages/privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy</a>
+                        <a href="/pages/terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms</a>
+                        <a href="/pages/refund.html" class="text-gray-400 hover:text-white transition-colors duration-300">Refund</a>
+                        <a href="/pages/cookies.html" class="text-gray-400 hover:text-white transition-colors duration-300">Cookies</a>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Email Us</h3>
+                    <div class="space-y-3">
+                        <p class="text-gray-400">contact@tryar.in</p>
+                        <p class="text-gray-400">tech@hirawat.in</p>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Location</h3>
+                    <div class="space-y-3">
+                        <p class="text-gray-400">India</p>
+                    </div>
+                </div>
+
+                <!-- Cookie Notice -->
+                <div class="col-span-full pt-8 border-t border-gray-800">
+                    <div class="flex items-center justify-center space-x-2 text-sm text-gray-400">
+                        <span>We use</span>
+                        <a href="/pages/cookies.html"
+                            class="text-blue-400 hover:text-blue-300 transition-colors duration-300">cookies</a>
+                        <span>.</span>
+                        <a href="#" fs-cc="allow"
+                            class="text-green-400 hover:text-green-300 transition-colors duration-300" role="button"
+                            tabindex="0">Okay.</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('mobileMenu', () => ({
+                isOpen: false,
+                init() {
+                    this.$watch('isOpen', value => {
+                        document.body.style.overflow = value ? 'hidden' : '';
+                    });
+                    window.addEventListener('keydown', e => {
+                        if (e.key === 'Escape' && this.isOpen) {
+                            this.isOpen = false;
+                        }
+                    });
+                },
+                toggle() {
+                    this.isOpen = !this.isOpen;
+                },
+                close() {
+                    this.isOpen = false;
+                }
+            }));
+        });
+    </script>
+</body>
+</html>
