@@ -180,12 +180,12 @@
 
                                 <!-- CTA Buttons -->
                                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-                                    <button
+                                    <button onclick="location.href='/#contact'"
                                         class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                                         <span class="material-icons align-middle mr-2">rocket_launch</span>
                                         Start Your Project
                                     </button>
-                                    <button
+                                    <button onclick="location.href='/#portfolio'"
                                         class="border-2 border-white text-white hover:bg-white hover:text-neutral-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
                                         <span class="material-icons align-middle mr-2">work</span>
                                         View Our Work
@@ -502,13 +502,9 @@
                                     technology solutions.
                                 </p>
                                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <button
+                                    <button onclick="location.href='/#contact'"
                                         class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
                                         Start Your Project
-                                    </button>
-                                    <button
-                                        class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
-                                        View Portfolio
                                     </button>
                                 </div>
                             </div>
@@ -532,7 +528,7 @@
                                         <!-- Dynamic content will be inserted here -->
                                     </div>
                                     <div class="mt-6 flex gap-4">
-                                        <button
+                                        <button onclick="location.href='/#contact'"
                                             class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
                                             Get Quote
                                         </button>
@@ -743,10 +739,10 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                                 <!-- Project 1 -->
                                 <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                                    data-category="3d-ar" data-project="smartwatch">
+                                    data-category="3d-ar" data-project="luggage">
                                     <div class="h-64 overflow-hidden">
                                         <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
-                                            alt="Android Smartwatch"
+                                            alt="Luggage"
                                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                                     </div>
                                     <div class="p-6">
@@ -755,7 +751,7 @@
                                                 class="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">3D/AR</span>
                                             <span class="text-xs text-gray-500">2024</span>
                                         </div>
-                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">SmartWatch 3D Configurator
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Luggage 3D Configurator
                                         </h3>
                                         <p class="text-gray-600 text-sm">Interactive 3D product visualization with
                                             real-time customization options.</p>
@@ -785,7 +781,7 @@
 
                                 <!-- Project 3 -->
                                 <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                                    data-category="3d-ar" data-project="camera">
+                                    data-category="3d-ar" data-project="dashboard">
                                     <div class="h-64 overflow-hidden">
                                         <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
                                             alt="polaroid 03"
@@ -797,10 +793,9 @@
                                                 class="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">3D/AR</span>
                                             <span class="text-xs text-gray-500">2023</span>
                                         </div>
-                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Vintage Camera AR
-                                            Experience</h3>
-                                        <p class="text-gray-600 text-sm">Augmented reality showcase for vintage camera
-                                            collection.</p>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Custom Data Dashboard
+                                            </h3>
+                                        <p class="text-gray-600 text-sm">Streamlit data dashboard using Snowflake Data Warehouse</p>
                                     </div>
                                 </div>
 
@@ -818,9 +813,8 @@
                                                 class="text-xs font-medium text-pink-600 bg-pink-100 px-2 py-1 rounded">Automation</span>
                                             <span class="text-xs text-gray-500">2024</span>
                                         </div>
-                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Audio Brand Automation</h3>
-                                        <p class="text-gray-600 text-sm">Smart inventory and customer service automation
-                                            system.</p>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Finance Company Automation</h3>
+                                        <p class="text-gray-600 text-sm">Data Entry & Workflow Automation to improve efficiency</p>
                                     </div>
                                 </div>
 
@@ -839,16 +833,15 @@
                                                 Platform</span>
                                             <span class="text-xs text-gray-500">2023</span>
                                         </div>
-                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Organic Juice Subscription
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Surfing School Optimization
                                         </h3>
-                                        <p class="text-gray-600 text-sm">Subscription-based D2C platform with automated
-                                            delivery system.</p>
+                                        <p class="text-gray-600 text-sm">Website SEO Ranking & Page Speed Optimization</p>
                                     </div>
                                 </div>
 
                                 <!-- Project 6 -->
                                 <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                                    data-category="3d-ar" data-project="sunglasses">
+                                    data-category="automation" data-project="sunglasses">
                                     <div class="h-64 overflow-hidden">
                                         <img src="https://images.unsplash.com/photo-1509695507497-903c140c43b0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Nnx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
                                             alt="Sunglasses product photography"
@@ -857,17 +850,15 @@
                                     <div class="p-6">
                                         <div class="flex items-center justify-between mb-2">
                                             <span
-                                                class="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">3D/AR</span>
+                                                class="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">Automation</span>
                                             <span class="text-xs text-gray-500">2023</span>
                                         </div>
-                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">AR Try-On Sunglasses</h3>
-                                        <p class="text-gray-600 text-sm">Virtual try-on experience for fashion
-                                            sunglasses brand.</p>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Customer Support Automation</h3>
+                                        <p class="text-gray-600 text-sm">AI Powered Customer Support Call Ratings & Analysis</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Stats Section -->
                             <!-- Client Logos Section -->
                             <div class="mb-16 bg-white py-12 w-screen relative" style="left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
                                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -940,7 +931,7 @@
                                     Let's create something amazing together. Get in touch to discuss your next D2C
                                     transformation.
                                 </p>
-                                <button
+                                <button onclick="location.href='/#contact'"
                                     class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
                                     Start Your Project
                                 </button>
@@ -965,7 +956,7 @@
                                         <!-- Dynamic content will be inserted here -->
                                     </div>
                                     <div class="mt-6 flex gap-4">
-                                        <button
+                                        <button onclick="location.href='/#contact'"
                                             class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
                                             Start Similar Project
                                         </button>
@@ -1020,16 +1011,16 @@
                                 const closeModalBtnBottom = document.getElementById('close-project-modal-btn');
 
                                 const projectDetails = {
-                                    'smartwatch': {
-                                        title: 'SmartWatch 3D Configurator',
+                                    'luggage': {
+                                        title: 'Luggage 3D Configurator',
                                         content: `
               <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
-                  <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="SmartWatch" class="w-full rounded-lg">
+                  <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Luggage" class="w-full rounded-lg">
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold mb-4">Project Overview</h4>
-                  <p class="text-gray-600 mb-4">Interactive 3D product configurator allowing customers to customize smartwatch bands, colors, and features in real-time.</p>
+                  <p class="text-gray-600 mb-4">Interactive 3D product configurator allowing customers to customize luggage bands, colors, and features in real-time.</p>
                   <h4 class="text-lg font-semibold mb-2">Key Features:</h4>
                   <ul class="list-disc list-inside space-y-1 mb-4 text-gray-600">
                     <li>Real-time 3D customization</li>
@@ -1365,7 +1356,7 @@
                             <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
                                 Ready to transform your D2C brand? Let's create your success story together.
                             </p>
-                            <button
+                            <button onclick="location.href='/#contact'"
                                 class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
                                 Start Your Transformation
                             </button>
@@ -1837,6 +1828,46 @@
             </div>
         </footer>
     </main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" 
+        class="fixed bottom-6 right-6 p-3 bg-blue-600 text-white rounded-full shadow-lg cursor-pointer opacity-0 transition-opacity duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        aria-label="Back to top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <!-- Back to Top Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            // Show button when scrolling down 200px
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 200) {
+                    backToTopButton.classList.remove('opacity-0');
+                    backToTopButton.classList.add('opacity-100');
+                } else {
+                    backToTopButton.classList.remove('opacity-100');
+                    backToTopButton.classList.add('opacity-0');
+                }
+            });
+            
+            // Smooth scroll to top when clicking the button
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Back to Top Style -->
+    <style>
+        #back-to-top {
+            z-index: 999;
+        }
+    </style>
 
     <!-- Core functionality scripts -->
     <script>
