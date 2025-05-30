@@ -1,101 +1,86 @@
 // Project Configuration
 window.projectConfig = {
     name: 'HirawatTech',
-    type: '',
     settings: {
-        colors: {
-            primary: '#2563EB',
-            secondary: '#1E40AF',
-            accent: ''
-        },
-        fonts: {
-            primary: 'Inter',
-            secondary: 'Inter'
-        }
+        colors: { primary: '#2563EB', secondary: '#1E40AF' },
+        fonts: { primary: 'Alata', secondary: 'Alata' }
     }
 };
 
-// Mobile menu functionality
-document.addEventListener('DOMContentLoaded', function () {
-    initializeMobileMenu();
-    initializeHeroSection();
-});
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu elements
+    var mobileMenuButton = document.getElementById('mobile-menu-button');
+    var mobileMenu = document.getElementById('mobile-menu');
+    var hamburgerIcon = document.getElementById('hamburger-icon');
+    var closeIcon = document.getElementById('close-icon');
 
-function initializeMobileMenu() {
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const hamburgerIcon = document.getElementById('hamburger-icon');
-    const closeIcon = document.getElementById('close-icon');
-
-    mobileMenuButton.addEventListener('click', function () {
-        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-        toggleMobileMenu(!isExpanded);
-    });
-
-    // Close mobile menu when clicking on a link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => toggleMobileMenu(false));
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function (event) {
-        if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-            toggleMobileMenu(false);
-        }
-    });
-
-    // Close mobile menu on escape key
-    document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') {
-            toggleMobileMenu(false);
-        }
-    });
-
+    // Toggle mobile menu function
     function toggleMobileMenu(show) {
         mobileMenu.classList.toggle('hidden', !show);
         hamburgerIcon.classList.toggle('hidden', show);
         closeIcon.classList.toggle('hidden', !show);
         mobileMenuButton.setAttribute('aria-expanded', show);
     }
-}
 
-function initializeHeroSection() {
-    // Smooth scroll for CTA buttons
-    const ctaButtons = document.querySelectorAll('#hero button');
-    ctaButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const target = this.textContent.includes('View Our Work') ? '#portfolio' : '#contact';
-            document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
-        });
+    // Mobile menu event listeners
+    mobileMenuButton.addEventListener('click', function() {
+        toggleMobileMenu(mobileMenuButton.getAttribute('aria-expanded') !== 'true');
     });
+    
+    var mobileLinks = mobileMenu.querySelectorAll('a');
+    for (var i = 0; i < mobileLinks.length; i++) {
+        mobileLinks[i].addEventListener('click', function() { 
+            toggleMobileMenu(false);
+        });
+    }
 
-    // Parallax effect for background
-    window.addEventListener('scroll', function () {
-        const scrolled = window.pageYOffset;
-        const heroSection = document.querySelector('#hero');
-        const backgroundImage = heroSection.querySelector('img');
-
-        if (backgroundImage && scrolled < heroSection.offsetHeight) {
-            backgroundImage.style.transform = `translateY(${scrolled * 0.5}px)`;
+    // Global click and escape handlers
+    document.addEventListener('click', function(e) {
+        if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+            toggleMobileMenu(false);
         }
     });
+    
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') toggleMobileMenu(false);
+    });
 
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    // Hero section initialization
+    var heroSection = document.querySelector('#hero');
+    if (heroSection) {
+        // CTA buttons scroll
+        var buttons = heroSection.querySelectorAll('button');
+        for (var j = 0; j < buttons.length; j++) {
+            buttons[j].addEventListener('click', function() {
+                var target = this.textContent.includes('View Our Work') ? '#portfolio' : '#contact';
+                var element = document.querySelector(target);
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in');
+        // Parallax effect
+        var backgroundImage = heroSection.querySelector('img');
+        if (backgroundImage) {
+            window.addEventListener('scroll', function() {
+                var scrolled = window.pageYOffset;
+                if (scrolled < heroSection.offsetHeight) {
+                    backgroundImage.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+                }
+            });
+        }
+
+        // Intersection Observer for animations
+        var observer = new IntersectionObserver(function(entries) {
+            for (var k = 0; k < entries.length; k++) {
+                if (entries[k].isIntersecting) {
+                    entries[k].target.classList.add('animate-fade-in');
+                }
             }
-        });
-    }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    // Observe hero elements
-    const heroElements = document.querySelectorAll('#hero h1, #hero p, #hero .grid > div');
-    heroElements.forEach(el => observer.observe(el));
-}
+        var heroElements = heroSection.querySelectorAll('h1, p, .grid > div');
+        for (var l = 0; l < heroElements.length; l++) {
+            observer.observe(heroElements[l]);
+        }
+    }
+});
