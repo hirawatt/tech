@@ -7,7 +7,7 @@
     <meta name="description"
         content="Leading technology agency in India specializing in D2C brand solutions, 3D/AR development, and business automation. Transform your business with cutting-edge technology solutions.">
     <meta name="theme-color" content="#ffffff">
-    
+
     <title>HirawatTech - D2C Brands, 3D/AR & Automation Solutions | India</title>
 
     <!-- Preload critical resources -->
@@ -15,13 +15,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="/assets/Alata-Regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/assets/hirawat-tech-500-logo.webp" as="image">
-    
+
     <!-- Core CSS -->
     <script src="https://cdn.tailwindcss.com/"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/assets/styles/style.css">
-    
+
     <!-- Deferred Scripts -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
@@ -31,7 +31,8 @@
     <link rel="icon" href="/assets/hirawat-tech-500-logo.webp" type="image/webp">
     <meta name="keywords" content="3D, AR, Software Development, D2C Brands, Technology Solutions, India">
     <meta property="og:title" content="HirawatTech - D2C Brands, 3D/AR & Automation Solutions">
-    <meta property="og:description" content="Transform your D2C brand with cutting-edge 3D/AR experiences and intelligent automation solutions.">
+    <meta property="og:description"
+        content="Transform your D2C brand with cutting-edge 3D/AR experiences and intelligent automation solutions.">
     <meta property="og:image" content="/assets/hirawat-tech-500-logo.webp">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_IN">
@@ -41,7 +42,7 @@
 <body class="antialiased text-gray-800 min-h-screen flex flex-col">
     <!-- Banner -->
     <div class="bg-gray-900 text-white py-2 px-4 flex justify-center items-center space-x-4">
-        Latest Product ➝ 
+        Latest Product ➝
         <a href="https://tryar.in" target="_blank" class="hover:text-blue-400 transition-colors duration-300"> TryAR</a>
     </div>
 
@@ -65,7 +66,7 @@
                                     this.$watch('isOpen', value => {
                                         document.body.style.overflow = value ? 'hidden' : '';
                                     });
-                                    
+
                                     // Close on escape key
                                     window.addEventListener('keydown', e => {
                                         if (e.key === 'Escape' && this.isOpen) {
@@ -88,7 +89,8 @@
                             <div class="flex justify-between items-center h-16">
                                 <!-- Logo -->
                                 <div class="flex-shrink-0 flex items-center">
-                                    <img src="/assets/hirawat-tech-500-logo.webp" alt="HirawatTech Logo" class="h-8 w-auto mr-2" width="32" height="32">
+                                    <img src="/assets/hirawat-tech-500-logo.webp" alt="HirawatTech Logo"
+                                        class="h-8 w-auto mr-2" width="32" height="32">
                                     <span class="font-Inter text-xl font-bold text-gray-900">HirawatTech</span>
                                 </div>
 
@@ -103,26 +105,29 @@
                                 </div>
 
                                 <!-- Mobile menu button -->
-                                <button @click="toggle" class="md:hidden inline-flex items-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-label="Toggle menu">
-                                    <svg x-show="!isOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                <button @click="toggle"
+                                    class="md:hidden inline-flex items-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                                    aria-label="Toggle menu">
+                                    <svg x-show="!isOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6h16M4 12h16M4 18h16"></path>
                                     </svg>
-                                    <svg x-show="isOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    <svg x-show="isOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
                                     </svg>
                                 </button>
                             </div>
 
                             <!-- Mobile Navigation Menu -->
-                            <div x-show="isOpen" 
-                                x-transition:enter="transition ease-out duration-200"
+                            <div x-show="isOpen" x-transition:enter="transition ease-out duration-200"
                                 x-transition:enter-start="opacity-0 -translate-y-1"
                                 x-transition:enter-end="opacity-100 translate-y-0"
                                 x-transition:leave="transition ease-in duration-150"
                                 x-transition:leave-start="opacity-100 translate-y-0"
-                                x-transition:leave-end="opacity-0 -translate-y-1"
-                                @click.away="close"
-                                class="md:hidden">
+                                x-transition:leave-end="opacity-0 -translate-y-1" @click.away="close" class="md:hidden">
                                 <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
                                     <a href="#hero" @click="close" class="nav-link-mobile">Home</a>
                                     <a href="#about" @click="close" class="nav-link-mobile">About</a>
@@ -139,6 +144,7 @@
                         .nav-link {
                             @apply font-Inter text-gray-700 hover:text-blue-600 transition-colors duration-300 text-sm font-medium;
                         }
+
                         .nav-link-mobile {
                             @apply block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-300;
                         }
@@ -159,21 +165,23 @@
                         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                             <div class="space-y-8">
                                 <!-- Main Headline -->
-                                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
-                                    Software Solutions for
-                                    <div class="animatedText block">
-                                        <span class="animate animate1">Virtual Reality</span>
-                                        <span class="animate animate2">Augmented Reality</span>
-                                        <span class="animate animate3">3D Technology</span>
-                                        <span class="animate animate4">Automation</span>
-                                        <span class="animate animate5">E-Commerce</span>
-                                    </div>
-                                </h1>
+                                    <h1
+                                        class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight content">
+                                        Software Solutions for
+                                        <div class="animatedText">
+                                            <span class="animate animate1">D2C Brands</span>
+                                            <span class="animate animate2">Augmented Reality</span>
+                                            <span class="animate animate3">3D Technology</span>
+                                            <span class="animate animate4">Automation</span>
+                                            <span class="animate animate5">E-Commerce</span>
+                                        </div>
+                                    </h1>
+                                </div>
+                                
 
                                 <!-- Subheadline -->
                                 <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                                    Transforming D2C brands with cutting-edge 3D/AR experiences and intelligent
-                                    automation
+                                    &nbsp;
                                 </p>
 
                                 <!-- CTA Buttons -->
@@ -1768,10 +1776,14 @@
                     <div>
                         <h3 class="text-lg font-semibold mb-4">Professional</h3>
                         <div class="space-y-3">
-                            <a href="https://www.linkedin.com/company/hirawat-tech" target="_blank" class="block hover:text-blue-400 transition-colors duration-300">Follow on LinkedIn</a>
-                            <a href="https://contra.com/vhirawat" target="_blank" class="block hover:text-blue-400 transition-colors duration-300">Hire on Contra</a>
-                            <a href="https://www.upwork.com/o/companies/~0163411dd2622fc83f/" target="_blank" class="block hover:text-blue-400 transition-colors duration-300">Hire on Upwork</a>
-                            <a href="/pages/about.html" class="block hover:text-blue-400 transition-colors duration-300">About Us</a>
+                            <a href="https://www.linkedin.com/company/hirawat-tech" target="_blank"
+                                class="block hover:text-blue-400 transition-colors duration-300">Follow on LinkedIn</a>
+                            <a href="https://contra.com/vhirawat" target="_blank"
+                                class="block hover:text-blue-400 transition-colors duration-300">Hire on Contra</a>
+                            <a href="https://www.upwork.com/o/companies/~0163411dd2622fc83f/" target="_blank"
+                                class="block hover:text-blue-400 transition-colors duration-300">Hire on Upwork</a>
+                            <a href="/pages/about.html"
+                                class="block hover:text-blue-400 transition-colors duration-300">About Us</a>
                         </div>
                     </div>
 
@@ -1779,9 +1791,13 @@
                     <div>
                         <h3 class="text-lg font-semibold mb-4">Legal</h3>
                         <div class="space-y-3">
-                            <a href="/pages/terms.html" target="_blank" class="block hover:text-blue-400 transition-colors duration-300">Terms of Service</a>
-                            <a href="/pages/privacy.html" target="_blank" class="block hover:text-blue-400 transition-colors duration-300">Privacy Policy</a>
-                            <a href="/pages/refund.html" target="_blank" class="block hover:text-blue-400 transition-colors duration-300">Cancellation & Refund Policy</a>
+                            <a href="/pages/terms.html" target="_blank"
+                                class="block hover:text-blue-400 transition-colors duration-300">Terms of Service</a>
+                            <a href="/pages/privacy.html" target="_blank"
+                                class="block hover:text-blue-400 transition-colors duration-300">Privacy Policy</a>
+                            <a href="/pages/refund.html" target="_blank"
+                                class="block hover:text-blue-400 transition-colors duration-300">Cancellation & Refund
+                                Policy</a>
                         </div>
                     </div>
 
@@ -1807,9 +1823,12 @@
                 <div class="pt-8 border-t border-gray-800">
                     <div class="flex items-center justify-center space-x-2 text-sm text-gray-400">
                         <span>We use</span>
-                        <a href="pages/cookies.html" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors duration-300">cookies</a>
+                        <a href="pages/cookies.html" target="_blank"
+                            class="text-blue-400 hover:text-blue-300 transition-colors duration-300">cookies</a>
                         <span>.</span>
-                        <a href="#" fs-cc="allow" class="text-green-400 hover:text-green-300 transition-colors duration-300" role="button" tabindex="0">Okay.</a>
+                        <a href="#" fs-cc="allow"
+                            class="text-green-400 hover:text-green-300 transition-colors duration-300" role="button"
+                            tabindex="0">Okay.</a>
                     </div>
                 </div>
             </div>
@@ -1863,4 +1882,5 @@
         }
     </script>
 </body>
+
 </html>
