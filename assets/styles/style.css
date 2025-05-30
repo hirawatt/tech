@@ -108,27 +108,47 @@ span {
 
 .animate1 {
     animation-delay: 0s;
-    color: rgb(129, 42, 243);
+    background: linear-gradient(45deg, #2563EB, #3B82F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #2563EB;  /* Fallback */
 }
 
 .animate2 {
     animation-delay: 2s;
-    color: rgb(0, 91, 236);
+    background: linear-gradient(90deg, #2563EB, #3B82F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #2563EB;  /* Fallback */
 }
 
 .animate3 {
     animation-delay: 4s;
-    color: rgb(251, 125, 35);
+    background: linear-gradient(120deg, #2563EB, #3B82F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #2563EB;  /* Fallback */
 }
 
 .animate4 {
     animation-delay: 6s;
-    color: rgb(25, 109, 0);
+    background: linear-gradient(160deg, #2563EB, #3B82F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #2563EB;  /* Fallback */
 }
 
 .animate5 {
     animation-delay: 8s;
-    color: rgb(242, 33, 51);
+    background: linear-gradient(180deg, #2563EB, #3B82F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #2563EB;  /* Fallback */
 }
 
 
