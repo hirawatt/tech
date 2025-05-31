@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&family=Material+Symbols+Outlined&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/assets/styles/style.css">
-    <script src="https://cdn.tailwindcss.com/"></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
     <script defer src="/assets/js/main.js"></script>
@@ -76,8 +76,8 @@
                         });
                     </script>
 
-                    <header x-data="mobileMenu" class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-                        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <header x-data="mobileMenu" class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50" role="banner" aria-label="Main site header">
+                        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Primary navigation">
                             <div class="flex justify-between items-center h-16">
                                 <!-- Logo -->
                                 <div class="flex-shrink-0 flex items-center">
@@ -632,22 +632,22 @@
                             <!-- Filter Tabs -->
                             <div class="flex justify-center mb-12">
                                 <div class="bg-white rounded-lg p-1 border border-gray-200">
-                                    <button
+                                    <button type="button"
                                         class="filter-btn active px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
                                         data-filter="all">
                                         All Projects
                                     </button>
-                                    <button
+                                    <button type="button"
                                         class="filter-btn px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
                                         data-filter="3d-ar">
                                         3D/AR
                                     </button>
-                                    <button
+                                    <button type="button"
                                         class="filter-btn px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
                                         data-filter="d2c">
                                         D2C Platforms
                                     </button>
-                                    <button
+                                    <button type="button"
                                         class="filter-btn px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
                                         data-filter="automation">
                                         Automation
@@ -656,128 +656,7 @@
                             </div>
 
                             <!-- Portfolio Grid -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                                <!-- Project 1 -->
-                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                                    data-category="3d-ar" data-project="luggage">
-                                    <div class="h-64 overflow-hidden">
-                                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
-                                            alt="Luggage"
-                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-                                    </div>
-                                    <div class="p-6">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <span
-                                                class="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">3D/AR</span>
-                                            <span class="text-xs text-gray-500">2024</span>
-                                        </div>
-                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Luggage 3D Configurator
-                                        </h3>
-                                        <p class="text-gray-600 text-sm">Interactive 3D product visualization with
-                                            real-time customization options.</p>
-                                    </div>
-                                </div>
-
-                                <!-- Project 2 -->
-                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                                    data-category="d2c" data-project="skincare">
-                                    <div class="h-64 overflow-hidden">
-                                        <img src="https://images.unsplash.com/photo-1556228578-567ba127e37f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
-                                            alt="Curology on succulents plants"
-                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-                                    </div>
-                                    <div class="p-6">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <span
-                                                class="text-xs font-medium text-purple-600 bg-purple-100 px-2 py-1 rounded">D2C
-                                                Platform</span>
-                                            <span class="text-xs text-gray-500">2024</span>
-                                        </div>
-                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Skincare D2C Platform</h3>
-                                        <p class="text-gray-600 text-sm">Custom e-commerce solution with personalized
-                                            product recommendations.</p>
-                                    </div>
-                                </div>
-
-                                <!-- Project 3 -->
-                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                                    data-category="3d-ar" data-project="dashboard">
-                                    <div class="h-64 overflow-hidden">
-                                        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
-                                            alt="polaroid 03"
-                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-                                    </div>
-                                    <div class="p-6">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <span
-                                                class="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">3D/AR</span>
-                                            <span class="text-xs text-gray-500">2023</span>
-                                        </div>
-                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Custom Data Dashboard
-                                            </h3>
-                                        <p class="text-gray-600 text-sm">Streamlit data dashboard using Snowflake Data Warehouse</p>
-                                    </div>
-                                </div>
-
-                                <!-- Project 4 -->
-                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                                    data-category="automation" data-project="headphones">
-                                    <div class="h-64 overflow-hidden">
-                                        <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8NHx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
-                                            alt="Pink headphones on a pastel background"
-                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-                                    </div>
-                                    <div class="p-6">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <span
-                                                class="text-xs font-medium text-pink-600 bg-pink-100 px-2 py-1 rounded">Automation</span>
-                                            <span class="text-xs text-gray-500">2024</span>
-                                        </div>
-                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Finance Company Automation</h3>
-                                        <p class="text-gray-600 text-sm">Data Entry & Workflow Automation to improve efficiency</p>
-                                    </div>
-                                </div>
-
-                                <!-- Project 5 -->
-                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                                    data-category="d2c" data-project="juice">
-                                    <div class="h-64 overflow-hidden">
-                                        <img src="https://images.unsplash.com/photo-1525904097878-94fb15835963?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8NXx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
-                                            alt="Mango Cold Pressed Juice"
-                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-                                    </div>
-                                    <div class="p-6">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <span
-                                                class="text-xs font-medium text-purple-600 bg-purple-100 px-2 py-1 rounded">D2C
-                                                Platform</span>
-                                            <span class="text-xs text-gray-500">2023</span>
-                                        </div>
-                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Surfing School Optimization
-                                        </h3>
-                                        <p class="text-gray-600 text-sm">Website SEO Ranking & Page Speed Optimization</p>
-                                    </div>
-                                </div>
-
-                                <!-- Project 6 -->
-                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                                    data-category="automation" data-project="sunglasses">
-                                    <div class="h-64 overflow-hidden">
-                                        <img src="https://images.unsplash.com/photo-1509695507497-903c140c43b0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Nnx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
-                                            alt="Sunglasses product photography"
-                                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-                                    </div>
-                                    <div class="p-6">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <span
-                                                class="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">Automation</span>
-                                            <span class="text-xs text-gray-500">2023</span>
-                                        </div>
-                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Customer Support Automation</h3>
-                                        <p class="text-gray-600 text-sm">AI Powered Customer Support Call Ratings & Analysis</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
 
                             <!-- Client Logos Section -->
                             <div class="mb-16 bg-white py-12 w-screen relative" style="left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
@@ -891,170 +770,132 @@
 
                         <script>
                             document.addEventListener('DOMContentLoaded', function () {
-                                // Filter functionality
-                                const filterButtons = document.querySelectorAll('.filter-btn');
-                                const portfolioItems = document.querySelectorAll('.portfolio-item');
+                                // Fetch and render portfolio data from JSON
+                                fetch('/assets/data/portfolio-data.json')
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        // Render portfolio items
+                                        const grid = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3.mb-16');
+                                        if (grid) {
+                                            grid.innerHTML = data.projects.map(project => `
+                                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-category="${project.category}" data-project="${project.id}">
+                                                    <div class="h-64 overflow-hidden">
+                                                        <img src="${project.image}" alt="${project.alt}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+                                                    </div>
+                                                    <div class="p-6">
+                                                        <div class="flex items-center justify-between mb-2">
+                                                            <span class="text-xs font-medium ${project.badgeClass} ${project.badgeBg} px-2 py-1 rounded">${project.badge}</span>
+                                                            <span class="text-xs text-gray-500">${project.year}</span>
+                                                        </div>
+                                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">${project.title}</h3>
+                                                        <p class="text-gray-600 text-sm">${project.description}</p>
+                                                    </div>
+                                                </div>
+                                            `).join('');
+                                        }
+                                        // Modal data
+                                        window.projectDetails = data.details;
 
-                                filterButtons.forEach(button => {
-                                    button.addEventListener('click', function () {
-                                        const filter = this.getAttribute('data-filter');
+                                        // --- FIX: Move filter and click handlers here ---
+                                        const filterButtons = document.querySelectorAll('.filter-btn');
+                                        const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-                                        // Update active button
-                                        filterButtons.forEach(btn => {
-                                            btn.classList.remove('active', 'bg-blue-600', 'text-white');
-                                            btn.classList.add('text-gray-600', 'hover:text-blue-600');
+                                        filterButtons.forEach(button => {
+                                            button.addEventListener('click', function () {
+                                                const filter = this.getAttribute('data-filter');
+
+                                                // Update active button
+                                                filterButtons.forEach(btn => {
+                                                    btn.classList.remove('active', 'bg-blue-600', 'text-white');
+                                                    btn.classList.add('text-gray-600', 'hover:text-blue-600');
+                                                });
+                                                this.classList.add('active', 'bg-blue-600', 'text-white');
+                                                this.classList.remove('text-gray-600', 'hover:text-blue-600');
+
+                                                // Filter items
+                                                portfolioItems.forEach(item => {
+                                                    const category = item.getAttribute('data-category');
+                                                    if (filter === 'all' || category === filter) {
+                                                        item.style.display = 'block';
+                                                        item.classList.add('animate-fade-in');
+                                                    } else {
+                                                        item.style.display = 'none';
+                                                    }
+                                                });
+                                            });
                                         });
-                                        this.classList.add('active', 'bg-blue-600', 'text-white');
-                                        this.classList.remove('text-gray-600', 'hover:text-blue-600');
 
-                                        // Filter items
+                                        // Set initial active state
+                                        filterButtons[0].classList.add('bg-blue-600', 'text-white');
+
+                                        // Modal functionality
+                                        const modal = document.getElementById('project-modal');
+                                        const modalTitle = document.getElementById('project-modal-title');
+                                        const modalContent = document.getElementById('project-modal-content');
+                                        const closeModalBtn = document.getElementById('close-project-modal');
+                                        const closeModalBtnBottom = document.getElementById('close-project-modal-btn');
+
+                                        function openProjectModal(projectId) {
+                                            const project = window.projectDetails[projectId];
+                                            if (project) {
+                                                modalTitle.textContent = project.title;
+                                                modalContent.innerHTML = project.content;
+                                                modal.classList.remove('hidden');
+                                                modal.setAttribute('aria-hidden', 'false');
+                                                document.body.style.overflow = 'hidden';
+                                                closeModalBtn.focus();
+                                            }
+                                        }
+
+                                        function closeProjectModal() {
+                                            modal.classList.add('hidden');
+                                            modal.setAttribute('aria-hidden', 'true');
+                                            document.body.style.overflow = '';
+                                        }
+
+                                        // Portfolio item click handlers
                                         portfolioItems.forEach(item => {
-                                            const category = item.getAttribute('data-category');
-                                            if (filter === 'all' || category === filter) {
-                                                item.style.display = 'block';
-                                                item.classList.add('animate-fade-in');
-                                            } else {
-                                                item.style.display = 'none';
+                                            item.addEventListener('click', function () {
+                                                const projectId = this.getAttribute('data-project');
+                                                openProjectModal(projectId);
+                                            });
+                                        });
+
+                                        // Close modal event listeners
+                                        closeModalBtn.addEventListener('click', closeProjectModal);
+                                        closeModalBtnBottom.addEventListener('click', closeProjectModal);
+
+                                        // Close modal when clicking outside
+                                        modal.addEventListener('click', function (e) {
+                                            if (e.target === modal) {
+                                                closeProjectModal();
                                             }
                                         });
+
+                                        // Close modal on ESC key
+                                        document.addEventListener('keydown', function (e) {
+                                            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                                                closeProjectModal();
+                                            }
+                                        });
+
+                                        // Intersection Observer for animations
+                                        const observerOptions = {
+                                            threshold: 0.1,
+                                            rootMargin: '0px 0px -50px 0px'
+                                        };
+
+                                        const observer = new IntersectionObserver((entries) => {
+                                            entries.forEach(entry => {
+                                                if (entry.isIntersecting) {
+                                                    entry.target.classList.add('animate-fade-in-up');
+                                                }
+                                            });
+                                        }, observerOptions);
+
+                                        // Observe portfolio items
+                                        portfolioItems.forEach(item => observer.observe(item));
                                     });
-                                });
-
-                                // Set initial active state
-                                filterButtons[0].classList.add('bg-blue-600', 'text-white');
-
-                                // Modal functionality
-                                const modal = document.getElementById('project-modal');
-                                const modalTitle = document.getElementById('project-modal-title');
-                                const modalContent = document.getElementById('project-modal-content');
-                                const closeModalBtn = document.getElementById('close-project-modal');
-                                const closeModalBtnBottom = document.getElementById('close-project-modal-btn');
-
-                                const projectDetails = {
-                                    'luggage': {
-                                        title: 'Luggage 3D Configurator',
-                                        content: `
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Luggage" class="w-full rounded-lg">
-                </div>
-                <div>
-                  <h4 class="text-lg font-semibold mb-4">Project Overview</h4>
-                  <p class="text-gray-600 mb-4">Interactive 3D product configurator allowing customers to customize luggage bands, colors, and features in real-time.</p>
-                  <h4 class="text-lg font-semibold mb-2">Key Features:</h4>
-                  <ul class="list-disc list-inside space-y-1 mb-4 text-gray-600">
-                    <li>Real-time 3D customization</li>
-                    <li>Multiple color options</li>
-                    <li>Band material selection</li>
-                    <li>360-degree product view</li>
-                    <li>Mobile-optimized experience</li>
-                  </ul>
-                  <h4 class="text-lg font-semibold mb-2">Results:</h4>
-                  <ul class="list-disc list-inside space-y-1 text-gray-600">
-                    <li>40% increase in engagement</li>
-                    <li>25% boost in conversions</li>
-                    <li>60% reduction in returns</li>
-                  </ul>
-                </div>
-              </div>
-            `
-                                    },
-                                    'skincare': {
-                                        title: 'Skincare D2C Platform',
-                                        content: `
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <img src="https://images.unsplash.com/photo-1556228578-567ba127e37f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Skincare Products" class="w-full rounded-lg">
-                </div>
-                <div>
-                  <h4 class="text-lg font-semibold mb-4">Project Overview</h4>
-                  <p class="text-gray-600 mb-4">Complete D2C e-commerce platform with personalized skincare recommendations and subscription management.</p>
-                  <h4 class="text-lg font-semibold mb-2">Key Features:</h4>
-                  <ul class="list-disc list-inside space-y-1 mb-4 text-gray-600">
-                    <li>Skin analysis quiz</li>
-                    <li>Personalized product recommendations</li>
-                    <li>Subscription management</li>
-                    <li>Customer portal</li>
-                    <li>Automated email marketing</li>
-                  </ul>
-                  <h4 class="text-lg font-semibold mb-2">Results:</h4>
-                  <ul class="list-disc list-inside space-y-1 text-gray-600">
-                    <li>300% increase in online sales</li>
-                    <li>85% customer retention rate</li>
-                    <li>50% growth in subscription base</li>
-                  </ul>
-                </div>
-              </div>
-            `
-                                    }
-                                };
-
-                                function openProjectModal(projectId) {
-                                    const project = projectDetails[projectId];
-                                    if (project) {
-                                        modalTitle.textContent = project.title;
-                                        modalContent.innerHTML = project.content;
-                                        modal.classList.remove('hidden');
-                                        modal.setAttribute('aria-hidden', 'false');
-                                        document.body.style.overflow = 'hidden';
-                                        closeModalBtn.focus();
-                                    }
-                                }
-
-                                function closeProjectModal() {
-                                    modal.classList.add('hidden');
-                                    modal.setAttribute('aria-hidden', 'true');
-                                    document.body.style.overflow = '';
-                                }
-
-                                // Portfolio item click handlers
-                                portfolioItems.forEach(item => {
-                                    item.addEventListener('click', function () {
-                                        const projectId = this.getAttribute('data-project');
-                                        openProjectModal(projectId);
-                                    });
-                                });
-
-                                // Close modal event listeners
-                                closeModalBtn.addEventListener('click', closeProjectModal);
-                                closeModalBtnBottom.addEventListener('click', closeProjectModal);
-
-                                // Close modal when clicking outside
-                                modal.addEventListener('click', function (e) {
-                                    if (e.target === modal) {
-                                        closeProjectModal();
-                                    }
-                                });
-
-                                // Close modal on ESC key
-                                document.addEventListener('keydown', function (e) {
-                                    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                                        closeProjectModal();
-                                    }
-                                });
-
-                                // CTA button click handler
-                                const ctaButton = document.querySelector('#portfolio button:last-child');
-                                ctaButton.addEventListener('click', function () {
-                                    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-                                });
-
-                                // Intersection Observer for animations
-                                const observerOptions = {
-                                    threshold: 0.1,
-                                    rootMargin: '0px 0px -50px 0px'
-                                };
-
-                                const observer = new IntersectionObserver((entries) => {
-                                    entries.forEach(entry => {
-                                        if (entry.isIntersecting) {
-                                            entry.target.classList.add('animate-fade-in-up');
-                                        }
-                                    });
-                                }, observerOptions);
-
-                                // Observe portfolio items
-                                portfolioItems.forEach(item => observer.observe(item));
                             });
                         </script>
 
@@ -1106,167 +947,7 @@
                         <!-- Full-width scrolling testimonials -->
                         <div class="w-full relative">
                             <div class="scroller" data-speed="slow">
-                                <ul class="tag-list scroller__inner flex gap-8 animate-scroll">
-                                    <!-- Testimonial 1 -->
-                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
-                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
-                                            "TechCraft's 3D product configurator increased our conversion rate by 40%.
-                                            The AR try-on feature is a game-changer for our customers."
-                                        </blockquote>
-                                        <div class="flex items-center">
-                                            <div
-                                                class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                                                RS
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold text-gray-900">Rajesh Sharma</div>
-                                                <div class="text-gray-600">CEO, StyleCraft India</div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <!-- Testimonial 2 -->
-                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
-                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
-                                            "The automation solutions streamlined our entire workflow. We've reduced
-                                            operational costs by 35% while scaling 3x faster."
-                                        </blockquote>
-                                        <div class="flex items-center">
-                                            <div
-                                                class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                                                PK
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold text-gray-900">Priya Kapoor</div>
-                                                <div class="text-gray-600">Founder, EcoBeauty</div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <!-- Testimonial 3 -->
-                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
-                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
-                                            "Their D2C platform development exceeded expectations. Mobile-first design
-                                            and seamless checkout boosted our sales by 250%."
-                                        </blockquote>
-                                        <div class="flex items-center">
-                                            <div
-                                                class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                                                AM
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold text-gray-900">Arjun Mehta</div>
-                                                <div class="text-gray-600">Co-founder, FitGear Pro</div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <!-- Testimonial 4 -->
-                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
-                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
-                                            "The AR jewelry try-on feature reduced our return rate by 60%. Customers
-                                            love the interactive shopping experience."
-                                        </blockquote>
-                                        <div class="flex items-center">
-                                            <div
-                                                class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                                                SG
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold text-gray-900">Sneha Gupta</div>
-                                                <div class="text-gray-600">Director, Luxe Ornaments</div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <!-- Testimonial 5 -->
-                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
-                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
-                                            "TechCraft transformed our skincare brand with personalized recommendations.
-                                            Customer engagement increased by 180%."
-                                        </blockquote>
-                                        <div class="flex items-center">
-                                            <div
-                                                class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                                                VT
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold text-gray-900">Vikram Thakur</div>
-                                                <div class="text-gray-600">Founder, GlowNaturals</div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <!-- Testimonial 6 -->
-                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
-                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
-                                            "The smart automation system handles our inventory perfectly. No more
-                                            stockouts or overstock issues. Brilliant solution!"
-                                        </blockquote>
-                                        <div class="flex items-center">
-                                            <div
-                                                class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                                                NK
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold text-gray-900">Neha Khanna</div>
-                                                <div class="text-gray-600">Operations Head, TechHome</div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <!-- Duplicate testimonials for seamless loop -->
-                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
-                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
-                                            "TechCraft's 3D product configurator increased our conversion rate by 40%.
-                                            The AR try-on feature is a game-changer for our customers."
-                                        </blockquote>
-                                        <div class="flex items-center">
-                                            <div
-                                                class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                                                RS
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold text-gray-900">Rajesh Sharma</div>
-                                                <div class="text-gray-600">CEO, StyleCraft India</div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
-                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
-                                            "The automation solutions streamlined our entire workflow. We've reduced
-                                            operational costs by 35% while scaling 3x faster."
-                                        </blockquote>
-                                        <div class="flex items-center">
-                                            <div
-                                                class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                                                PK
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold text-gray-900">Priya Kapoor</div>
-                                                <div class="text-gray-600">Founder, EcoBeauty</div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
-                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">
-                                            "Their D2C platform development exceeded expectations. Mobile-first design
-                                            and seamless checkout boosted our sales by 250%."
-                                        </blockquote>
-                                        <div class="flex items-center">
-                                            <div
-                                                class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                                                AM
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold text-gray-900">Arjun Mehta</div>
-                                                <div class="text-gray-600">Co-founder, FitGear Pro</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                <ul class="tag-list scroller__inner flex gap-8 animate-scroll"></ul>
                             </div>
                         </div>
 
@@ -1284,11 +965,26 @@
 
                         <script>
                             document.addEventListener('DOMContentLoaded', function () {
-                                // CTA button click handler
-                                const ctaButton = document.querySelector('#testimonials button');
-                                ctaButton.addEventListener('click', function () {
-                                    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-                                });
+                                // Fetch and render testimonials from JSON
+                                fetch('/assets/data/testimonials-data.json')
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        const ul = document.querySelector('.tag-list.scroller__inner');
+                                        if (ul) {
+                                            ul.innerHTML = data.testimonials.map(t => `
+                                                <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
+                                                    <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">${t.quote}</blockquote>
+                                                    <div class="flex items-center">
+                                                        <div class="w-12 h-12 ${t.avatarBg} rounded-full flex items-center justify-center text-white font-bold mr-4">${t.initials}</div>
+                                                        <div>
+                                                            <div class="font-semibold text-gray-900">${t.name}</div>
+                                                            <div class="text-gray-600">${t.role}</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            `).join('');
+                                        }
+                                    });
 
                                 // Pause animation on hover
                                 const scroller = document.querySelector('.scroller__inner');
@@ -1677,7 +1373,7 @@
                 </div>
             </div>
 
-        <footer class="bg-gray-900 text-white py-16">
+        <footer class="bg-gray-900 text-white py-16" role="contentinfo" aria-label="Site footer">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Grid for Professional and Legal Links -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">

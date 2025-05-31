@@ -1,0 +1,102 @@
+{
+  "projects": [
+    {
+      "id": "luggage",
+      "category": "3d-ar",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Luggage",
+      "badge": "3D/AR",
+      "badgeClass": "text-blue-600",
+      "badgeBg": "bg-blue-100",
+      "year": "2024",
+      "title": "Luggage 3D Configurator",
+      "description": "Interactive 3D product visualization with real-time customization options."
+    },
+    {
+      "id": "skincare",
+      "category": "d2c",
+      "image": "https://images.unsplash.com/photo-1556228578-567ba127e37f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Curology on succulents plants",
+      "badge": "D2C Platform",
+      "badgeClass": "text-purple-600",
+      "badgeBg": "bg-purple-100",
+      "year": "2024",
+      "title": "Skincare D2C Platform",
+      "description": "Custom e-commerce solution with personalized product recommendations."
+    },
+    {
+      "id": "automation",
+      "category": "automation",
+      "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1080&q=80",
+      "alt": "Automation Dashboard",
+      "badge": "Automation",
+      "badgeClass": "text-pink-600",
+      "badgeBg": "bg-pink-100",
+      "year": "2023",
+      "title": "Business Automation Suite",
+      "description": "End-to-end workflow automation for business operations and analytics."
+    },
+    {
+      "id": "furniture-ar",
+      "category": "3d-ar",
+      "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1080&q=80",
+      "alt": "Furniture AR",
+      "badge": "3D/AR",
+      "badgeClass": "text-blue-600",
+      "badgeBg": "bg-blue-100",
+      "year": "2023",
+      "title": "Furniture AR Viewer",
+      "description": "Augmented reality tool for visualizing furniture in real spaces."
+    },
+    {
+      "id": "fashion-d2c",
+      "category": "d2c",
+      "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1080&q=80",
+      "alt": "Fashion D2C",
+      "badge": "D2C Platform",
+      "badgeClass": "text-purple-600",
+      "badgeBg": "bg-purple-100",
+      "year": "2022",
+      "title": "Fashion D2C Store",
+      "description": "Modern e-commerce platform for a leading fashion brand."
+    },
+    {
+      "id": "analytics",
+      "category": "automation",
+      "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1080&q=80",
+      "alt": "Analytics Dashboard",
+      "badge": "Automation",
+      "badgeClass": "text-pink-600",
+      "badgeBg": "bg-pink-100",
+      "year": "2022",
+      "title": "Analytics Dashboard",
+      "description": "Custom analytics dashboard for real-time business insights."
+    }
+  ],
+  "details": {
+    "luggage": {
+      "title": "Luggage 3D Configurator",
+      "content": "<div class=\"grid grid-cols-1 lg:grid-cols-2 gap-8\"><div><img src=\"https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080\" alt=\"Luggage\" class=\"w-full rounded-lg\"></div><div><h4 class=\"text-lg font-semibold mb-4\">Project Overview</h4><p class=\"text-gray-600 mb-4\">Interactive 3D product configurator allowing customers to customize luggage bands, colors, and features in real-time.</p><h4 class=\"text-lg font-semibold mb-2\">Key Features:</h4><ul class=\"list-disc list-inside space-y-1 mb-4 text-gray-600\"><li>Real-time 3D customization</li><li>Multiple color options</li><li>Band material selection</li><li>360-degree product view</li><li>Mobile-optimized experience</li></ul><h4 class=\"text-lg font-semibold mb-2\">Results:</h4><ul class=\"list-disc list-inside space-y-1 text-gray-600\"><li>40% increase in engagement</li><li>25% boost in conversions</li><li>60% reduction in returns</li></ul></div></div>"
+    },
+    "skincare": {
+      "title": "Skincare D2C Platform",
+      "content": "<div class=\"grid grid-cols-1 lg:grid-cols-2 gap-8\"><div><img src=\"https://images.unsplash.com/photo-1556228578-567ba127e37f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8cHJvZHVjdCUyNTIwdmlzdWFsaXphdGlvbiUyNTIwbW9kZXJuJTI1MjBwcm9mZXNzaW9uYWwlMjUyMGJyaWdodHxlbnwxfDB8fHwxNzQ4NTQ3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080\" alt=\"Skincare Products\" class=\"w-full rounded-lg\"></div><div><h4 class=\"text-lg font-semibold mb-4\">Project Overview</h4><p class=\"text-gray-600 mb-4\">Complete D2C e-commerce platform with personalized skincare recommendations and subscription management.</p><h4 class=\"text-lg font-semibold mb-2\">Key Features:</h4><ul class=\"list-disc list-inside space-y-1 mb-4 text-gray-600\"><li>Skin analysis quiz</li><li>Personalized product recommendations</li><li>Subscription management</li><li>Customer portal</li><li>Automated email marketing</li></ul><h4 class=\"text-lg font-semibold mb-2\">Results:</h4><ul class=\"list-disc list-inside space-y-1 text-gray-600\"><li>300% increase in online sales</li><li>85% customer retention rate</li><li>50% growth in subscription base</li></ul></div></div>"
+    },
+    "automation": {
+      "title": "Business Automation Suite",
+      "content": "<div class=\"grid grid-cols-1 lg:grid-cols-2 gap-8\"><div><img src=\"https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1080&q=80\" alt=\"Automation Dashboard\" class=\"w-full rounded-lg\"></div><div><h4 class=\"text-lg font-semibold mb-4\">Project Overview</h4><p class=\"text-gray-600 mb-4\">Comprehensive automation suite streamlining business processes, reducing manual work, and providing actionable analytics.</p><h4 class=\"text-lg font-semibold mb-2\">Key Features:</h4><ul class=\"list-disc list-inside space-y-1 mb-4 text-gray-600\"><li>Automated workflows</li><li>Custom triggers and actions</li><li>Integration with third-party tools</li><li>Real-time analytics</li><li>Role-based access</li></ul><h4 class=\"text-lg font-semibold mb-2\">Results:</h4><ul class=\"list-disc list-inside space-y-1 text-gray-600\"><li>70% reduction in manual tasks</li><li>Improved operational efficiency</li><li>Enhanced data-driven decisions</li></ul></div></div>"
+    },
+    "furniture-ar": {
+      "title": "Furniture AR Viewer",
+      "content": "<div class=\"grid grid-cols-1 lg:grid-cols-2 gap-8\"><div><img src=\"https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1080&q=80\" alt=\"Furniture AR\" class=\"w-full rounded-lg\"></div><div><h4 class=\"text-lg font-semibold mb-4\">Project Overview</h4><p class=\"text-gray-600 mb-4\">AR application enabling users to visualize furniture in their own environment before purchase.</p><h4 class=\"text-lg font-semibold mb-2\">Key Features:</h4><ul class=\"list-disc list-inside space-y-1 mb-4 text-gray-600\"><li>AR placement of 3D models</li><li>Scale and rotate furniture</li><li>Room lighting adaptation</li><li>Mobile and web support</li></ul><h4 class=\"text-lg font-semibold mb-2\">Results:</h4><ul class=\"list-disc list-inside space-y-1 text-gray-600\"><li>50% reduction in product returns</li><li>Increased customer confidence</li></ul></div></div>"
+    },
+    "fashion-d2c": {
+      "title": "Fashion D2C Store",
+      "content": "<div class=\"grid grid-cols-1 lg:grid-cols-2 gap-8\"><div><img src=\"https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1080&q=80\" alt=\"Fashion D2C\" class=\"w-full rounded-lg\"></div><div><h4 class=\"text-lg font-semibold mb-4\">Project Overview</h4><p class=\"text-gray-600 mb-4\">A modern D2C e-commerce platform for a fashion brand, featuring seamless shopping and personalized recommendations.</p><h4 class=\"text-lg font-semibold mb-2\">Key Features:</h4><ul class=\"list-disc list-inside space-y-1 mb-4 text-gray-600\"><li>Personalized product feeds</li><li>Wishlist and quick buy</li><li>Integrated payment gateways</li><li>Mobile-first design</li></ul><h4 class=\"text-lg font-semibold mb-2\">Results:</h4><ul class=\"list-disc list-inside space-y-1 text-gray-600\"><li>200% increase in sales</li><li>High customer satisfaction</li></ul></div></div>"
+    },
+    "analytics": {
+      "title": "Analytics Dashboard",
+      "content": "<div class=\"grid grid-cols-1 lg:grid-cols-2 gap-8\"><div><img src=\"https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1080&q=80\" alt=\"Analytics Dashboard\" class=\"w-full rounded-lg\"></div><div><h4 class=\"text-lg font-semibold mb-4\">Project Overview</h4><p class=\"text-gray-600 mb-4\">Custom analytics dashboard providing real-time insights and visualizations for business KPIs.</p><h4 class=\"text-lg font-semibold mb-2\">Key Features:</h4><ul class=\"list-disc list-inside space-y-1 mb-4 text-gray-600\"><li>Real-time data sync</li><li>Customizable widgets</li><li>Exportable reports</li><li>Role-based dashboards</li></ul><h4 class=\"text-lg font-semibold mb-2\">Results:</h4><ul class=\"list-disc list-inside space-y-1 text-gray-600\"><li>Faster decision making</li><li>Improved business visibility</li></ul></div></div>"
+    }
+  }
+}

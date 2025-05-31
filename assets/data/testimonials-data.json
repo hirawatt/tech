@@ -1,0 +1,46 @@
+{
+  "testimonials": [
+    {
+      "quote": "TechCraft's 3D product configurator increased our conversion rate by 40%. The AR try-on feature is a game-changer for our customers.",
+      "initials": "RS",
+      "avatarBg": "bg-blue-600",
+      "name": "Rajesh Sharma",
+      "role": "CEO, StyleCraft India"
+    },
+    {
+      "quote": "The automation solutions streamlined our entire workflow. We've reduced operational costs by 35% while scaling 3x faster.",
+      "initials": "PK",
+      "avatarBg": "bg-purple-600",
+      "name": "Priya Kapoor",
+      "role": "Founder, EcoBeauty"
+    },
+    {
+      "quote": "Their D2C platform development exceeded expectations. Mobile-first design and seamless checkout boosted our sales by 250%.",
+      "initials": "AM",
+      "avatarBg": "bg-pink-600",
+      "name": "Arjun Mehta",
+      "role": "Co-founder, FitGear Pro"
+    },
+    {
+      "quote": "The AR jewelry try-on feature reduced our return rate by 60%. Customers love the interactive shopping experience.",
+      "initials": "SG",
+      "avatarBg": "bg-orange-600",
+      "name": "Sneha Gupta",
+      "role": "Director, Luxe Ornaments"
+    },
+    {
+      "quote": "TechCraft transformed our skincare brand with personalized recommendations. Customer engagement increased by 180%.",
+      "initials": "VT",
+      "avatarBg": "bg-green-600",
+      "name": "Vikram Thakur",
+      "role": "Founder, GlowNaturals"
+    },
+    {
+      "quote": "The smart automation system handles our inventory perfectly. No more stockouts or overstock issues. Brilliant solution!",
+      "initials": "NK",
+      "avatarBg": "bg-indigo-600",
+      "name": "Neha Khanna",
+      "role": "Operations Head, TechHome"
+    }
+  ]
+}
