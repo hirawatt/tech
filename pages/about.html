@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/assets/styles/style.css">
 
+    <!-- Preload team data -->
+    <link rel="preload" href="/assets/data/team.json" as="fetch" type="application/json" crossorigin>
+
+
     <!-- Deferred Scripts -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
     <script defer src="/assets/js/main.js"></script>
@@ -193,84 +197,24 @@
                 <!-- Team Section -->
                 <div class="mb-20">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Meet Our Team</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                    <div x-data="teamData" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
                         <!-- Team Members -->
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <span class="material-icons text-blue-600 mb-3 text-3xl">admin_panel_settings</span>
-                            <h3 class="text-xl font-semibold text-gray-900">Vishal</h3>
-                            <p class="text-blue-600">Founder</p>
-                            <p class="text-gray-600 text-sm">6 years experience</p>
-                        </div>
+                        <template x-for="member in teamMembers" :key="member.name">
+                            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 flex flex-col items-center text-center h-full transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                                <span class="material-icons text-blue-600 mb-4 text-5xl" x-text="member.icon"></span>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-1" x-text="member.name"></h3>
+                                <p class="text-blue-700 font-medium text-sm mb-3" x-text="member.role"></p>
+                                <p class="text-gray-500 text-xs mb-4" x-text="member.experience"></p>
+                                <div class="mt-auto w-full pt-4 border-t border-gray-200">
+                                    <p class="text-gray-600 text-xs leading-relaxed" x-text="member.stack"></p>
+                                </div>
+                            </div>
+                        </template>
+                        <!-- Loading/Error state (optional) -->
+                        <div x-show="loading" class="col-span-full text-center text-gray-500">Loading team data...</div>
+                        <div x-show="error" class="col-span-full text-center text-red-500" x-text="error"></div>
+                        <div x-show="!loading && teamMembers.length === 0 && !error" class="col-span-full text-center text-gray-500">No team members found.</div>
 
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <span class="material-icons text-blue-600 mb-3 text-3xl">code</span>
-                            <h3 class="text-xl font-semibold text-gray-900">Himanshu</h3>
-                            <p class="text-blue-600">Senior Developer</p>
-                            <p class="text-gray-600 text-sm">5 years experience</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <span class="material-icons text-blue-600 mb-3 text-3xl">laptop_chromebook</span>
-                            <h3 class="text-xl font-semibold text-gray-900">Sumit</h3>
-                            <p class="text-blue-600">Junior Developer</p>
-                            <p class="text-gray-600 text-sm">2 years experience</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <span class="material-icons text-blue-600 mb-3 text-3xl">laptop_chromebook</span>
-                            <h3 class="text-xl font-semibold text-gray-900">Jitendra</h3>
-                            <p class="text-blue-600">Junior Developer</p>
-                            <p class="text-gray-600 text-sm">1 years experience</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <span class="material-icons text-blue-600 mb-3 text-3xl">bug_report</span>
-                            <h3 class="text-xl font-semibold text-gray-900">Rishabh</h3>
-                            <p class="text-blue-600">QA Testing</p>
-                            <p class="text-gray-600 text-sm">4 years experience</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <span class="material-icons text-blue-600 mb-3 text-3xl">cloud_circle</span>
-                            <h3 class="text-xl font-semibold text-gray-900">Shashank</h3>
-                            <p class="text-blue-600">DevOps</p>
-                            <p class="text-gray-600 text-sm">5 years experience</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <span class="material-icons text-blue-600 mb-3 text-3xl">account_balance</span>
-                            <h3 class="text-xl font-semibold text-gray-900">Vinay</h3>
-                            <p class="text-blue-600">Finance</p>
-                            <p class="text-gray-600 text-sm">5 years experience</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <span class="material-icons text-blue-600 mb-3 text-3xl">business_center</span>
-                            <h3 class="text-xl font-semibold text-gray-900">Nikunj</h3>
-                            <p class="text-blue-600">Business Development</p>
-                            <p class="text-gray-600 text-sm">3 years experience</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <span class="material-icons text-blue-600 mb-3 text-3xl">article</span>
-                            <h3 class="text-xl font-semibold text-gray-900">Chirag</h3>
-                            <p class="text-blue-600">Content Head</p>
-                            <p class="text-gray-600 text-sm">4 years experience</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <span class="material-icons text-blue-600 mb-3 text-3xl">campaign</span>
-                            <h3 class="text-xl font-semibold text-gray-900">Khushi</h3>
-                            <p class="text-blue-600">Marketing</p>
-                            <p class="text-gray-600 text-sm">1 years experience</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <span class="material-icons text-blue-600 mb-3 text-3xl">3d_rotation</span>
-                            <h3 class="text-xl font-semibold text-gray-900">Sanju</h3>
-                            <p class="text-blue-600">3D Artist</p>
-                            <p class="text-gray-600 text-sm">2 years experience</p>
-                        </div>
                     </div>
                 </div>
 
@@ -343,6 +287,28 @@
 
     <!-- Mobile Menu Script -->
     <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('teamData', () => ({
+                teamMembers: [],
+                loading: true,
+                error: null,
+                async init() {
+                    try {
+                        const response = await fetch('/assets/data/team.json');
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        this.teamMembers = await response.json();
+                    } catch (e) {
+                        console.error('Failed to load team data:', e);
+                        this.error = 'Failed to load team data.';
+                    } finally {
+                        this.loading = false;
+                    }
+                }
+            }));
+        });
+
         document.addEventListener('alpine:init', () => {
             Alpine.data('mobileMenu', () => ({
                 isOpen: false,

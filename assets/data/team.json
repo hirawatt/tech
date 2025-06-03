@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Vishal",
+        "role": "Founder",
+        "experience": "6 years experience",
+        "stack": "Full-stack Development, AR/VR, Business Strategy",
+        "icon": "admin_panel_settings"
+    },
+    {
+        "name": "Himanshu",
+        "role": "Senior Developer",
+        "experience": "5 years experience",
+        "stack": "Node.js, React, UI/UX, Microservices",
+        "icon": "code"
+    },
+    {
+        "name": "Sumit",
+        "role": "Junior Developer",
+        "experience": "2 years experience",
+        "stack": "Shopify, Wordpress, HTML, API Integration",
+        "icon": "laptop_chromebook"
+    },
+    {
+        "name": "Jitendra",
+        "role": "Junior Developer",
+        "experience": "1 years experience",
+        "stack": "Wordpress, WooCommerce, Basic Backend",
+        "icon": "laptop_chromebook"
+    },
+    {
+        "name": "Rishabh",
+        "role": "QA Testing",
+        "experience": "4 years experience",
+        "stack": "Manual & Automated Testing, Bug Tracking",
+        "icon": "bug_report"
+    },
+    {
+        "name": "Shashank",
+        "role": "DevOps",
+        "experience": "5 years experience",
+        "stack": "AWS, Docker, CI/CD, Infrastructure Management",
+        "icon": "cloud_circle"
+    },
+    {
+        "name": "Vinay",
+        "role": "Finance",
+        "experience": "5 years experience",
+        "stack": "Financial Planning, Accounting, Budgeting",
+        "icon": "account_balance"
+    },
+    {
+        "name": "Nikunj",
+        "role": "Business Development",
+        "experience": "3 years experience",
+        "stack": "Sales, Partnerships, Market Research",
+        "icon": "business_center"
+    },
+    {
+        "name": "Chirag",
+        "role": "Content Head",
+        "experience": "4 years experience",
+        "stack": "Content Strategy, Copywriting, Editing",
+        "icon": "article"
+    },
+    {
+        "name": "Khushi",
+        "role": "Marketing",
+        "experience": "1 years experience",
+        "stack": "Social Media, Digital Marketing, Analytics",
+        "icon": "campaign"
+    },
+    {
+        "name": "Sanju",
+        "role": "3D Artist",
+        "experience": "2 years experience",
+        "stack": "3D Modeling, Texturing, AR Asset Creation",
+        "icon": "3d_rotation"
+    }
+]
