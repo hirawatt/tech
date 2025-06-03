@@ -1427,6 +1427,14 @@
                     </div>
                 </div>
 
+                <!-- Enable Notifications Button -->
+                <div class="text-center my-8">
+                    <button id="enable-notifications-btn"
+                        class="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-lg font-semibold transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900">
+                        Enable Browser Notifications
+                    </button>
+                </div>
+
                 <!-- Cookie Notice -->
                 <div class="pt-8 border-t border-gray-800">
                     <div class="flex items-center justify-center space-x-2 text-sm text-gray-400">
@@ -1482,6 +1490,135 @@
             z-index: 999;
         }
     </style>
+
+    <!-- Notification Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const notificationButton = document.getElementById('enable-notifications-btn');
+            let notificationSocket = null; // Keep track of the WebSocket
+            const WEBSOCKET_URL = 'ws://0.0.0.0:8765'; // Your Python WebSocket server URL
+
+            function displayBrowserNotification(title, body, icon) {
+                console.log(`[Notification Script] displayBrowserNotification called with: title='${title}', body='${body}', icon='${icon}'`);
+                console.log("[Notification Script] Current Notification.permission state:", Notification.permission);
+
+                if (Notification.permission === "granted") {
+                    console.log("[Notification Script] Permission is granted. Attempting to show notification.");
+                    const notification = new Notification(title, {
+                        body: body,
+                        icon: icon || "/assets/hirawat-tech-500-logo.webp" // Default icon
+                    });
+
+                    notification.onshow = () => console.log("[Notification Script] Notification shown successfully.");
+                    notification.onerror = (err) => console.error("[Notification Script] Error showing notification:", err);
+                    notification.onclick = () => console.log("[Notification Script] Notification clicked.");
+                    notification.onclose = (event) => {
+                        console.log("[Notification Script] Notification closed. Event:", event);
+                        // Note: 'onclose' can be triggered by user closing it, or system (e.g., timeout)
+                    };
+                } else {
+                    console.warn("[Notification Script] Permission is NOT granted. Cannot show notification.");
+                }
+            }
+
+            function connectWebSocketForNotifications() {
+                if (notificationSocket && (notificationSocket.readyState === WebSocket.OPEN || notificationSocket.readyState === WebSocket.CONNECTING)) {
+                    console.log("WebSocket already connected or connecting.");
+                    return;
+                }
+
+                if (Notification.permission !== "granted") {
+                    console.log("Cannot connect WebSocket: Notifications permission not granted.");
+                    return;
+                }
+
+                console.log(`[Notification Script] Attempting to connect WebSocket to ${WEBSOCKET_URL}...`);
+                notificationSocket = new WebSocket(WEBSOCKET_URL);
+
+                notificationSocket.onopen = function (event) {
+                    console.log("[Notification Script] WebSocket connection established for notifications. Event:", event);
+                };
+
+                notificationSocket.onmessage = function (event) {
+                    console.log("[Notification Script] Received message event from WebSocket:", event);
+                    console.log("[Notification Script] Raw data:", event.data);
+                    try {
+                        const data = JSON.parse(event.data);
+                        console.log("[Notification Script] Parsed data:", data);
+                        if (data.title && data.body) {
+                            console.log("[Notification Script] Data contains title and body. Calling displayBrowserNotification.");
+                            displayBrowserNotification(data.title, data.body, data.icon);
+                        } else {
+                            console.warn("[Notification Script] Received data does not have title or body:", data);
+                        }
+                    } catch (e) {
+                        console.error("[Notification Script] Error processing message from WebSocket:", e, "Raw data:", event.data);
+                    }
+                };
+
+                notificationSocket.onclose = function (event) {
+                    console.log("[Notification Script] WebSocket connection closed. Reason:", event.reason, "Code:", event.code, "Was clean:", event.wasClean);
+                    notificationSocket = null;
+                    // Optional: Implement reconnection logic if permission is still granted
+                    // if (Notification.permission === "granted" && !event.wasClean) { // Reconnect if not a clean close
+                    //     console.log("Attempting to reconnect WebSocket in 5 seconds...");
+                    //     setTimeout(connectWebSocketForNotifications, 5000);
+                    // }
+                };
+
+                notificationSocket.onerror = function (error) {
+                    console.error("[Notification Script] WebSocket error:", error);
+                    // The onclose event will usually follow an error.
+                };
+            }
+
+            if (!notificationButton) return;
+
+            // Check if Notifications are supported
+            if (!("Notification" in window)) {
+                console.warn("[Notification Script] This browser does not support desktop notification");
+                notificationButton.textContent = 'Notifications Not Supported';
+                notificationButton.disabled = true;
+                notificationButton.classList.add('opacity-50', 'cursor-not-allowed');
+                return;
+            }
+
+            // Update button based on current permission & handle WebSocket connection
+            function updateButtonStatusAndConnection() {
+                if (Notification.permission === "granted") {
+                    notificationButton.textContent = 'Notifications Enabled';
+                    notificationButton.classList.replace('bg-teal-500', 'bg-green-500');
+                    notificationButton.classList.replace('hover:bg-teal-600', 'hover:bg-green-600');
+                    notificationButton.disabled = true;
+                    connectWebSocketForNotifications(); // Connect if permission is granted
+                } else if (Notification.permission === "denied") {
+                    notificationButton.textContent = 'Notifications Denied';
+                    notificationButton.disabled = true;
+                    notificationButton.classList.add('opacity-50', 'cursor-not-allowed');
+                } else {
+                    notificationButton.textContent = 'Enable Browser Notifications';
+                    // Ensure correct classes if coming from granted/denied state
+                    notificationButton.classList.remove('bg-green-500', 'opacity-50', 'cursor-not-allowed');
+                    notificationButton.classList.add('bg-teal-500', 'hover:bg-teal-600');
+                    notificationButton.disabled = false;
+                }
+            }
+
+            updateButtonStatusAndConnection(); // Initial status
+
+            notificationButton.addEventListener('click', function () {
+                if (Notification.permission === "default") {
+                    Notification.requestPermission().then(function (permission) {
+                        updateButtonStatusAndConnection(); // Update button and connect if granted
+                        if (permission === "granted") {
+                            // Display a test notification immediately after permission grant
+                            displayBrowserNotification("HirawatTech Notifications", "You've successfully enabled notifications!");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 
     <!-- Core functionality scripts -->
     <script>
