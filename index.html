@@ -697,7 +697,12 @@
                                         const grid = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3.mb-16');
                                         if (grid) {
                                             grid.innerHTML = data.projects.map(project => `
-                                                <article class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-category="${project.category}" data-project="${project.id}">
+                                                <article class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                                                         data-category="${project.category}"
+                                                         data-project="${project.id}"
+                                                         tabindex="0"
+                                                         role="button"
+                                                         aria-labelledby="project-title-${project.id}">
                                                     <div class="h-64 overflow-hidden">
                                                         <img src="${project.image}" alt="${project.alt}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
                                                     </div>
@@ -706,7 +711,7 @@
                                                             <span class="text-xs font-medium ${project.badgeClass} ${project.badgeBg} px-2 py-1 rounded">${project.badge}</span>
                                                             <span class="text-xs text-gray-500">${project.year}</span>
                                                         </div>
-                                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">${project.title}</h3>
+                                                        <h3 id="project-title-${project.id}" class="text-lg font-semibold text-gray-900 mb-2">${project.title}</h3>
                                                         <p class="text-gray-600 text-sm">${project.description}</p>
                                                     </div>
                                                 </article>
@@ -777,6 +782,14 @@
                                             item.addEventListener('click', function () {
                                                 const projectId = this.getAttribute('data-project');
                                                 openProjectModal(projectId);
+                                            });
+
+                                            item.addEventListener('keydown', function (event) {
+                                                if (event.key === 'Enter' || event.key === ' ') {
+                                                    event.preventDefault(); // Prevent space from scrolling page
+                                                    const projectId = this.getAttribute('data-project');
+                                                    openProjectModal(projectId);
+                                                }
                                             });
                                         });
 
