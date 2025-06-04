@@ -1,67 +1,37 @@
-/* Base styles */
-:root {
-    --primary-color: #2563EB;
-    --secondary-color: #1E40AF;
-}
-
-/* Remove scrollbars */
-* {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    font-family: Inter, system-ui, sans-serif;
-}
-
-*::-webkit-scrollbar { display: none; }
-
-/* Interactive elements */
-.interactive-element {
-    transition: all 0.3s ease;
-}
-
-.interactive-element:hover {
-    transform: translateY(-2px);
-}
-
-/* Navigation Styles */
+/* Navigation Links */
 .nav-link {
-    font-family: Inter, system-ui, sans-serif;
-    color: #374151;
-    font-size: 0.875rem;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-family: 'Inter', sans-serif;
+    color: rgb(55, 65, 81); /* text-gray-700 */
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
 }
-
 .nav-link:hover {
-    color: #2563EB;
+    color: rgb(37, 99, 235); /* hover:text-blue-600 */
 }
 
 .nav-link-mobile {
     display: block;
-    padding: 0.5rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #374151;
-    border-radius: 0.375rem;
-    transition: all 0.3s;
+    padding-left: 0.75rem; /* px-3 */
+    padding-right: 0.75rem; /* px-3 */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    font-size: 1rem; /* text-base */
+    font-weight: 500; /* font-medium */
+    color: rgb(55, 65, 81); /* text-gray-700 */
+    border-radius: 0.375rem; /* rounded-md */
+    transition-property: color, background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
 }
-
 .nav-link-mobile:hover {
-    color: #2563EB;
-    background-color: #F9FAFB;
+    color: rgb(37, 99, 235); /* hover:text-blue-600 */
+    background-color: rgb(249, 250, 251); /* hover:bg-gray-50 */
 }
 
 /* Animations */
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes fade-in-up {
     from {
         opacity: 0;
@@ -73,122 +43,70 @@
     }
 }
 
-.animate-fade-in {
-    animation: fade-in 0.8s ease-out forwards;
-}
-
 .animate-fade-in-up {
     animation: fade-in-up 0.6s ease-out forwards;
 }
 
-/* Section visibility */
-[data-section-id] {
-    display: none;
+@keyframes fade-in-opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-[data-section-id]:first-child {
-    display: block;
+.animate-fade-in-opacity {
+    animation: fade-in-opacity 0.4s ease-out forwards;
 }
 
-/* Animated Text & Layout */
-.animatedText, .hero, .content {
-    display: grid;
-    justify-content: center;
-    text-align: center;
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-scroll-logos {
+    animation: scroll-logos 45s linear infinite;
+}
+
+@keyframes scroll-testimonials {
+    to {
+        transform: translate(calc(-50% - 1rem));
+    }
+}
+
+.animate-scroll { /* Used by testimonials scroller */
+    animation: scroll-testimonials 30s linear infinite;
 }
 
 .animatedText {
-    margin-top: 1em;
-    place-items: center;
+    position: relative; /* Or inline-block, depending on layout needs */
+    display: inline-block; /* Ensures the div only takes up the space of its content */
+    height: 1.2em; /* Adjust based on your font size and line height to prevent layout shifts */
+    vertical-align: bottom; /* Or adjust as needed */
+    align-items: center;
 }
 
-span {
-    animation: topToBottom ease-in-out infinite;
-    opacity: 0;
+.animatedText span {
     position: absolute;
-    overflow: hidden;
-    display: inline-block;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    white-space: nowrap; /* Prevent text from wrapping if it's too long */
 }
 
-.animate {
-    animation-duration: 10s;
-    display: inline-grid;
+.animatedText span.visible {
+    opacity: 1;
 }
 
-.animate1 {
-    animation-delay: 0s;
-    background: linear-gradient(45deg, #2563EB, #3B82F6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #2563EB;  /* Fallback */
-}
-
-.animate2 {
-    animation-delay: 2s;
-    background: linear-gradient(90deg, #2563EB, #3B82F6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #2563EB;  /* Fallback */
-}
-
-.animate3 {
-    animation-delay: 4s;
-    background: linear-gradient(120deg, #2563EB, #3B82F6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #2563EB;  /* Fallback */
-}
-
-.animate4 {
-    animation-delay: 6s;
-    background: linear-gradient(160deg, #2563EB, #3B82F6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #2563EB;  /* Fallback */
-}
-
-.animate5 {
-    animation-delay: 8s;
-    background: linear-gradient(180deg, #2563EB, #3B82F6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #2563EB;  /* Fallback */
-}
-
-
-@keyframes topToBottom {
-    0% {
-        opacity: 0;
-    }
-    3% {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-    10% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    25% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    28% {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    80% {
-        opacity: 0;
-    }
-}
-
-/* Responsive utilities */
-@media (max-width: 768px) {
-    .nav-link-mobile {
-        padding: 0.75rem 1rem;
-    }
-}
+/* Define colors for each span */
+.animatedText .animate1 { color: #3b82f6; /* Tailwind blue-500 */ }
+.animatedText .animate2 { color: #8b5cf6; /* Tailwind purple-500 */ }
+.animatedText .animate3 { color: #ec4899; /* Tailwind pink-500 */ }
+.animatedText .animate4 { color: #f97316; /* Tailwind orange-500 */ }
+.animatedText .animate5 { color: #10b981; /* Tailwind emerald-500 */ }

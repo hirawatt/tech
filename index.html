@@ -143,13 +143,14 @@
                                 <!-- Main Headline -->
                                     <h1
                                         class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight content">
-                                        Software Solutions for
+                                        Software Solutions for&nbsp;
+                                        <br>
                                         <div class="animatedText">
-                                            <span class="animate animate1">D2C Brands</span>
-                                            <span class="animate animate2">Augmented Reality</span>
-                                            <span class="animate animate3">3D Technology</span>
-                                            <span class="animate animate4">Automation</span>
-                                            <span class="animate animate5">E-Commerce</span>
+                                            <span class="animate1">D2C Brands</span>
+                                            <span class="animate2">Augmented Reality</span>
+                                            <span class="animate3">3D Technology</span>
+                                            <span class="animate4">Automation</span>
+                                            <span class="animate5">E-Commerce</span>
                                         </div>
                                     </h1>
                                 </div>
@@ -250,8 +251,6 @@
                             heroElements.forEach(el => observer.observe(el));
                         });
                     </script>
-
-
                 </div>
                 <div>
                     <section id="about" class="py-20 bg-gray-50">
@@ -259,7 +258,6 @@
                             <!-- Section Header -->
                             <div class="text-center mb-16">
                                 <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                                    <span class="material-symbols-outlined text-3xl align-middle mr-2">business</span>
                                     About
                                 </h2>
                                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -553,24 +551,6 @@
                                 serviceCards.forEach(card => observer.observe(card));
                             });
                         </script>
-
-                        <style>
-                            @keyframes fade-in-up {
-                                from {
-                                    opacity: 0;
-                                    transform: translateY(30px);
-                                }
-
-                                to {
-                                    opacity: 1;
-                                    transform: translateY(0);
-                                }
-                            }
-
-                            .animate-fade-in-up {
-                                animation: fade-in-up 0.6s ease-out forwards;
-                            }
-                        </style>
                     </section>
                 </div>
                 <div>
@@ -661,22 +641,6 @@
                                 </div>
                                 <div class="absolute left-0 w-40 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
                                 <div class="absolute right-0 w-40 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
-                                <style>
-                                    @keyframes scroll {
-                                        0% {
-                                            transform: translateX(0);
-                                        }
-                                        100% {
-                                            transform: translateX(-100%);
-                                        }
-                                    }
-                                    .animate-scroll-logos {
-                                        animation: scroll 45s linear infinite;
-                                    }
-                                    .animate-scroll-logos:hover {
-                                        animation-play-state: paused;
-                                    }
-                                </style>
                             </div>
 
                             <!-- CTA Section -->
@@ -854,38 +818,6 @@
                                     });
                             });
                         </script>
-
-                        <style>
-                            @keyframes fade-in-up {
-                                from {
-                                    opacity: 0;
-                                    transform: translateY(30px);
-                                }
-
-                                to {
-                                    opacity: 1;
-                                    transform: translateY(0);
-                                }
-                            }
-
-                            @keyframes fade-in {
-                                from {
-                                    opacity: 0;
-                                }
-
-                                to {
-                                    opacity: 1;
-                                }
-                            }
-
-                            .animate-fade-in-up {
-                                animation: fade-in-up 0.6s ease-out forwards;
-                            }
-
-                            .animate-fade-in {
-                                animation: fade-in 0.4s ease-out forwards;
-                            }
-                        </style>
                     </section>
                 </div>
                 <div>
@@ -1314,6 +1246,38 @@
         if (window.scripts && window.scripts.body) {
             document.getElementById('body-scripts').outerHTML = window.scripts.body;
         }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const animatedTextContainer = document.querySelector('.animatedText');
+            if (animatedTextContainer) {
+                const spans = animatedTextContainer.querySelectorAll('span');
+                let currentIndex = 0;
+                const intervalTime = 3000; // Time in milliseconds for each span to be visible (3 seconds)
+
+                function showNextSpan() {
+                    // Hide current span
+                    if (spans.length > 0) {
+                         spans[currentIndex].classList.remove('visible');
+                    }
+
+                    // Move to next span
+                    currentIndex = (currentIndex + 1) % spans.length;
+
+                    // Show next span
+                    if (spans.length > 0) {
+                        spans[currentIndex].classList.add('visible');
+                    }
+                }
+
+                // Initially show the first span
+                if (spans.length > 0) {
+                    spans[currentIndex].classList.add('visible');
+                }
+                setInterval(showNextSpan, intervalTime);
+            }
+        });
     </script>
 </body>
 
