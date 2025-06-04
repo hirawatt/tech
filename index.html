@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Leading technology agency in India specializing in D2C brand solutions, 3D/AR development, and business automation. Transform your business with cutting-edge technology solutions.">
+    <meta name="description"
+        content="Leading technology agency in India specializing in D2C brand solutions, 3D/AR development, and business automation. Transform your business with cutting-edge technology solutions.">
     <meta name="theme-color" content="#ffffff">
 
     <title>HirawatTech - D2C Brands, 3D/AR & Automation Solutions | India</title>
@@ -12,7 +13,8 @@
     <!-- Resource Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&family=Material+Symbols+Outlined&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Material+Symbols+Outlined&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/assets/styles/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +26,8 @@
     <link rel="icon" href="/assets/hirawat-tech-500-logo.webp" type="image/webp">
     <meta name="keywords" content="3D, AR, Software Development, D2C Brands, Technology Solutions, India">
     <meta property="og:title" content="HirawatTech - D2C Brands, 3D/AR & Automation Solutions">
-    <meta property="og:description" content="Transform your D2C brand with cutting-edge 3D/AR experiences and intelligent automation solutions.">
+    <meta property="og:description"
+        content="Transform your D2C brand with cutting-edge 3D/AR experiences and intelligent automation solutions.">
     <meta property="og:image" content="/assets/hirawat-tech-500-logo.webp">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_IN">
@@ -47,390 +50,397 @@
 
     <!-- Main content area -->
     <main id="main-content" class="flex-1 relative h-full">
-                <div>
-                    <script>
-                        // Mobile menu implementation using Alpine.js
-                        document.addEventListener('alpine:init', () => {
-                            Alpine.data('mobileMenu', () => ({
-                                isOpen: false,
-                                init() {
-                                    this.$watch('isOpen', value => {
-                                        document.body.style.overflow = value ? 'hidden' : '';
-                                    });
+        <div>
+            <script>
+                // Mobile menu implementation using Alpine.js
+                document.addEventListener('alpine:init', () => {
+                    Alpine.data('mobileMenu', () => ({
+                        isOpen: false,
+                        init() {
+                            this.$watch('isOpen', value => {
+                                document.body.style.overflow = value ? 'hidden' : '';
+                            });
 
-                                    // Close on escape key
-                                    window.addEventListener('keydown', e => {
-                                        if (e.key === 'Escape' && this.isOpen) {
-                                            this.isOpen = false;
-                                        }
-                                    });
-                                },
-                                toggle() {
-                                    this.isOpen = !this.isOpen;
-                                },
-                                close() {
+                            // Close on escape key
+                            window.addEventListener('keydown', e => {
+                                if (e.key === 'Escape' && this.isOpen) {
                                     this.isOpen = false;
                                 }
-                            }));
-                        });
-                    </script>
+                            });
+                        },
+                        toggle() {
+                            this.isOpen = !this.isOpen;
+                        },
+                        close() {
+                            this.isOpen = false;
+                        }
+                    }));
+                });
+            </script>
 
-                    <header x-data="mobileMenu" class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50" role="banner" aria-label="Main site header">
-                        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Primary navigation">
-                            <div class="flex justify-between items-center h-16">
-                                <!-- Logo -->
-                                <div class="flex-shrink-0 flex items-center">
-                                    <img src="/assets/hirawat-tech-500-logo.webp" alt="HirawatTech Logo"
-                                        class="h-14 w-auto mr-2" width="32" height="32" fetchpriority="high">
-                                    <span class="font-Inter text-xl font-bold text-gray-900">HirawatTech</span>
-                                </div>
+            <header x-data="mobileMenu" class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50"
+                role="banner" aria-label="Main site header">
+                <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Primary navigation">
+                    <div class="flex justify-between items-center h-16">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0 flex items-center">
+                            <img src="/assets/hirawat-tech-500-logo.webp" alt="HirawatTech Logo"
+                                class="h-14 w-auto mr-2" width="32" height="32" fetchpriority="high">
+                            <span class="font-Inter text-xl font-bold text-gray-900">HirawatTech</span>
+                        </div>
 
-                                <!-- Desktop Navigation -->
-                                <div class="hidden md:flex space-x-8">
-                                    <a href="#about" class="nav-link"><span class="material-symbols-outlined text-sm align-middle mr-1">info</span>About</a>
-                                    <a href="#services" class="nav-link"><span class="material-symbols-outlined text-sm align-middle mr-1">build</span>Services</a>
-                                    <a href="#portfolio" class="nav-link"><span class="material-symbols-outlined text-sm align-middle mr-1">work</span>Portfolio</a>
-                                    <a href="#testimonials" class="nav-link"><span class="material-symbols-outlined text-sm align-middle mr-1">star</span>Testimonials</a>
-                                    <a href="#contact" class="nav-link"><span class="material-symbols-outlined text-sm align-middle mr-1">contact_mail</span>Contact</a>
-                                </div>
+                        <!-- Desktop Navigation -->
+                        <div class="hidden md:flex space-x-8">
+                            <a href="#about" class="nav-link"><span
+                                    class="material-symbols-outlined text-sm align-middle mr-1">info</span>About</a>
+                            <a href="#services" class="nav-link"><span
+                                    class="material-symbols-outlined text-sm align-middle mr-1">build</span>Services</a>
+                            <a href="#portfolio" class="nav-link"><span
+                                    class="material-symbols-outlined text-sm align-middle mr-1">work</span>Portfolio</a>
+                            <a href="#testimonials" class="nav-link"><span
+                                    class="material-symbols-outlined text-sm align-middle mr-1">star</span>Testimonials</a>
+                            <a href="#contact" class="nav-link"><span
+                                    class="material-symbols-outlined text-sm align-middle mr-1">contact_mail</span>Contact</a>
+                        </div>
 
-                                <!-- Mobile menu button -->
-                                <button @click="toggle"
-                                    class="md:hidden inline-flex items-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
-                                    aria-label="Toggle menu">
-                                    <svg x-show="!isOpen" class="h-6 w-6" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 6h16M4 12h16M4 18h16"></path>
-                                    </svg>
-                                    <svg x-show="isOpen" class="h-6 w-6" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M6 18L18 6M6 6l12 12"></path>
-                                    </svg>
-                                </button>
+                        <!-- Mobile menu button -->
+                        <button @click="toggle"
+                            class="md:hidden inline-flex items-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                            aria-label="Toggle menu">
+                            <svg x-show="!isOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                            <svg x-show="isOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Navigation Menu -->
+                    <div x-show="isOpen" x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0 -translate-y-1"
+                        x-transition:enter-end="opacity-100 translate-y-0"
+                        x-transition:leave="transition ease-in duration-150"
+                        x-transition:leave-start="opacity-100 translate-y-0"
+                        x-transition:leave-end="opacity-0 -translate-y-1" @click.away="close" class="md:hidden">
+                        <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                            <a href="#hero" @click="close" class="nav-link-mobile">Home</a>
+                            <a href="#about" @click="close" class="nav-link-mobile">About</a>
+                            <a href="#services" @click="close" class="nav-link-mobile">Services</a>
+                            <a href="#portfolio" @click="close" class="nav-link-mobile">Portfolio</a>
+                            <a href="#testimonials" @click="close" class="nav-link-mobile">Testimonials</a>
+                            <a href="#contact" @click="close" class="nav-link-mobile">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+
+        </div>
+        <div>
+            <section id="hero"
+                class="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-900">
+
+                <!-- Content -->
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <div class="space-y-8">
+                        <!-- Main Headline -->
+                        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight content">
+                            Software Solutions for&nbsp;
+                            <br>
+                            <div class="animatedText">
+                                <span class="animate1">D2C Brands</span>
+                                <span class="animate2">Augmented Reality</span>
+                                <span class="animate3">3D Technology</span>
+                                <span class="animate4">Automation</span>
+                                <span class="animate5">E-Commerce</span>
                             </div>
+                        </h1>
+                    </div>
 
-                            <!-- Mobile Navigation Menu -->
-                            <div x-show="isOpen" x-transition:enter="transition ease-out duration-200"
-                                x-transition:enter-start="opacity-0 -translate-y-1"
-                                x-transition:enter-end="opacity-100 translate-y-0"
-                                x-transition:leave="transition ease-in duration-150"
-                                x-transition:leave-start="opacity-100 translate-y-0"
-                                x-transition:leave-end="opacity-0 -translate-y-1" @click.away="close" class="md:hidden">
-                                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-                                    <a href="#hero" @click="close" class="nav-link-mobile">Home</a>
-                                    <a href="#about" @click="close" class="nav-link-mobile">About</a>
-                                    <a href="#services" @click="close" class="nav-link-mobile">Services</a>
-                                    <a href="#portfolio" @click="close" class="nav-link-mobile">Portfolio</a>
-                                    <a href="#testimonials" @click="close" class="nav-link-mobile">Testimonials</a>
-                                    <a href="#contact" @click="close" class="nav-link-mobile">Contact</a>
-                                </div>
+
+                    <!-- Subheadline -->
+                    <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                        &nbsp;
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-16">
+                        <button onclick="location.href='/#contact'"
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                            <span class="material-symbols-outlined align-middle mr-2">rocket_launch</span>
+                            Start Your Project
+                        </button>
+                        <button onclick="location.href='/#portfolio'"
+                            class="border-2 border-white text-white hover:bg-white hover:text-neutral-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
+                            <span class="material-symbols-outlined align-middle mr-2">work</span>
+                            View Our Work
+                        </button>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 max-w-4xl mx-auto">
+                        <div class="text-center space-y-3 relative">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center">
+                                <img src="/assets/icons/3d-ar.svg" alt="3D/AR Icon" class="w-10 h-10 text-white">
                             </div>
-                        </nav>
-                    </header>
+                            <h3 class="text-xl font-semibold text-white relative">3D/AR Experiences</h3>
+                            <p class="text-gray-400 relative">Immersive product visualization</p>
+                        </div>
 
+                        <div class="text-center space-y-3 relative">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mx-auto flex items-center justify-center">
+                                <img src="/assets/icons/d2c.svg" alt="D2C Icon" class="w-10 h-10 text-white">
+                            </div>
+                            <h3 class="text-xl font-semibold text-white relative">D2C Brand Growth</h3>
+                            <p class="text-gray-400 relative">Direct-to-consumer excellence</p>
+                        </div>
 
+                        <div class="text-center space-y-3 relative">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-br from-pink-500 to-orange-600 rounded-full mx-auto flex items-center justify-center">
+                                <img src="/assets/icons/robot.svg" alt="Automation Icon" class="w-10 h-10 text-white">
+                            </div>
+                            <h3 class="text-xl font-semibold text-white">Smart Automation</h3>
+                            <p class="text-gray-400">Intelligent workflow solutions</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <section id="hero"
-                        class="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-900">
+        </div>
 
-                        <!-- Content -->
-                        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                            <div class="space-y-8">
-                                <!-- Main Headline -->
-                                    <h1
-                                        class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight content">
-                                        Software Solutions for&nbsp;
-                                        <br>
-                                        <div class="animatedText">
-                                            <span class="animate1">D2C Brands</span>
-                                            <span class="animate2">Augmented Reality</span>
-                                            <span class="animate3">3D Technology</span>
-                                            <span class="animate4">Automation</span>
-                                            <span class="animate5">E-Commerce</span>
-                                        </div>
-                                    </h1>
-                                </div>
-                                
+        <!-- Floating Animation Elements -->
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse" aria-hidden="true">
+            </div>
+            <div class="absolute top-3/4 right-1/4 w-3 h-3 bg-purple-400 rounded-full animate-bounce"
+                aria-hidden="true">
+            </div>
+            <div class="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-ping" aria-hidden="true">
+            </div>
+        </div>
 
-                                <!-- Subheadline -->
-                                <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                                    &nbsp;
-                                </p>
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
+            <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
+        </div>
+        </section>
 
-                                <!-- CTA Buttons -->
-                                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-16">
-                                    <button onclick="location.href='/#contact'"
-                                        class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                                        <span class="material-symbols-outlined align-middle mr-2">rocket_launch</span>
-                                        Start Your Project
-                                    </button>
-                                    <button onclick="location.href='/#portfolio'"
-                                        class="border-2 border-white text-white hover:bg-white hover:text-neutral-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
-                                        <span class="material-symbols-outlined align-middle mr-2">work</span>
-                                        View Our Work
-                                    </button>
-                                </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Parallax effect for background
+                window.addEventListener('scroll', function () {
+                    const scrolled = window.pageYOffset;
+                    const heroSection = document.querySelector('#hero');
+                    const backgroundImage = heroSection.querySelector('img');
 
-                                <!-- Key Features -->
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 max-w-4xl mx-auto">
-                                    <div class="text-center space-y-3 relative">
-                                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center">
-                                            <img src="/assets/icons/3d-ar.svg" alt="3D/AR Icon" class="w-10 h-10 text-white">
-                                        </div>
-                                        <h3 class="text-xl font-semibold text-white relative">3D/AR Experiences</h3>
-                                        <p class="text-gray-400 relative">Immersive product visualization</p>
-                                    </div>
+                    if (backgroundImage && scrolled < heroSection.offsetHeight) {
+                        backgroundImage.style.transform = `translateY(${scrolled * 0.5}px)`;
+                    }
+                });
 
-                                    <div class="text-center space-y-3 relative">
-                                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mx-auto flex items-center justify-center">
-                                            <img src="/assets/icons/d2c.svg" alt="D2C Icon" class="w-10 h-10 text-white">
-                                        </div>
-                                        <h3 class="text-xl font-semibold text-white relative">D2C Brand Growth</h3>
-                                        <p class="text-gray-400 relative">Direct-to-consumer excellence</p>
-                                    </div>
+                // Intersection Observer for animations
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
 
-                                    <div class="text-center space-y-3 relative">
-                                        <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-orange-600 rounded-full mx-auto flex items-center justify-center">
-                                            <img src="/assets/icons/robot.svg" alt="Automation Icon" class="w-10 h-10 text-white">
-                                        </div>
-                                        <h3 class="text-xl font-semibold text-white">Smart Automation</h3>
-                                        <p class="text-gray-400">Intelligent workflow solutions</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-fade-in');
+                        }
+                    });
+                }, observerOptions);
 
-                        <!-- Floating Animation Elements -->
-                        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-                            <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse" aria-hidden="true"></div>
-                            <div class="absolute top-3/4 right-1/4 w-3 h-3 bg-purple-400 rounded-full animate-bounce" aria-hidden="true">
-                            </div>
-                            <div class="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-ping" aria-hidden="true">
-                            </div>
-                        </div>
+                // Observe hero elements
+                const heroElements = document.querySelectorAll('#hero h1, #hero p, #hero .grid > div');
+                heroElements.forEach(el => observer.observe(el));
+            });
+        </script>
+        </div>
+        <div>
+            <section id="about" class="py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Section Header -->
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                            About
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            We're a cutting-edge technology agency from India, specializing in transforming D2C
+                            brands through innovative 3D/AR experiences and intelligent automation solutions.
+                        </p>
+                    </div>
 
-                        <!-- Scroll Indicator -->
-                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
-                            <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
-                        </div>
-                    </section>
+                    <div class="flex justify-center">
+                        <button onclick="location.href='/pages/about.html'"
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                            <span class="material-symbols-outlined align-middle mr-2">read_more</span>
+                            Know More
+                        </button>
+                    </div>
+                </div>
 
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            // Parallax effect for background
-                            window.addEventListener('scroll', function () {
-                                const scrolled = window.pageYOffset;
-                                const heroSection = document.querySelector('#hero');
-                                const backgroundImage = heroSection.querySelector('img');
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Intersection Observer for animations
+                        const observerOptions = {
+                            threshold: 0.1,
+                            rootMargin: '0px 0px -50px 0px'
+                        };
 
-                                if (backgroundImage && scrolled < heroSection.offsetHeight) {
-                                    backgroundImage.style.transform = `translateY(${scrolled * 0.5}px)`;
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('animate-fade-in-up');
                                 }
                             });
+                        }, observerOptions);
 
-                            // Intersection Observer for animations
-                            const observerOptions = {
-                                threshold: 0.1,
-                                rootMargin: '0px 0px -50px 0px'
-                            };
+                        // Observe about section elements
+                        const aboutElements = document.querySelectorAll('#about h2, #about h3, #about .grid > div, #about .space-y-4 > div');
+                        aboutElements.forEach(el => observer.observe(el));
 
-                            const observer = new IntersectionObserver((entries) => {
-                                entries.forEach(entry => {
-                                    if (entry.isIntersecting) {
-                                        entry.target.classList.add('animate-fade-in');
-                                    }
-                                });
-                            }, observerOptions);
-
-                            // Observe hero elements
-                            const heroElements = document.querySelectorAll('#hero h1, #hero p, #hero .grid > div');
-                            heroElements.forEach(el => observer.observe(el));
+                        // Counter animation for stats
+                        const counters = document.querySelectorAll('#about .text-3xl');
+                        counters.forEach(counter => {
+                            const target = parseInt(counter.textContent);
+                            let current = 0;
+                            const increment = target / 50;
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    counter.textContent = target + '+';
+                                    clearInterval(timer);
+                                } else {
+                                    counter.textContent = Math.floor(current) + '+';
+                                }
+                            }, 30);
                         });
-                    </script>
-                </div>
-                <div>
-                    <section id="about" class="py-20 bg-gray-50">
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <!-- Section Header -->
-                            <div class="text-center mb-16">
-                                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                                    About
-                                </h2>
-                                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                                    We're a cutting-edge technology agency from India, specializing in transforming D2C
-                                    brands through innovative 3D/AR experiences and intelligent automation solutions.
-                                </p>
-                            </div>
+                    });
+                </script>
 
-                            <div class="flex justify-center">
-                                <button onclick="location.href='/pages/about.html'"
-                                    class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
-                                    <span class="material-symbols-outlined align-middle mr-2">read_more</span>
-                                    Know More
+
+            </section>
+        </div>
+        <div>
+            <section id="services" class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Section Header -->
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4">Services</h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Comprehensive technology solutions designed to accelerate your D2C brand's growth
+                            through innovation and automation.
+                        </p>
+                    </div>
+
+                    <!-- Services Grid -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                        <!-- Service 1: D2C Development -->
+                        <article
+                            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">D2C Platform Development
+                                </h3>
+                                <ul class="space-y-2 text-l text-gray-600 mb-6">
+                                    <li>• Custom Shopify & WooCommerce</li>
+                                    <li>• Mobile-first responsive design</li>
+                                    <li>• Payment gateway integration</li>
+                                    <li>• Performance optimization</li>
+                                </ul>
+                                <button
+                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300">
+                                    Learn More
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Service 2: 3D/AR Solutions -->
+                        <article
+                            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">3D/AR Experiences</h3>
+                                <ul class="space-y-2 text-l text-gray-600 mb-6">
+                                    <li>• Interactive 3D product models</li>
+                                    <li>• AR try-on experiences</li>
+                                    <li>• WebGL implementations</li>
+                                    <li>• Virtual showrooms</li>
+                                </ul>
+                                <button
+                                    class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300">
+                                    Learn More
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Service 3: Automation -->
+                        <article
+                            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Automation</h3>
+                                <ul class="space-y-2 text-l text-gray-600 mb-6">
+                                    <li>• Workflow automation systems</li>
+                                    <li>• AI-powered chatbots</li>
+                                    <li>• Inventory management</li>
+                                    <li>• Analytics & reporting</li>
+                                </ul>
+                                <button
+                                    class="w-full bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300">
+                                    Learn More
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Service Details Modal -->
+                <div id="service-modal"
+                    class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
+                    aria-modal="true" aria-hidden="true">
+                    <div class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 id="modal-title" class="text-2xl font-semibold text-gray-900"></h3>
+                                <button id="close-modal" class="text-gray-400 hover:text-gray-600 text-2xl font-bold"
+                                    aria-label="Close modal">
+                                    &times;
+                                </button>
+                            </div>
+                            <div id="modal-content" class="text-gray-600">
+                                <!-- Dynamic content will be inserted here -->
+                            </div>
+                            <div class="mt-6 flex gap-4">
+                                <button onclick="location.href='/#contact'"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
+                                    Get Quote
+                                </button>
+                                <button id="close-modal-btn"
+                                    class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg font-medium transition-colors duration-300">
+                                    Close
                                 </button>
                             </div>
                         </div>
-
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function () {
-                                // Intersection Observer for animations
-                                const observerOptions = {
-                                    threshold: 0.1,
-                                    rootMargin: '0px 0px -50px 0px'
-                                };
-
-                                const observer = new IntersectionObserver((entries) => {
-                                    entries.forEach(entry => {
-                                        if (entry.isIntersecting) {
-                                            entry.target.classList.add('animate-fade-in-up');
-                                        }
-                                    });
-                                }, observerOptions);
-
-                                // Observe about section elements
-                                const aboutElements = document.querySelectorAll('#about h2, #about h3, #about .grid > div, #about .space-y-4 > div');
-                                aboutElements.forEach(el => observer.observe(el));
-
-                                // Counter animation for stats
-                                const counters = document.querySelectorAll('#about .text-3xl');
-                                counters.forEach(counter => {
-                                    const target = parseInt(counter.textContent);
-                                    let current = 0;
-                                    const increment = target / 50;
-                                    const timer = setInterval(() => {
-                                        current += increment;
-                                        if (current >= target) {
-                                            counter.textContent = target + '+';
-                                            clearInterval(timer);
-                                        } else {
-                                            counter.textContent = Math.floor(current) + '+';
-                                        }
-                                    }, 30);
-                                });
-                            });
-                        </script>
-
-
-                    </section>
+                    </div>
                 </div>
-                <div>
-                    <section id="services" class="py-20 bg-white">
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <!-- Section Header -->
-                            <div class="text-center mb-16">
-                                <h2 class="text-4xl font-bold text-gray-900 mb-4">Services</h2>
-                                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                                    Comprehensive technology solutions designed to accelerate your D2C brand's growth
-                                    through innovation and automation.
-                                </p>
-                            </div>
 
-                            <!-- Services Grid -->
-                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-                                <!-- Service 1: D2C Development -->
-                                <article
-                                    class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-6">
-                                        <h3 class="text-xl font-semibold text-gray-900 mb-3">D2C Platform Development
-                                        </h3>
-                                        <ul class="space-y-2 text-l text-gray-600 mb-6">
-                                            <li>• Custom Shopify & WooCommerce</li>
-                                            <li>• Mobile-first responsive design</li>
-                                            <li>• Payment gateway integration</li>
-                                            <li>• Performance optimization</li>
-                                        </ul>
-                                        <button
-                                            class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300">
-                                            Learn More
-                                        </button>
-                                    </div>
-                                </article>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const modal = document.getElementById('service-modal');
+                        const modalTitle = document.getElementById('modal-title');
+                        const modalContent = document.getElementById('modal-content');
+                        const closeModalBtn = document.getElementById('close-modal');
+                        const closeModalBtnBottom = document.getElementById('close-modal-btn');
+                        const learnMoreButtons = document.querySelectorAll('#services button:not(#close-modal):not(#close-modal-btn)');
 
-                                <!-- Service 2: 3D/AR Solutions -->
-                                <article
-                                    class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-6">
-                                        <h3 class="text-xl font-semibold text-gray-900 mb-3">3D/AR Experiences</h3>
-                                        <ul class="space-y-2 text-l text-gray-600 mb-6">
-                                            <li>• Interactive 3D product models</li>
-                                            <li>• AR try-on experiences</li>
-                                            <li>• WebGL implementations</li>
-                                            <li>• Virtual showrooms</li>
-                                        </ul>
-                                        <button
-                                            class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300">
-                                            Learn More
-                                        </button>
-                                    </div>
-                                </article>
-
-                                <!-- Service 3: Automation -->
-                                <article
-                                    class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-6">
-                                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Automation</h3>
-                                        <ul class="space-y-2 text-l text-gray-600 mb-6">
-                                            <li>• Workflow automation systems</li>
-                                            <li>• AI-powered chatbots</li>
-                                            <li>• Inventory management</li>
-                                            <li>• Analytics & reporting</li>
-                                        </ul>
-                                        <button
-                                            class="w-full bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300">
-                                            Learn More
-                                        </button>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-
-                        <!-- Service Details Modal -->
-                        <div id="service-modal"
-                            class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
-                            aria-modal="true" aria-hidden="true">
-                            <div class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto">
-                                <div class="p-6">
-                                    <div class="flex justify-between items-center mb-4">
-                                        <h3 id="modal-title" class="text-2xl font-semibold text-gray-900"></h3>
-                                        <button id="close-modal"
-                                            class="text-gray-400 hover:text-gray-600 text-2xl font-bold"
-                                            aria-label="Close modal">
-                                            &times;
-                                        </button>
-                                    </div>
-                                    <div id="modal-content" class="text-gray-600">
-                                        <!-- Dynamic content will be inserted here -->
-                                    </div>
-                                    <div class="mt-6 flex gap-4">
-                                        <button onclick="location.href='/#contact'"
-                                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
-                                            Get Quote
-                                        </button>
-                                        <button id="close-modal-btn"
-                                            class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg font-medium transition-colors duration-300">
-                                            Close
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function () {
-                                const modal = document.getElementById('service-modal');
-                                const modalTitle = document.getElementById('modal-title');
-                                const modalContent = document.getElementById('modal-content');
-                                const closeModalBtn = document.getElementById('close-modal');
-                                const closeModalBtnBottom = document.getElementById('close-modal-btn');
-                                const learnMoreButtons = document.querySelectorAll('#services button:not(#close-modal):not(#close-modal-btn)');
-
-                                const serviceDetails = {
-                                    'D2C Platform Development': {
-                                        title: 'D2C Platform Development',
-                                        content: `
+                        const serviceDetails = {
+                            'D2C Platform Development': {
+                                title: 'D2C Platform Development',
+                                content: `
               <p class="mb-4">Transform your direct-to-consumer business with our comprehensive e-commerce solutions. We build scalable, high-performance platforms that drive conversions and enhance customer experience.</p>
               <h4 class="font-semibold mb-2">What's Included:</h4>
               <ul class="list-disc list-inside space-y-1 mb-4">
@@ -444,10 +454,10 @@
               <h4 class="font-semibold mb-2">Technologies:</h4>
               <p>Shopify, WooCommerce, React, Node.js, MongoDB</p>
             `
-                                    },
-                                    '3D/AR Experiences': {
-                                        title: '3D/AR Experiences',
-                                        content: `
+                            },
+                            '3D/AR Experiences': {
+                                title: '3D/AR Experiences',
+                                content: `
               <p class="mb-4">Create immersive product experiences that allow customers to visualize and interact with your products before purchase, significantly reducing return rates and increasing engagement.</p>
               <h4 class="font-semibold mb-2">What's Included:</h4>
               <ul class="list-disc list-inside space-y-1 mb-4">
@@ -461,10 +471,10 @@
               <h4 class="font-semibold mb-2">Technologies:</h4>
               <p>Three.js, WebGL, ARKit, ARCore, Blender, Unity</p>
             `
-                                    },
-                                    'Smart Automation': {
-                                        title: 'Smart Automation',
-                                        content: `
+                            },
+                            'Smart Automation': {
+                                title: 'Smart Automation',
+                                content: `
               <p class="mb-4">Streamline your operations with intelligent automation solutions that reduce manual work, improve efficiency, and scale your business operations seamlessly.</p>
               <h4 class="font-semibold mb-2">What's Included:</h4>
               <ul class="list-disc list-inside space-y-1 mb-4">
@@ -478,225 +488,259 @@
               <h4 class="font-semibold mb-2">Technologies:</h4>
               <p>Python, TensorFlow, Zapier, AWS Lambda, Node.js</p>
             `
-                                    }
-                                };
+                            }
+                        };
 
-                                function openModal(serviceType) {
-                                    const service = serviceDetails[serviceType];
-                                    if (service) {
-                                        modalTitle.textContent = service.title;
-                                        modalContent.innerHTML = service.content;
-                                        modal.classList.remove('hidden');
-                                        modal.setAttribute('aria-hidden', 'false');
-                                        document.body.style.overflow = 'hidden';
+                        function openModal(serviceType) {
+                            const service = serviceDetails[serviceType];
+                            if (service) {
+                                modalTitle.textContent = service.title;
+                                modalContent.innerHTML = service.content;
+                                modal.classList.remove('hidden');
+                                modal.setAttribute('aria-hidden', 'false');
+                                document.body.style.overflow = 'hidden';
 
-                                        // Focus trap
-                                        closeModalBtn.focus();
-                                    }
+                                // Focus trap
+                                closeModalBtn.focus();
+                            }
+                        }
+
+                        function closeModal() {
+                            modal.classList.add('hidden');
+                            modal.setAttribute('aria-hidden', 'true');
+                            document.body.style.overflow = '';
+                        }
+
+                        // Event listeners for Learn More buttons
+                        learnMoreButtons.forEach(button => {
+                            button.addEventListener('click', function () {
+                                const serviceCard = this.closest('.bg-gray-50');
+                                const serviceTitle = serviceCard.querySelector('h3').textContent;
+
+                                if (this.textContent === 'Learn More') {
+                                    openModal(serviceTitle);
                                 }
-
-                                function closeModal() {
-                                    modal.classList.add('hidden');
-                                    modal.setAttribute('aria-hidden', 'true');
-                                    document.body.style.overflow = '';
-                                }
-
-                                // Event listeners for Learn More buttons
-                                learnMoreButtons.forEach(button => {
-                                    button.addEventListener('click', function () {
-                                        const serviceCard = this.closest('.bg-gray-50');
-                                        const serviceTitle = serviceCard.querySelector('h3').textContent;
-
-                                        if (this.textContent === 'Learn More') {
-                                            openModal(serviceTitle);
-                                        }
-                                    });
-                                });
-
-                                // Close modal event listeners
-                                closeModalBtn.addEventListener('click', closeModal);
-                                closeModalBtnBottom.addEventListener('click', closeModal);
-
-                                // Close modal when clicking outside
-                                modal.addEventListener('click', function (e) {
-                                    if (e.target === modal) {
-                                        closeModal();
-                                    }
-                                });
-
-                                // Close modal on ESC key
-                                document.addEventListener('keydown', function (e) {
-                                    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                                        closeModal();
-                                    }
-                                });
-
-                                // Intersection Observer for animations
-                                const observerOptions = {
-                                    threshold: 0.1,
-                                    rootMargin: '0px 0px -50px 0px'
-                                };
-
-                                const observer = new IntersectionObserver((entries) => {
-                                    entries.forEach(entry => {
-                                        if (entry.isIntersecting) {
-                                            entry.target.classList.add('animate-fade-in-up');
-                                        }
-                                    });
-                                }, observerOptions);
-
-                                // Observe service cards
-                                const serviceCards = document.querySelectorAll('#services .bg-gray-50');
-                                serviceCards.forEach(card => observer.observe(card));
                             });
-                        </script>
-                    </section>
-                </div>
-                <div>
-                    <section id="portfolio" class="py-20 bg-gray-50">
+                        });
+
+                        // Close modal event listeners
+                        closeModalBtn.addEventListener('click', closeModal);
+                        closeModalBtnBottom.addEventListener('click', closeModal);
+
+                        // Close modal when clicking outside
+                        modal.addEventListener('click', function (e) {
+                            if (e.target === modal) {
+                                closeModal();
+                            }
+                        });
+
+                        // Close modal on ESC key
+                        document.addEventListener('keydown', function (e) {
+                            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                                closeModal();
+                            }
+                        });
+
+                        // Intersection Observer for animations
+                        const observerOptions = {
+                            threshold: 0.1,
+                            rootMargin: '0px 0px -50px 0px'
+                        };
+
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('animate-fade-in-up');
+                                }
+                            });
+                        }, observerOptions);
+
+                        // Observe service cards
+                        const serviceCards = document.querySelectorAll('#services .bg-gray-50');
+                        serviceCards.forEach(card => observer.observe(card));
+                    });
+                </script>
+            </section>
+        </div>
+        <div>
+            <section id="portfolio" class="py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Section Header -->
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4">Portfolio</h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Discover how we've transformed B2B and D2C brands with innovative 3D/AR experiences and
+                            smart automation solutions.
+                        </p>
+                    </div>
+
+                    <!-- Filter Tabs -->
+                    <div class="flex justify-center mb-12">
+                        <div class="bg-white rounded-lg p-1 border border-gray-200">
+                            <button type="button"
+                                class="filter-btn active px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                                data-filter="all">
+                                All Projects
+                            </button>
+                            <button type="button"
+                                class="filter-btn px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                                data-filter="3d-ar">
+                                3D/AR
+                            </button>
+                            <button type="button"
+                                class="filter-btn px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                                data-filter="d2c">
+                                D2C Platforms
+                            </button>
+                            <button type="button"
+                                class="filter-btn px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                                data-filter="automation">
+                                Automation
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
+
+                    <!-- Client Logos Section -->
+                    <section class="mb-16 bg-white py-12 w-screen relative"
+                        style="left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;"
+                        aria-labelledby="trusted-clients-heading">
                         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <!-- Section Header -->
-                            <div class="text-center mb-16">
-                                <h2 class="text-4xl font-bold text-gray-900 mb-4">Portfolio</h2>
-                                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                                    Discover how we've transformed B2B and D2C brands with innovative 3D/AR experiences and
-                                    smart automation solutions.
-                                </p>
-                            </div>
-
-                            <!-- Filter Tabs -->
-                            <div class="flex justify-center mb-12">
-                                <div class="bg-white rounded-lg p-1 border border-gray-200">
-                                    <button type="button"
-                                        class="filter-btn active px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
-                                        data-filter="all">
-                                        All Projects
-                                    </button>
-                                    <button type="button"
-                                        class="filter-btn px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
-                                        data-filter="3d-ar">
-                                        3D/AR
-                                    </button>
-                                    <button type="button"
-                                        class="filter-btn px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
-                                        data-filter="d2c">
-                                        D2C Platforms
-                                    </button>
-                                    <button type="button"
-                                        class="filter-btn px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
-                                        data-filter="automation">
-                                        Automation
-                                    </button>
+                            <h3 id="trusted-clients-heading"
+                                class="text-2xl font-semibold text-gray-900 mb-8 text-center">Trusted By Global
+                                Companies</h3>
+                        </div>
+                        <div class="relative overflow-hidden w-full">
+                            <div class="flex animate-scroll-logos">
+                                <!-- First set of logos -->
+                                <div class="flex items-center space-x-50 min-w-full px-15">
+                                    <img src="/assets/client-logos/appletech-soft.png" alt="AppleTech Soft"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/aws.png" alt="AWS" class="h-8 w-32 object-contain"
+                                        loading="lazy">
+                                    <img src="/assets/client-logos/fidelity-investment.webp" alt="Fidelity Investment"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/fuzo.png" alt="Fuzo" class="h-8 w-32 object-contain"
+                                        loading="lazy">
+                                    <img src="/assets/client-logos/gulpdata.png" alt="Gulp Data"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/jito-youth.jpg" alt="Jito Youth"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/jugni-lifestyle.webp" alt="Jugni Lifestyle"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/kairos-spark.png" alt="Kairos Spark"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/kyzaindia.webp" alt="Kyza India"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/rawrx.avif" alt="RawrX"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/seemore-data.svg" alt="Seemore Data"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/snowflake.png" alt="Snowflake"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/souf-and-school.png" alt="Souf and School"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/truelty.png" alt="Truelty"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/zeminix-uk.webp" alt="Zeminix UK"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                </div>
+                                <!-- Duplicate set for seamless scrolling -->
+                                <div class="flex items-center space-x-50 min-w-full px-15">
+                                    <img src="/assets/client-logos/appletech-soft.png" alt="AppleTech Soft"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/aws.png" alt="AWS" class="h-8 w-32 object-contain"
+                                        loading="lazy">
+                                    <img src="/assets/client-logos/fidelity-investment.webp" alt="Fidelity Investment"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/fuzo.png" alt="Fuzo" class="h-8 w-32 object-contain"
+                                        loading="lazy">
+                                    <img src="/assets/client-logos/gulpdata.png" alt="Gulp Data"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/jito-youth.jpg" alt="Jito Youth"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/jugni-lifestyle.webp" alt="Jugni Lifestyle"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/kairos-spark.png" alt="Kairos Spark"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/kyzaindia.webp" alt="Kyza India"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/rawrx.avif" alt="RawrX"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/seemore-data.svg" alt="Seemore Data"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/snowflake.png" alt="Snowflake"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/souf-and-school.png" alt="Souf and School"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/truelty.png" alt="Truelty"
+                                        class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/client-logos/zeminix-uk.webp" alt="Zeminix UK"
+                                        class="h-8 w-32 object-contain" loading="lazy">
                                 </div>
                             </div>
+                        </div>
+                        <div class="absolute left-0 w-40 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
+                        <div class="absolute right-0 w-40 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
+                    </section>
 
-                            <!-- Portfolio Grid -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
+                    <!-- CTA Section -->
+                    <div class="text-center">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Ready to Start Your Project?</h3>
+                        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                            Let's create something amazing together. Get in touch to discuss your next D2C
+                            transformation.
+                        </p>
+                        <button onclick="location.href='/#contact'"
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                            Start Your Project
+                        </button>
+                    </div>
+                </div>
 
-                            <!-- Client Logos Section -->
-                            <section class="mb-16 bg-white py-12 w-screen relative" style="left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;" aria-labelledby="trusted-clients-heading">
-                                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                                    <h3 id="trusted-clients-heading" class="text-2xl font-semibold text-gray-900 mb-8 text-center">Trusted By Global Companies</h3>
-                                </div>
-                                <div class="relative overflow-hidden w-full">
-                                    <div class="flex animate-scroll-logos">
-                                        <!-- First set of logos -->
-                                        <div class="flex items-center space-x-50 min-w-full px-15">
-                                            <img src="/assets/client-logos/appletech-soft.png" alt="AppleTech Soft" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/aws.png" alt="AWS" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/fidelity-investment.webp" alt="Fidelity Investment" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/fuzo.png" alt="Fuzo" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/gulpdata.png" alt="Gulp Data" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/jito-youth.jpg" alt="Jito Youth" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/jugni-lifestyle.webp" alt="Jugni Lifestyle" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/kairos-spark.png" alt="Kairos Spark" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/kyzaindia.webp" alt="Kyza India" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/rawrx.avif" alt="RawrX" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/seemore-data.svg" alt="Seemore Data" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/snowflake.png" alt="Snowflake" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/souf-and-school.png" alt="Souf and School" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/truelty.png" alt="Truelty" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/zeminix-uk.webp" alt="Zeminix UK" class="h-8 w-32 object-contain" loading="lazy">
-                                        </div>
-                                        <!-- Duplicate set for seamless scrolling -->
-                                        <div class="flex items-center space-x-50 min-w-full px-15">
-                                            <img src="/assets/client-logos/appletech-soft.png" alt="AppleTech Soft" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/aws.png" alt="AWS" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/fidelity-investment.webp" alt="Fidelity Investment" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/fuzo.png" alt="Fuzo" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/gulpdata.png" alt="Gulp Data" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/jito-youth.jpg" alt="Jito Youth" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/jugni-lifestyle.webp" alt="Jugni Lifestyle" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/kairos-spark.png" alt="Kairos Spark" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/kyzaindia.webp" alt="Kyza India" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/rawrx.avif" alt="RawrX" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/seemore-data.svg" alt="Seemore Data" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/snowflake.png" alt="Snowflake" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/souf-and-school.png" alt="Souf and School" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/truelty.png" alt="Truelty" class="h-8 w-32 object-contain" loading="lazy">
-                                            <img src="/assets/client-logos/zeminix-uk.webp" alt="Zeminix UK" class="h-8 w-32 object-contain" loading="lazy">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="absolute left-0 w-40 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
-                                <div class="absolute right-0 w-40 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
-                            </section>
-
-                            <!-- CTA Section -->
-                            <div class="text-center">
-                                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Ready to Start Your Project?</h3>
-                                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
-                                    Let's create something amazing together. Get in touch to discuss your next D2C
-                                    transformation.
-                                </p>
+                <!-- Project Detail Modal -->
+                <div id="project-modal"
+                    class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
+                    aria-modal="true" aria-hidden="true">
+                    <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 id="project-modal-title" class="text-2xl font-semibold text-gray-900"></h3>
+                                <button id="close-project-modal"
+                                    class="text-gray-400 hover:text-gray-600 text-2xl font-bold"
+                                    aria-label="Close modal">
+                                    &times;
+                                </button>
+                            </div>
+                            <div id="project-modal-content">
+                                <!-- Dynamic content will be inserted here -->
+                            </div>
+                            <div class="mt-6 flex gap-4">
                                 <button onclick="location.href='/#contact'"
-                                    class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
-                                    Start Your Project
+                                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
+                                    Start Similar Project
+                                </button>
+                                <button id="close-project-modal-btn"
+                                    class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg font-medium transition-colors duration-300">
+                                    Close
                                 </button>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Project Detail Modal -->
-                        <div id="project-modal"
-                            class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
-                            aria-modal="true" aria-hidden="true">
-                            <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
-                                <div class="p-6">
-                                    <div class="flex justify-between items-center mb-6">
-                                        <h3 id="project-modal-title" class="text-2xl font-semibold text-gray-900"></h3>
-                                        <button id="close-project-modal"
-                                            class="text-gray-400 hover:text-gray-600 text-2xl font-bold"
-                                            aria-label="Close modal">
-                                            &times;
-                                        </button>
-                                    </div>
-                                    <div id="project-modal-content">
-                                        <!-- Dynamic content will be inserted here -->
-                                    </div>
-                                    <div class="mt-6 flex gap-4">
-                                        <button onclick="location.href='/#contact'"
-                                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
-                                            Start Similar Project
-                                        </button>
-                                        <button id="close-project-modal-btn"
-                                            class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg font-medium transition-colors duration-300">
-                                            Close
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function () {
-                                // Fetch and render portfolio data from JSON
-                                fetch('/assets/data/portfolio-data.json')
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        // Render portfolio items
-                                        const grid = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3.mb-16');
-                                        if (grid) {
-                                            grid.innerHTML = data.projects.map(project => `
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Fetch and render portfolio data from JSON
+                        fetch('/assets/data/portfolio-data.json')
+                            .then(response => response.json())
+                            .then(data => {
+                                // Render portfolio items
+                                const grid = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3.mb-16');
+                                if (grid) {
+                                    grid.innerHTML = data.projects.map(project => `
                                                 <article class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
                                                          data-category="${project.category}"
                                                          data-project="${project.id}"
@@ -716,162 +760,162 @@
                                                     </div>
                                                 </article>
                                             `).join('');
-                                        }
-                                        // Modal data
-                                        window.projectDetails = data.details;
+                                }
+                                // Modal data
+                                window.projectDetails = data.details;
 
-                                        // --- FIX: Move filter and click handlers here ---
-                                        const filterButtons = document.querySelectorAll('.filter-btn');
-                                        const portfolioItems = document.querySelectorAll('.portfolio-item');
+                                // --- FIX: Move filter and click handlers here ---
+                                const filterButtons = document.querySelectorAll('.filter-btn');
+                                const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-                                        filterButtons.forEach(button => {
-                                            button.addEventListener('click', function () {
-                                                const filter = this.getAttribute('data-filter');
+                                filterButtons.forEach(button => {
+                                    button.addEventListener('click', function () {
+                                        const filter = this.getAttribute('data-filter');
 
-                                                // Update active button
-                                                filterButtons.forEach(btn => {
-                                                    btn.classList.remove('active', 'bg-blue-600', 'text-white');
-                                                    btn.classList.add('text-gray-600', 'hover:text-blue-600');
-                                                });
-                                                this.classList.add('active', 'bg-blue-600', 'text-white');
-                                                this.classList.remove('text-gray-600', 'hover:text-blue-600');
-
-                                                // Filter items
-                                                portfolioItems.forEach(item => {
-                                                    const category = item.getAttribute('data-category');
-                                                    if (filter === 'all' || category === filter) {
-                                                        item.style.display = 'block';
-                                                        item.classList.add('animate-fade-in');
-                                                    } else {
-                                                        item.style.display = 'none';
-                                                    }
-                                                });
-                                            });
+                                        // Update active button
+                                        filterButtons.forEach(btn => {
+                                            btn.classList.remove('active', 'bg-blue-600', 'text-white');
+                                            btn.classList.add('text-gray-600', 'hover:text-blue-600');
                                         });
+                                        this.classList.add('active', 'bg-blue-600', 'text-white');
+                                        this.classList.remove('text-gray-600', 'hover:text-blue-600');
 
-                                        // Set initial active state
-                                        filterButtons[0].classList.add('bg-blue-600', 'text-white');
-
-                                        // Modal functionality
-                                        const modal = document.getElementById('project-modal');
-                                        const modalTitle = document.getElementById('project-modal-title');
-                                        const modalContent = document.getElementById('project-modal-content');
-                                        const closeModalBtn = document.getElementById('close-project-modal');
-                                        const closeModalBtnBottom = document.getElementById('close-project-modal-btn');
-
-                                        function openProjectModal(projectId) {
-                                            const project = window.projectDetails[projectId];
-                                            if (project) {
-                                                modalTitle.textContent = project.title;
-                                                modalContent.innerHTML = project.content;
-                                                modal.classList.remove('hidden');
-                                                modal.setAttribute('aria-hidden', 'false');
-                                                document.body.style.overflow = 'hidden';
-                                                closeModalBtn.focus();
-                                            }
-                                        }
-
-                                        function closeProjectModal() {
-                                            modal.classList.add('hidden');
-                                            modal.setAttribute('aria-hidden', 'true');
-                                            document.body.style.overflow = '';
-                                        }
-
-                                        // Portfolio item click handlers
+                                        // Filter items
                                         portfolioItems.forEach(item => {
-                                            item.addEventListener('click', function () {
-                                                const projectId = this.getAttribute('data-project');
-                                                openProjectModal(projectId);
-                                            });
-
-                                            item.addEventListener('keydown', function (event) {
-                                                if (event.key === 'Enter' || event.key === ' ') {
-                                                    event.preventDefault(); // Prevent space from scrolling page
-                                                    const projectId = this.getAttribute('data-project');
-                                                    openProjectModal(projectId);
-                                                }
-                                            });
-                                        });
-
-                                        // Close modal event listeners
-                                        closeModalBtn.addEventListener('click', closeProjectModal);
-                                        closeModalBtnBottom.addEventListener('click', closeProjectModal);
-
-                                        // Close modal when clicking outside
-                                        modal.addEventListener('click', function (e) {
-                                            if (e.target === modal) {
-                                                closeProjectModal();
+                                            const category = item.getAttribute('data-category');
+                                            if (filter === 'all' || category === filter) {
+                                                item.style.display = 'block';
+                                                item.classList.add('animate-fade-in');
+                                            } else {
+                                                item.style.display = 'none';
                                             }
                                         });
-
-                                        // Close modal on ESC key
-                                        document.addEventListener('keydown', function (e) {
-                                            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                                                closeProjectModal();
-                                            }
-                                        });
-
-                                        // Intersection Observer for animations
-                                        const observerOptions = {
-                                            threshold: 0.1,
-                                            rootMargin: '0px 0px -50px 0px'
-                                        };
-
-                                        const observer = new IntersectionObserver((entries) => {
-                                            entries.forEach(entry => {
-                                                if (entry.isIntersecting) {
-                                                    entry.target.classList.add('animate-fade-in-up');
-                                                }
-                                            });
-                                        }, observerOptions);
-
-                                        // Observe portfolio items
-                                        portfolioItems.forEach(item => observer.observe(item));
                                     });
+                                });
+
+                                // Set initial active state
+                                filterButtons[0].classList.add('bg-blue-600', 'text-white');
+
+                                // Modal functionality
+                                const modal = document.getElementById('project-modal');
+                                const modalTitle = document.getElementById('project-modal-title');
+                                const modalContent = document.getElementById('project-modal-content');
+                                const closeModalBtn = document.getElementById('close-project-modal');
+                                const closeModalBtnBottom = document.getElementById('close-project-modal-btn');
+
+                                function openProjectModal(projectId) {
+                                    const project = window.projectDetails[projectId];
+                                    if (project) {
+                                        modalTitle.textContent = project.title;
+                                        modalContent.innerHTML = project.content;
+                                        modal.classList.remove('hidden');
+                                        modal.setAttribute('aria-hidden', 'false');
+                                        document.body.style.overflow = 'hidden';
+                                        closeModalBtn.focus();
+                                    }
+                                }
+
+                                function closeProjectModal() {
+                                    modal.classList.add('hidden');
+                                    modal.setAttribute('aria-hidden', 'true');
+                                    document.body.style.overflow = '';
+                                }
+
+                                // Portfolio item click handlers
+                                portfolioItems.forEach(item => {
+                                    item.addEventListener('click', function () {
+                                        const projectId = this.getAttribute('data-project');
+                                        openProjectModal(projectId);
+                                    });
+
+                                    item.addEventListener('keydown', function (event) {
+                                        if (event.key === 'Enter' || event.key === ' ') {
+                                            event.preventDefault(); // Prevent space from scrolling page
+                                            const projectId = this.getAttribute('data-project');
+                                            openProjectModal(projectId);
+                                        }
+                                    });
+                                });
+
+                                // Close modal event listeners
+                                closeModalBtn.addEventListener('click', closeProjectModal);
+                                closeModalBtnBottom.addEventListener('click', closeProjectModal);
+
+                                // Close modal when clicking outside
+                                modal.addEventListener('click', function (e) {
+                                    if (e.target === modal) {
+                                        closeProjectModal();
+                                    }
+                                });
+
+                                // Close modal on ESC key
+                                document.addEventListener('keydown', function (e) {
+                                    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                                        closeProjectModal();
+                                    }
+                                });
+
+                                // Intersection Observer for animations
+                                const observerOptions = {
+                                    threshold: 0.1,
+                                    rootMargin: '0px 0px -50px 0px'
+                                };
+
+                                const observer = new IntersectionObserver((entries) => {
+                                    entries.forEach(entry => {
+                                        if (entry.isIntersecting) {
+                                            entry.target.classList.add('animate-fade-in-up');
+                                        }
+                                    });
+                                }, observerOptions);
+
+                                // Observe portfolio items
+                                portfolioItems.forEach(item => observer.observe(item));
                             });
-                        </script>
-                    </section>
+                    });
+                </script>
+            </section>
+        </div>
+        <div>
+            <section id="testimonials" class="py-20 bg-neutral-900 overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+                    <div class="text-center">
+                        <h2 class="text-4xl font-bold text-white mb-4">Testimonials</h2>
+                        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                            Hear from D2C brands who've transformed their business with our innovative
+                            solutions.
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <section id="testimonials" class="py-20 bg-neutral-900 overflow-hidden">
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-                            <div class="text-center">
-                                <h2 class="text-4xl font-bold text-white mb-4">Testimonials</h2>
-                                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                                    Hear from D2C brands who've transformed their business with our innovative
-                                    solutions.
-                                </p>
-                            </div>
-                        </div>
 
-                        <!-- Full-width scrolling testimonials -->
-                        <div class="w-full relative">
-                            <div class="scroller" data-speed="slow">
-                                <ul class="tag-list scroller__inner flex gap-8 animate-scroll"></ul>
-                            </div>
-                        </div>
+                <!-- Full-width scrolling testimonials -->
+                <div class="w-full relative">
+                    <div class="scroller" data-speed="slow">
+                        <ul class="tag-list scroller__inner flex gap-8 animate-scroll"></ul>
+                    </div>
+                </div>
 
-                        <!-- Bottom section with CTA -->
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 text-center">
-                            <h3 class="text-2xl font-semibold text-white mb-4">Join Our Success Stories</h3>
-                            <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
-                                Ready to transform your D2C brand? Let's create your success story together.
-                            </p>
-                            <button onclick="location.href='/#contact'"
-                                class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
-                                Start Your Transformation
-                            </button>
-                        </div>
+                <!-- Bottom section with CTA -->
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 text-center">
+                    <h3 class="text-2xl font-semibold text-white mb-4">Join Our Success Stories</h3>
+                    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                        Ready to transform your D2C brand? Let's create your success story together.
+                    </p>
+                    <button onclick="location.href='/#contact'"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                        Start Your Transformation
+                    </button>
+                </div>
 
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function () {
-                                // Fetch and render testimonials from JSON
-                                fetch('/assets/data/testimonials-data.json')
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        const ul = document.querySelector('.tag-list.scroller__inner');
-                                        if (ul) {
-                                            ul.innerHTML = data.testimonials.map(t => `
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Fetch and render testimonials from JSON
+                        fetch('/assets/data/testimonials-data.json')
+                            .then(response => response.json())
+                            .then(data => {
+                                const ul = document.querySelector('.tag-list.scroller__inner');
+                                if (ul) {
+                                    ul.innerHTML = data.testimonials.map(t => `
                                                 <li class="testimonial-card bg-white rounded-lg min-w-96 max-w-96 shadow-lg">
                                                     <article class="p-8">
                                                         <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">${t.quote}</blockquote>
@@ -885,224 +929,221 @@
                                                     </article>
                                                 </li>
                                             `).join('');
-                                        }
-                                    });
-
-                                // Pause animation on hover
-                                const scroller = document.querySelector('.scroller__inner');
-                                const scrollerContainer = document.querySelector('.scroller');
-
-                                scrollerContainer.addEventListener('mouseenter', function () {
-                                    scroller.style.animationPlayState = 'paused';
-                                });
-
-                                scrollerContainer.addEventListener('mouseleave', function () {
-                                    scroller.style.animationPlayState = 'running';
-                                });
-
-                                // Intersection Observer for fade-in animation
-                                const observerOptions = {
-                                    threshold: 0.1,
-                                    rootMargin: '0px 0px -50px 0px'
-                                };
-
-                                const observer = new IntersectionObserver((entries) => {
-                                    entries.forEach(entry => {
-                                        if (entry.isIntersecting) {
-                                            entry.target.classList.add('animate-fade-in');
-                                        }
-                                    });
-                                }, observerOptions);
-
-                                // Observe testimonials section elements
-                                const testimonialElements = document.querySelectorAll('#testimonials h2, #testimonials h3, #testimonials p');
-                                testimonialElements.forEach(el => observer.observe(el));
+                                }
                             });
-                        </script>
 
-                        <style>
-                            .scroller {
-                                max-width: 100vw;
-                                margin-left: calc(-50vw + 50%);
-                                margin-right: calc(-50vw + 50%);
-                                width: 100vw;
-                                overflow: hidden;
-                                mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-                            }
+                        // Pause animation on hover
+                        const scroller = document.querySelector('.scroller__inner');
+                        const scrollerContainer = document.querySelector('.scroller');
 
-                            .scroller__inner {
-                                padding-block: 1rem;
-                                display: flex;
-                                flex-wrap: nowrap;
-                                gap: 2rem;
-                            }
+                        scrollerContainer.addEventListener('mouseenter', function () {
+                            scroller.style.animationPlayState = 'paused';
+                        });
 
-                            .animate-scroll {
-                                animation: scroll 30s linear infinite;
-                            }
+                        scrollerContainer.addEventListener('mouseleave', function () {
+                            scroller.style.animationPlayState = 'running';
+                        });
 
-                            @keyframes scroll {
-                                to {
-                                    transform: translate(calc(-50% - 1rem));
+                        // Intersection Observer for fade-in animation
+                        const observerOptions = {
+                            threshold: 0.1,
+                            rootMargin: '0px 0px -50px 0px'
+                        };
+
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('animate-fade-in');
                                 }
-                            }
+                            });
+                        }, observerOptions);
 
-                            @keyframes fade-in {
-                                from {
-                                    opacity: 0;
-                                    transform: translateY(30px);
-                                }
+                        // Observe testimonials section elements
+                        const testimonialElements = document.querySelectorAll('#testimonials h2, #testimonials h3, #testimonials p');
+                        testimonialElements.forEach(el => observer.observe(el));
+                    });
+                </script>
 
-                                to {
-                                    opacity: 1;
-                                    transform: translateY(0);
-                                }
-                            }
+                <style>
+                    .scroller {
+                        max-width: 100vw;
+                        margin-left: calc(-50vw + 50%);
+                        margin-right: calc(-50vw + 50%);
+                        width: 100vw;
+                        overflow: hidden;
+                        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+                    }
 
-                            .animate-fade-in {
-                                animation: fade-in 0.6s ease-out forwards;
-                            }
+                    .scroller__inner {
+                        padding-block: 1rem;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        gap: 2rem;
+                    }
 
-                            @media (prefers-reduced-motion: reduce) {
-                                .animate-scroll {
-                                    animation-play-state: paused;
-                                }
-                            }
-                        </style>
-                    </section>
-                </div>
-                <div>
-                    <section id="contact" class="py-20 bg-white">
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <!-- Section Header -->
-                            <div class="text-center mb-16">
-                                <h2 class="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
-                                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                                    Ready to transform your D2C brand? Let's discuss your project and create something
-                                    amazing together.
-                                </p>
-                            </div>
+                    .animate-scroll {
+                        animation: scroll 30s linear infinite;
+                    }
 
-                            <!-- Main Content Grid -->
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                                <!-- Contact Form -->
-                                <div class="bg-gray-50 rounded-lg p-8">
-                                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Get Started Today</h3>
-                                    <form id="contact-form" class="space-y-6">
-                                        <div>
-                                            <label for="email"
-                                                class="block text-sm font-medium text-gray-700 mb-2">Email
-                                                Address</label>
-                                            <input type="email" id="email" name="email" required
-                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
-                                                placeholder="john@example.com" />
-                                        </div>
+                    @keyframes scroll {
+                        to {
+                            transform: translate(calc(-50% - 1rem));
+                        }
+                    }
 
-                                        <div>
-                                            <label for="service"
-                                                class="block text-sm font-medium text-gray-700 mb-2">Service
-                                                Interest</label>
-                                            <select id="service" name="service" required
-                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
-                                                <option value="">Select a service</option>
-                                                <option value="d2c-platform">D2C Platform Development</option>
-                                                <option value="3d-ar">3D/AR Experiences</option>
-                                                <option value="automation">Smart Automation</option>
-                                                <option value="consultation">Consultation</option>
-                                                <option value="other">Other</option>
-                                            </select>
-                                        </div>
+                    @keyframes fade-in {
+                        from {
+                            opacity: 0;
+                            transform: translateY(30px);
+                        }
 
-                                        <div>
-                                            <label for="budget"
-                                                class="block text-sm font-medium text-gray-700 mb-2">Project
-                                                Budget</label>
-                                            <select id="budget" name="budget"
-                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
-                                                <option value="">Select budget range</option>
-                                                <option value="under-50k">Under ₹50,000</option>
-                                                <option value="50k-1l">₹50,000 - ₹1,00,000</option>
-                                                <option value="1l-5l">₹1,00,000 - ₹5,00,000</option>
-                                                <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
-                                                <option value="above-10l">Above ₹10,00,000</option>
-                                            </select>
-                                        </div>
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
 
-                                        <div>
-                                            <label for="message"
-                                                class="block text-sm font-medium text-gray-700 mb-2">Project
-                                                Details</label>
-                                            <textarea id="message" name="message" rows="4" required
-                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 resize-vertical"
-                                                placeholder="Tell us about your project requirements..."></textarea>
-                                        </div>
+                    .animate-fade-in {
+                        animation: fade-in 0.6s ease-out forwards;
+                    }
 
-                                        <button type="submit"
-                                            class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                                            Send Message
-                                        </button>
-                                    </form>
+                    @media (prefers-reduced-motion: reduce) {
+                        .animate-scroll {
+                            animation-play-state: paused;
+                        }
+                    }
+                </style>
+            </section>
+        </div>
+        <div>
+            <section id="contact" class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Section Header -->
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Ready to transform your D2C brand? Let's discuss your project and create something
+                            amazing together.
+                        </p>
+                    </div>
+
+                    <!-- Main Content Grid -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <div class="bg-gray-50 rounded-lg p-8">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Get Started Today</h3>
+                            <form id="contact-form" class="space-y-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email
+                                        Address</label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                                        placeholder="john@example.com" />
                                 </div>
 
-                                <!-- Contact Information -->
-                                <div class="space-y-8">
-                                    <!-- Contact Info -->
-                                    <div>
-                                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Get In Touch</h3>
-                                        <div class="space-y-6">
-                                            <div class="flex items-start space-x-4">
-                                                <div
-                                                    class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <span class="material-symbols-outlined text-white text-2xl">mail</span>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900">Email Us</h4>
-                                                    <p class="text-gray-600">contact@tryar.in</p>
-                                                    <p class="text-gray-600">tech@hirawat.in</p>
-                                                </div>
-                                            </div>
+                                <div>
+                                    <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service
+                                        Interest</label>
+                                    <select id="service" name="service" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
+                                        <option value="">Select a service</option>
+                                        <option value="d2c-platform">D2C Platform Development</option>
+                                        <option value="3d-ar">3D/AR Experiences</option>
+                                        <option value="automation">Smart Automation</option>
+                                        <option value="consultation">Consultation</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
 
-                                            <div class="flex items-start space-x-4">
-                                                <div
-                                                    class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <span class="material-symbols-outlined text-white text-2xl">phone</span>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900">Call Us</h4>
-                                                    <p class="text-gray-600">+91 98303 01891</p>
-                                                </div>
-                                            </div>
+                                <div>
+                                    <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">Project
+                                        Budget</label>
+                                    <select id="budget" name="budget"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
+                                        <option value="">Select budget range</option>
+                                        <option value="under-50k">Under ₹50,000</option>
+                                        <option value="50k-1l">₹50,000 - ₹1,00,000</option>
+                                        <option value="1l-5l">₹1,00,000 - ₹5,00,000</option>
+                                        <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
+                                        <option value="above-10l">Above ₹10,00,000</option>
+                                    </select>
+                                </div>
 
-                                            <div class="flex items-start space-x-4">
-                                                <div
-                                                    class="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <span class="material-symbols-outlined text-white text-2xl">location_on</span>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900">Visit Us</h4>
-                                                    <p class="text-gray-600">Malleshwaram <br> Bengaluru
-                                                        560003<br>India</p>
-                                                </div>
-                                            </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Project
+                                        Details</label>
+                                    <textarea id="message" name="message" rows="4" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 resize-vertical"
+                                        placeholder="Tell us about your project requirements..."></textarea>
+                                </div>
 
-                                            <div class="flex items-start space-x-4">
-                                                <div
-                                                    class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <span class="material-symbols-outlined text-white text-2xl">schedule</span>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900">Business Hours</h4>
-                                                    <p class="text-gray-600">Mon - Fri: <br> 9:00 AM - 7:00 PM</p>
-                                                    <p class="text-gray-600">Sat: <br> 10:00 AM - 4:00 PM</p>
-                                                </div>
-                                            </div>
+                                <button type="submit"
+                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="space-y-8">
+                            <!-- Contact Info -->
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-900 mb-6">Get In Touch</h3>
+                                <div class="space-y-6">
+                                    <div class="flex items-start space-x-4">
+                                        <div
+                                            class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="material-symbols-outlined text-white text-2xl">mail</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">Email Us</h4>
+                                            <p class="text-gray-600">contact@tryar.in</p>
+                                            <p class="text-gray-600">tech@hirawat.in</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start space-x-4">
+                                        <div
+                                            class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="material-symbols-outlined text-white text-2xl">phone</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">Call Us</h4>
+                                            <p class="text-gray-600">+91 98303 01891</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start space-x-4">
+                                        <div
+                                            class="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span
+                                                class="material-symbols-outlined text-white text-2xl">location_on</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">Visit Us</h4>
+                                            <p class="text-gray-600">Malleshwaram <br> Bengaluru
+                                                560003<br>India</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start space-x-4">
+                                        <div
+                                            class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="material-symbols-outlined text-white text-2xl">schedule</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">Business Hours</h4>
+                                            <p class="text-gray-600">Mon - Fri: <br> 9:00 AM - 7:00 PM</p>
+                                            <p class="text-gray-600">Sat: <br> 10:00 AM - 4:00 PM</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                           
-                    </section>
-                </div>
+                        </div>
+                    </div>
+
+            </section>
+        </div>
 
         <footer class="bg-gray-900 text-white py-16" role="contentinfo" aria-label="Site footer">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1175,7 +1216,7 @@
     </main>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" 
+    <button id="back-to-top"
         class="fixed bottom-6 right-6 p-3 bg-blue-600 text-white rounded-full shadow-lg cursor-pointer opacity-0 transition-opacity duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         aria-label="Back to top">
         <span class="material-symbols-outlined">arrow_upward</span>
@@ -1183,11 +1224,11 @@
 
     <!-- Back to Top Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const backToTopButton = document.getElementById('back-to-top');
-            
+
             // Show button when scrolling down 200px
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 if (window.pageYOffset > 200) {
                     backToTopButton.classList.remove('opacity-0');
                     backToTopButton.classList.add('opacity-100');
@@ -1196,9 +1237,9 @@
                     backToTopButton.classList.add('opacity-0');
                 }
             });
-            
+
             // Smooth scroll to top when clicking the button
-            backToTopButton.addEventListener('click', function() {
+            backToTopButton.addEventListener('click', function () {
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
@@ -1272,7 +1313,7 @@
                 function showNextSpan() {
                     // Hide current span
                     if (spans.length > 0) {
-                         spans[currentIndex].classList.remove('visible');
+                        spans[currentIndex].classList.remove('visible');
                     }
 
                     // Move to next span
