@@ -48,7 +48,7 @@
     <!-- Main content area -->
     <main id="main-content" class="flex-1 relative h-full">
             <div>
-                <div id="root">
+                <div>
                     <script>
                         // Mobile menu implementation using Alpine.js
                         document.addEventListener('alpine:init', () => {
@@ -133,7 +133,7 @@
 
 
                 </div>
-                <div id="root">
+                <div>
                     <section id="hero"
                         class="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-900">
 
@@ -253,7 +253,7 @@
 
 
                 </div>
-                <div id="root">
+                <div>
                     <section id="about" class="py-20 bg-gray-50">
                         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <!-- Section Header -->
@@ -319,7 +319,7 @@
 
                     </section>
                 </div>
-                <div id="root">
+                <div>
                     <section id="services" class="py-20 bg-white">
                         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <!-- Section Header -->
@@ -573,7 +573,7 @@
                         </style>
                     </section>
                 </div>
-                <div id="root">
+                <div>
                     <section id="portfolio" class="py-20 bg-gray-50">
                         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <!-- Section Header -->
@@ -888,7 +888,7 @@
                         </style>
                     </section>
                 </div>
-                <div id="root">
+                <div>
                     <section id="testimonials" class="py-20 bg-neutral-900 overflow-hidden">
                         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
                             <div class="text-center">
@@ -1025,7 +1025,7 @@
                         </style>
                     </section>
                 </div>
-                <div id="root">
+                <div>
                     <section id="contact" class="py-20 bg-white">
                         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <!-- Section Header -->
@@ -1154,177 +1154,7 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Success Modal -->
-                            <div id="success-modal"
-                                class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
-                                aria-modal="true" aria-hidden="true">
-                                <div
-                                    class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all duration-300 scale-95">
-                                    <div class="text-center">
-                                        <div
-                                            class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                            <span class="text-2xl">✓</span>
-                                        </div>
-                                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Message Sent Successfully!
-                                        </h3>
-                                        <p class="text-gray-600 mb-6">
-                                            Thank you for reaching out. We'll get back to you within 24 hours.
-                                        </p>
-                                        <button id="close-success-modal"
-                                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
-                                            Close
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <script>
-                                document.addEventListener('DOMContentLoaded', function () {
-                                    const form = document.getElementById('contact-form');
-                                    const successModal = document.getElementById('success-modal');
-                                    const closeSuccessModal = document.getElementById('close-success-modal');
-
-                                    // Form submission handler
-                                    form.addEventListener('submit', function (e) {
-                                        e.preventDefault();
-
-                                        // Get form data
-                                        const formData = new FormData(form);
-                                        const data = Object.fromEntries(formData);
-
-                                        // Validate required fields
-                                        const requiredFields = ['firstName', 'lastName', 'email', 'service', 'message'];
-                                        let isValid = true;
-
-                                        requiredFields.forEach(field => {
-                                            const input = document.getElementById(field);
-                                            if (!data[field] || data[field].trim() === '') {
-                                                input.classList.add('border-red-500');
-                                                isValid = false;
-                                            } else {
-                                                input.classList.remove('border-red-500');
-                                            }
-                                        });
-
-                                        // Email validation
-                                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                                        const emailInput = document.getElementById('email');
-                                        if (!emailRegex.test(data.email)) {
-                                            emailInput.classList.add('border-red-500');
-                                            isValid = false;
-                                        } else {
-                                            emailInput.classList.remove('border-red-500');
-                                        }
-
-                                        if (isValid) {
-                                            // Simulate form submission
-                                            const submitButton = form.querySelector('button[type="submit"]');
-                                            const originalText = submitButton.textContent;
-
-                                            submitButton.textContent = 'Sending...';
-                                            submitButton.disabled = true;
-
-                                            setTimeout(() => {
-                                                // Show success modal
-                                                successModal.classList.remove('hidden');
-                                                successModal.setAttribute('aria-hidden', 'false');
-                                                successModal.querySelector('.transform').classList.remove('scale-95');
-                                                successModal.querySelector('.transform').classList.add('scale-100');
-                                                document.body.style.overflow = 'hidden';
-
-                                                // Reset form
-                                                form.reset();
-                                                submitButton.textContent = originalText;
-                                                submitButton.disabled = false;
-
-                                                // Focus close button
-                                                closeSuccessModal.focus();
-                                            }, 1500);
-                                        }
-                                    });
-
-                                    // Success modal close handlers
-                                    function closeModal() {
-                                        successModal.querySelector('.transform').classList.remove('scale-100');
-                                        successModal.querySelector('.transform').classList.add('scale-95');
-
-                                        setTimeout(() => {
-                                            successModal.classList.add('hidden');
-                                            successModal.setAttribute('aria-hidden', 'true');
-                                            document.body.style.overflow = '';
-                                        }, 300);
-                                    }
-
-                                    closeSuccessModal.addEventListener('click', closeModal);
-
-                                    // Close modal when clicking outside
-                                    successModal.addEventListener('click', function (e) {
-                                        if (e.target === successModal) {
-                                            closeModal();
-                                        }
-                                    });
-
-                                    // Close modal on ESC key
-                                    document.addEventListener('keydown', function (e) {
-                                        if (e.key === 'Escape' && !successModal.classList.contains('hidden')) {
-                                            closeModal();
-                                        }
-                                    });
-
-                                    // Form field focus effects
-                                    const inputs = form.querySelectorAll('input, select, textarea');
-                                    inputs.forEach(input => {
-                                        input.addEventListener('focus', function () {
-                                            this.classList.remove('border-red-500');
-                                        });
-                                    });
-
-                                    // Intersection Observer for animations
-                                    const observerOptions = {
-                                        threshold: 0.1,
-                                        rootMargin: '0px 0px -50px 0px'
-                                    };
-
-                                    const observer = new IntersectionObserver((entries) => {
-                                        entries.forEach(entry => {
-                                            if (entry.isIntersecting) {
-                                                entry.target.classList.add('animate-fade-in-up');
-                                            }
-                                        });
-                                    }, observerOptions);
-
-                                    // Observe contact section elements
-                                    const contactElements = document.querySelectorAll('#contact h2, #contact h3, #contact .bg-gray-50, #contact .space-y-8 > div');
-                                    contactElements.forEach(el => observer.observe(el));
-                                });
-                            </script>
-
-                            <style>
-                                @keyframes fade-in-up {
-                                    from {
-                                        opacity: 0;
-                                        transform: translateY(30px);
-                                    }
-
-                                    to {
-                                        opacity: 1;
-                                        transform: translateY(0);
-                                    }
-                                }
-
-                                .animate-fade-in-up {
-                                    animation: fade-in-up 0.6s ease-out forwards;
-                                }
-
-                                .scale-95 {
-                                    transform: scale(0.95);
-                                }
-
-                                .scale-100 {
-                                    transform: scale(1);
-                                }
-                            </style>
+                           
                     </section>
                 </div>
             </div>
