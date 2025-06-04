@@ -5,9 +5,9 @@
 - Location: India
 - Domain: Advanced Technology Solutions
 - Core Specializations: 
-  * 3D & Augmented Reality Technologies
-  * Python Automation
-  * AI Applications
+  * 3D & Augmented Reality
+  * D2C & E-Commerce Solutions
+  * Smart Automation
   * Streamlit Framework Development
 
 ## Technical Expertise
@@ -18,8 +18,13 @@
 - Interactive Spatial Computing
 - Mixed Reality Prototyping
 
-### Python Automation
-- Robotic Process Automation (RPA)
+### D2C & E-Commerce Solutions
+- Custom Platform Development (Shopify, WooCommerce)
+- Mobile-first Design
+- Payment Gateway Integration
+- Performance Optimization
+
+### Smart Automation
 - Advanced Scripting Solutions
 - Enterprise Workflow Optimization
 - Machine Learning Automation
@@ -28,7 +33,6 @@
 ### AI Applications
 - Machine Learning Model Development
 - Natural Language Processing
-- Computer Vision Solutions
 - Predictive Analytics
 - Intelligent Decision Support Systems
 
@@ -40,12 +44,15 @@
   * ARCore
   * ARKit
   * WebGL
+- D2C/E-Commerce:
+  * Shopify
+  * WooCommerce
+  * React
+  * Node.js
+  * MongoDB
 - Python Ecosystem:
   * Streamlit
-  * Django
-  * Flask
   * Pandas
-  * NumPy
   * Scikit-learn
 - AI/ML Libraries:
   * TensorFlow
@@ -54,13 +61,14 @@
   * Keras
 
 ## Streamlit Framework Specialization
-- Interactive Web Application Development
-- Data Science Dashboard Creation
-- Machine Learning Model Visualization
-- Rapid Prototyping
-- Enterprise-Grade Streamlit Solutions
+* Interactive Web Application Development
+* Data Science Dashboard Creation
+* Machine Learning Model Visualization
+* Rapid Prototyping
+* Enterprise-Grade Streamlit Solutions
 
 ## Project Domains
+- D2C & E-Commerce
 - Industrial Augmented Reality
 - Educational Technology
 - Healthcare Visualization
@@ -70,7 +78,7 @@
 
 ## Innovation Highlights
 - Custom 3D Visualization Platforms
-- AI-Powered Automation Frameworks
+- Smart Automation Frameworks
 - Interactive Streamlit Dashboards
 - Immersive AR Experiences
 - Advanced Python Automation Scripts
@@ -90,7 +98,7 @@
 ## Research and Development Focus
 - Emerging AR Technologies
 - AI-Driven Automation
-- Cross-Platform Development
+- Cross-Platform Development (including D2C/E-Commerce)
 - User Experience in Immersive Technologies
 - Ethical AI Implementation
 
@@ -98,7 +106,7 @@
 - Technology Strategy
 - AR/VR Solution Architecture
 - Python Automation Consulting
-- AI Application Design
+- Smart Automation Design
 - Streamlit Framework Integration
 
 ## Contact Information
