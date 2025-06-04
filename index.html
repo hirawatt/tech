@@ -47,7 +47,6 @@
 
     <!-- Main content area -->
     <main id="main-content" class="flex-1 relative h-full">
-            <div>
                 <div>
                     <script>
                         // Mobile menu implementation using Alpine.js
@@ -332,7 +331,7 @@
                             <!-- Services Grid -->
                             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
                                 <!-- Service 1: D2C Development -->
-                                <div
+                                <article
                                     class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
                                     <div class="p-6">
                                         <h3 class="text-xl font-semibold text-gray-900 mb-3">D2C Platform Development
@@ -348,10 +347,10 @@
                                             Learn More
                                         </button>
                                     </div>
-                                </div>
+                                </article>
 
                                 <!-- Service 2: 3D/AR Solutions -->
-                                <div
+                                <article
                                     class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
                                     <div class="p-6">
                                         <h3 class="text-xl font-semibold text-gray-900 mb-3">3D/AR Experiences</h3>
@@ -366,10 +365,10 @@
                                             Learn More
                                         </button>
                                     </div>
-                                </div>
+                                </article>
 
                                 <!-- Service 3: Automation -->
-                                <div
+                                <article
                                     class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
                                     <div class="p-6">
                                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Automation</h3>
@@ -384,7 +383,7 @@
                                             Learn More
                                         </button>
                                     </div>
-                                </div>
+                                </article>
                             </div>
                         </div>
 
@@ -595,9 +594,9 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
 
                             <!-- Client Logos Section -->
-                            <div class="mb-16 bg-white py-12 w-screen relative" style="left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+                            <section class="mb-16 bg-white py-12 w-screen relative" style="left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;" aria-labelledby="trusted-clients-heading">
                                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                                    <h3 class="text-2xl font-semibold text-gray-900 mb-8 text-center">Trusted By Global Companies</h3>
+                                    <h3 id="trusted-clients-heading" class="text-2xl font-semibold text-gray-900 mb-8 text-center">Trusted By Global Companies</h3>
                                 </div>
                                 <div class="relative overflow-hidden w-full">
                                     <div class="flex animate-scroll-logos">
@@ -641,7 +640,7 @@
                                 </div>
                                 <div class="absolute left-0 w-40 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
                                 <div class="absolute right-0 w-40 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
-                            </div>
+                            </section>
 
                             <!-- CTA Section -->
                             <div class="text-center">
@@ -698,7 +697,7 @@
                                         const grid = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3.mb-16');
                                         if (grid) {
                                             grid.innerHTML = data.projects.map(project => `
-                                                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-category="${project.category}" data-project="${project.id}">
+                                                <article class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-category="${project.category}" data-project="${project.id}">
                                                     <div class="h-64 overflow-hidden">
                                                         <img src="${project.image}" alt="${project.alt}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
                                                     </div>
@@ -710,7 +709,7 @@
                                                         <h3 class="text-lg font-semibold text-gray-900 mb-2">${project.title}</h3>
                                                         <p class="text-gray-600 text-sm">${project.description}</p>
                                                     </div>
-                                                </div>
+                                                </article>
                                             `).join('');
                                         }
                                         // Modal data
@@ -860,15 +859,17 @@
                                         const ul = document.querySelector('.tag-list.scroller__inner');
                                         if (ul) {
                                             ul.innerHTML = data.testimonials.map(t => `
-                                                <li class="testimonial-card bg-white rounded-lg p-8 min-w-96 max-w-96 shadow-lg">
-                                                    <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">${t.quote}</blockquote>
-                                                    <div class="flex items-center">
-                                                        <div class="w-12 h-12 ${t.avatarBg} rounded-full flex items-center justify-center text-white font-bold mr-4">${t.initials}</div>
-                                                        <div>
-                                                            <div class="font-semibold text-gray-900">${t.name}</div>
-                                                            <div class="text-gray-600">${t.role}</div>
+                                                <li class="testimonial-card bg-white rounded-lg min-w-96 max-w-96 shadow-lg">
+                                                    <article class="p-8">
+                                                        <blockquote class="text-gray-700 mb-6 text-lg leading-relaxed">${t.quote}</blockquote>
+                                                        <div class="flex items-center">
+                                                            <div class="w-12 h-12 ${t.avatarBg} rounded-full flex items-center justify-center text-white font-bold mr-4">${t.initials}</div>
+                                                            <div>
+                                                                <div class="font-semibold text-gray-900">${t.name}</div>
+                                                                <div class="text-gray-600">${t.role}</div>
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    </article>
                                                 </li>
                                             `).join('');
                                         }
@@ -1089,7 +1090,6 @@
                            
                     </section>
                 </div>
-            </div>
 
         <footer class="bg-gray-900 text-white py-16" role="contentinfo" aria-label="Site footer">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
