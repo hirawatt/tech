@@ -51,94 +51,7 @@
     }
     </script>
 
-    <!-- Loading Animation Styles -->
-    <style>
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #0f172a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-        }
 
-        .loading-spinner {
-            position: relative;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            border: 4px solid rgba(255, 255, 255, 0.2);
-            border-top-color: #3b82f6;
-            animation: spin 1s linear infinite;
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
-        }
-
-        .loading-logo {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            background-color: rgba(15, 23, 42, 0.8);
-            border-radius: 50%;
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-
-        .logo-text {
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hirawat {
-            color: #3b82f6;
-        }
-
-        .tech {
-            color: #f59e0b;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(90%);
-                opacity: 0.7;
-            }
-
-            50% {
-                transform: scale(110%);
-                opacity: 1;
-            }
-
-            100% {
-                transform: scale(90%);
-                opacity: 0.7;
-            }
-        }
-
-        .loading-hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-    </style>
 </head>
 
 <body class="antialiased text-gray-800 min-h-screen flex flex-col">
@@ -152,64 +65,23 @@
         </div>
     </div>
 
-    <!-- Deferred Scripts -->
-    <script defer src="/assets/scripts/main.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <!-- Critical Scripts - Load early for Alpine.js integration -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+    
+    <!-- Main Application Script - Load after Alpine.js -->
+    <script defer src="/assets/scripts/main.js"></script>
+    
+    <!-- Non-critical Scripts - Load last -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 
-    <!-- Loading Animation Script -->
-    <script>
-        // Hide loading overlay when page is fully loaded
-        window.addEventListener('load', function () {
-            const loadingOverlay = document.getElementById('loading-overlay');
-            if (loadingOverlay) {
-                // Add a small delay to ensure all assets are rendered
-                setTimeout(function () {
-                    loadingOverlay.classList.add('loading-hidden');
-                }, 500);
-            }
-        });
 
-        // Fallback to hide loading screen if it takes too long
-        setTimeout(function () {
-            const loadingOverlay = document.getElementById('loading-overlay');
-            if (loadingOverlay && !loadingOverlay.classList.contains('loading-hidden')) {
-                loadingOverlay.classList.add('loading-hidden');
-            }
-        }, 5000);
-    </script>
     <!-- Skip to main content link for accessibility -->
     <a href="#main-content"
         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
         Skip to main content
     </a>
 
-    <script>
-        // Mobile menu implementation using Alpine.js
-        document.addEventListener('alpine:init', () => {
-            Alpine.data('mobileMenu', () => ({
-                isOpen: false,
-                init() {
-                    this.$watch('isOpen', value => {
-                        document.body.style.overflow = value ? 'hidden' : '';
-                    });
 
-                    // Close on escape key
-                    window.addEventListener('keydown', e => {
-                        if (e.key === 'Escape' && this.isOpen) {
-                            this.isOpen = false;
-                        }
-                    });
-                },
-                toggle() {
-                    this.isOpen = !this.isOpen;
-                },
-                close() {
-                    this.isOpen = false;
-                }
-            }));
-        });
-    </script>
 
     <header x-data="mobileMenu" class="sticky top-0 z-50" role="banner" aria-label="Main site header">
         <!-- Banner -->
@@ -371,38 +243,7 @@
                 </div>
             </section>
 
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    // Parallax effect for background
-                    window.addEventListener('scroll', function () {
-                        const scrolled = window.pageYOffset;
-                        const heroSection = document.querySelector('#hero');
-                        const backgroundImage = heroSection.querySelector('img');
 
-                        if (backgroundImage && scrolled < heroSection.offsetHeight) {
-                            backgroundImage.style.transform = `translateY(${scrolled * 0.5}px)`;
-                        }
-                    });
-
-                    // Intersection Observer for animations
-                    const observerOptions = {
-                        threshold: 0.1,
-                        rootMargin: '0px 0px -50px 0px'
-                    };
-
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('animate-fade-in');
-                            }
-                        });
-                    }, observerOptions);
-
-                    // Observe hero elements
-                    const heroElements = document.querySelectorAll('#hero h1, #hero p, #hero .grid > div');
-                    heroElements.forEach(el => observer.observe(el));
-                });
-            </script>
         </div>
         <div>
             <section id="about" class="py-20 bg-gray-50">
@@ -427,44 +268,7 @@
                     </div>
                 </div>
 
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        // Intersection Observer for animations
-                        const observerOptions = {
-                            threshold: 0.1,
-                            rootMargin: '0px 0px -50px 0px'
-                        };
 
-                        const observer = new IntersectionObserver((entries) => {
-                            entries.forEach(entry => {
-                                if (entry.isIntersecting) {
-                                    entry.target.classList.add('animate-fade-in-up');
-                                }
-                            });
-                        }, observerOptions);
-
-                        // Observe about section elements
-                        const aboutElements = document.querySelectorAll('#about h2, #about h3, #about .grid > div, #about .space-y-4 > div');
-                        aboutElements.forEach(el => observer.observe(el));
-
-                        // Counter animation for stats
-                        const counters = document.querySelectorAll('#about .text-3xl');
-                        counters.forEach(counter => {
-                            const target = parseInt(counter.textContent);
-                            let current = 0;
-                            const increment = target / 50;
-                            const timer = setInterval(() => {
-                                current += increment;
-                                if (current >= target) {
-                                    counter.textContent = target + '+';
-                                    clearInterval(timer);
-                                } else {
-                                    counter.textContent = Math.floor(current) + '+';
-                                }
-                            }, 30);
-                        });
-                    });
-                </script>
 
 
             </section>
@@ -534,106 +338,7 @@
                     </div>
                 </div>
 
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const modal = document.getElementById('service-modal');
-                        const modalTitle = document.getElementById('modal-title');
-                        const modalContent = document.getElementById('modal-content');
-                        const closeModalBtn = document.getElementById('close-modal');
-                        const closeModalBtnBottom = document.getElementById('close-modal-btn');
-                        const servicesGrid = document.getElementById('services-grid');
 
-                        // Load services from JSON file
-                        fetch('/assets/data/services-data.json')
-                            .then(response => response.json())
-                            .then(data => {
-                                // Render services
-                                servicesGrid.innerHTML = data.services.map(service => `
-                                    <article class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                        <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-gray-900 mb-3">${service.title}</h3>
-                                            <ul class="space-y-2 text-l text-gray-600 mb-6">
-                                                ${service.items.map(item => `<li>• ${item}</li>`).join('')}
-                                            </ul>
-                                            <button
-                                                class="w-full ${service.buttonClass} text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300"
-                                                data-service-id="${service.id}">
-                                                ${service.buttonText}
-                                            </button>
-                                        </div>
-                                    </article>
-                                `).join('');
-
-                                // Add event listeners to the newly created buttons
-                                document.querySelectorAll('#services-grid button').forEach(button => {
-                                    button.addEventListener('click', function () {
-                                        const serviceId = this.getAttribute('data-service-id');
-                                        const service = data.services.find(s => s.id === serviceId);
-                                        if (service) {
-                                            openModal(service.modalContent.title, service.modalContent.content);
-                                        }
-                                    });
-                                });
-                            })
-                            .catch(error => {
-                                console.error('Error loading services data:', error);
-                                servicesGrid.innerHTML = '<p class="text-center text-red-500">Failed to load services. Please try again later.</p>';
-                            });
-
-                        function openModal(title, content) {
-                            modalTitle.textContent = title;
-                            modalContent.innerHTML = content;
-                            modal.classList.remove('hidden');
-                            modal.setAttribute('aria-hidden', 'false');
-                            document.body.style.overflow = 'hidden';
-
-                            // Focus trap
-                            closeModalBtn.focus();
-                        }
-
-                        function closeModal() {
-                            modal.classList.add('hidden');
-                            modal.setAttribute('aria-hidden', 'true');
-                            document.body.style.overflow = '';
-                        }
-
-                        // Close modal event listeners
-                        closeModalBtn.addEventListener('click', closeModal);
-                        closeModalBtnBottom.addEventListener('click', closeModal);
-
-                        // Close modal when clicking outside
-                        modal.addEventListener('click', function (e) {
-                            if (e.target === modal) {
-                                closeModal();
-                            }
-                        });
-
-                        // Close modal on ESC key
-                        document.addEventListener('keydown', function (e) {
-                            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                                closeModal();
-                            }
-                        });
-
-                        // Intersection Observer for animations
-                        const observerOptions = {
-                            threshold: 0.1,
-                            rootMargin: '0px 0px -50px 0px'
-                        };
-
-                        const observer = new IntersectionObserver((entries) => {
-                            entries.forEach(entry => {
-                                if (entry.isIntersecting) {
-                                    entry.target.classList.add('animate-fade-in-up');
-                                }
-                            });
-                        }, observerOptions);
-
-                        // Observe service cards
-                        const serviceCards = document.querySelectorAll('#services .bg-gray-50');
-                        serviceCards.forEach(card => observer.observe(card));
-                    });
-                </script>
             </section>
         </div>
         <div>

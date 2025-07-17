@@ -284,3 +284,87 @@ section p {
 .animatedText .animate5 {
     color: #10b981;
 }
+
+/* Loading Animation Styles - Critical for initial page load */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.loading-spinner {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #3b82f6;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.loading-logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(15, 23, 42, 0.8);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hirawat {
+    color: #3b82f6;
+}
+
+.tech {
+    color: #f59e0b;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(90%);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(110%);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(90%);
+        opacity: 0.7;
+    }
+}
+
+.loading-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
