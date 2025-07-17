@@ -236,7 +236,6 @@
                             <a href="#about" class="nav-link">About</a>
                             <a href="#services" class="nav-link">Services</a>
                             <a href="#portfolio" class="nav-link">Portfolio</a>
-                            <a href="#testimonials" class="nav-link">Testimonials</a>
                             <a href="#contact" class="nav-link">Contact</a>
                         </div>
 
@@ -272,8 +271,6 @@
                                 class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700">Services</a>
                             <a href="#portfolio" @click="close"
                                 class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700">Portfolio</a>
-                            <a href="#testimonials" @click="close"
-                                class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700">Testimonials</a>
                             <a href="#contact" @click="close"
                                 class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700">Contact</a>
                         </div>
@@ -288,7 +285,8 @@
                 class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-900 to-black">
 
                 <!-- Content -->
-                <div class="relative z-10 max-w-7xl mx-auto px-4 py-10 sm:py-16 lg:py-20 lg:px-8 text-center hero-content">
+                <div
+                    class="relative z-10 max-w-7xl mx-auto px-4 py-10 sm:py-16 lg:py-20 lg:px-8 text-center hero-content">
                     <div class="space-y-4 sm:space-y-8">
                         <!-- Main Headline -->
                         <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight hero-headline">
@@ -304,7 +302,8 @@
                     </div>
 
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-6 sm:pt-16 hero-cta">
+                    <div
+                        class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-6 sm:pt-16 hero-cta">
                         <button onclick="location.href='/#contact'"
                             class="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl w-full sm:w-auto">
                             <span class="material-symbols-outlined align-middle mr-2">rocket_launch</span>
@@ -318,11 +317,13 @@
                     </div>
 
                     <!-- Key Features -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-8 pt-4 sm:pt-16 max-w-4xl mx-auto hero-features">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-8 pt-4 sm:pt-16 max-w-4xl mx-auto hero-features">
                         <div class="text-center space-y-1 sm:space-y-3 relative hero-feature">
                             <div
                                 class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center">
-                                <img src="/assets/images/icons/3d-ar.svg" alt="3D/AR Icon" class="w-8 h-8 sm:w-10 sm:h-10 text-white">
+                                <img src="/assets/images/icons/3d-ar.svg" alt="3D/AR Icon"
+                                    class="w-8 h-8 sm:w-10 sm:h-10 text-white">
                             </div>
                             <h3 class="text-lg sm:text-xl font-semibold text-white relative">3D/AR Experiences</h3>
                             <p class="text-sm sm:text-base text-gray-400 relative">Immersive product visualization</p>
@@ -331,7 +332,8 @@
                         <div class="text-center space-y-1 sm:space-y-3 relative hero-feature">
                             <div
                                 class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mx-auto flex items-center justify-center">
-                                <img src="/assets/images/icons/d2c.svg" alt="D2C Icon" class="w-8 h-8 sm:w-10 sm:h-10 text-white">
+                                <img src="/assets/images/icons/d2c.svg" alt="D2C Icon"
+                                    class="w-8 h-8 sm:w-10 sm:h-10 text-white">
                             </div>
                             <h3 class="text-lg sm:text-xl font-semibold text-white relative">D2C Brand Growth</h3>
                             <p class="text-sm sm:text-base text-gray-400 relative">Direct-to-consumer excellence</p>
@@ -479,61 +481,8 @@
                     </div>
 
                     <!-- Services Grid -->
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-                        <!-- Service 1: D2C Development -->
-                        <article
-                            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-3">D2C Platform Development
-                                </h3>
-                                <ul class="space-y-2 text-l text-gray-600 mb-6">
-                                    <li>• Custom Shopify & WooCommerce</li>
-                                    <li>• Mobile-first responsive design</li>
-                                    <li>• Payment gateway integration</li>
-                                    <li>• Performance optimization</li>
-                                </ul>
-                                <button
-                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300">
-                                    Learn More
-                                </button>
-                            </div>
-                        </article>
-
-                        <!-- Service 2: 3D/AR Solutions -->
-                        <article
-                            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-3">3D/AR Experiences</h3>
-                                <ul class="space-y-2 text-l text-gray-600 mb-6">
-                                    <li>• Interactive 3D product models</li>
-                                    <li>• AR try-on experiences</li>
-                                    <li>• WebGL implementations</li>
-                                    <li>• Virtual showrooms</li>
-                                </ul>
-                                <button
-                                    class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300">
-                                    Learn More
-                                </button>
-                            </div>
-                        </article>
-
-                        <!-- Service 3: Automation -->
-                        <article
-                            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Automation</h3>
-                                <ul class="space-y-2 text-l text-gray-600 mb-6">
-                                    <li>• Workflow automation systems</li>
-                                    <li>• AI-powered chatbots</li>
-                                    <li>• Inventory management</li>
-                                    <li>• Analytics & reporting</li>
-                                </ul>
-                                <button
-                                    class="w-full bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300">
-                                    Learn More
-                                </button>
-                            </div>
-                        </article>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16" id="services-grid">
+                        <!-- Services will be loaded dynamically from JSON -->
                     </div>
                 </div>
 
@@ -574,74 +523,54 @@
                         const modalContent = document.getElementById('modal-content');
                         const closeModalBtn = document.getElementById('close-modal');
                         const closeModalBtnBottom = document.getElementById('close-modal-btn');
-                        const learnMoreButtons = document.querySelectorAll('#services button:not(#close-modal):not(#close-modal-btn)');
+                        const servicesGrid = document.getElementById('services-grid');
 
-                        const serviceDetails = {
-                            'D2C Platform Development': {
-                                title: 'D2C Platform Development',
-                                content: `
-              <p class="mb-4">Transform your direct-to-consumer business with our comprehensive e-commerce solutions. We build scalable, high-performance platforms that drive conversions and enhance customer experience.</p>
-              <h4 class="font-semibold mb-2">What's Included:</h4>
-              <ul class="list-disc list-inside space-y-1 mb-4">
-                <li>Custom theme development</li>
-                <li>Advanced product catalog management</li>
-                <li>Multi-payment gateway integration</li>
-                <li>SEO optimization</li>
-                <li>Mobile-responsive design</li>
-                <li>Performance optimization</li>
-              </ul>
-              <h4 class="font-semibold mb-2">Technologies:</h4>
-              <p>Shopify, WooCommerce, React, Node.js, MongoDB</p>
-            `
-                            },
-                            '3D/AR Experiences': {
-                                title: '3D/AR Experiences',
-                                content: `
-              <p class="mb-4">Create immersive product experiences that allow customers to visualize and interact with your products before purchase, significantly reducing return rates and increasing engagement.</p>
-              <h4 class="font-semibold mb-2">What's Included:</h4>
-              <ul class="list-disc list-inside space-y-1 mb-4">
-                <li>3D product modeling and optimization</li>
-                <li>AR try-on experiences</li>
-                <li>Interactive product configurators</li>
-                <li>Virtual showroom development</li>
-                <li>Cross-platform compatibility</li>
-                <li>Performance optimization</li>
-              </ul>
-              <h4 class="font-semibold mb-2">Technologies:</h4>
-              <p>Three.js, WebGL, ARKit, ARCore, Blender, Unity</p>
-            `
-                            },
-                            'Smart Automation': {
-                                title: 'Smart Automation',
-                                content: `
-              <p class="mb-4">Streamline your operations with intelligent automation solutions that reduce manual work, improve efficiency, and scale your business operations seamlessly.</p>
-              <h4 class="font-semibold mb-2">What's Included:</h4>
-              <ul class="list-disc list-inside space-y-1 mb-4">
-                <li>Custom workflow automation</li>
-                <li>AI-powered customer support</li>
-                <li>Inventory management systems</li>
-                <li>Automated reporting and analytics</li>
-                <li>Integration with existing tools</li>
-                <li>24/7 monitoring and support</li>
-              </ul>
-              <h4 class="font-semibold mb-2">Technologies:</h4>
-              <p>Python, TensorFlow, Zapier, AWS Lambda, Node.js</p>
-            `
-                            }
-                        };
+                        // Load services from JSON file
+                        fetch('/assets/data/services-data.json')
+                            .then(response => response.json())
+                            .then(data => {
+                                // Render services
+                                servicesGrid.innerHTML = data.services.map(service => `
+                                    <article class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                                        <div class="p-6">
+                                            <h3 class="text-xl font-semibold text-gray-900 mb-3">${service.title}</h3>
+                                            <ul class="space-y-2 text-l text-gray-600 mb-6">
+                                                ${service.items.map(item => `<li>• ${item}</li>`).join('')}
+                                            </ul>
+                                            <button
+                                                class="w-full ${service.buttonClass} text-white py-2 px-4 rounded-lg font-medium transition-colors duration-300"
+                                                data-service-id="${service.id}">
+                                                ${service.buttonText}
+                                            </button>
+                                        </div>
+                                    </article>
+                                `).join('');
 
-                        function openModal(serviceType) {
-                            const service = serviceDetails[serviceType];
-                            if (service) {
-                                modalTitle.textContent = service.title;
-                                modalContent.innerHTML = service.content;
-                                modal.classList.remove('hidden');
-                                modal.setAttribute('aria-hidden', 'false');
-                                document.body.style.overflow = 'hidden';
+                                // Add event listeners to the newly created buttons
+                                document.querySelectorAll('#services-grid button').forEach(button => {
+                                    button.addEventListener('click', function () {
+                                        const serviceId = this.getAttribute('data-service-id');
+                                        const service = data.services.find(s => s.id === serviceId);
+                                        if (service) {
+                                            openModal(service.modalContent.title, service.modalContent.content);
+                                        }
+                                    });
+                                });
+                            })
+                            .catch(error => {
+                                console.error('Error loading services data:', error);
+                                servicesGrid.innerHTML = '<p class="text-center text-red-500">Failed to load services. Please try again later.</p>';
+                            });
 
-                                // Focus trap
-                                closeModalBtn.focus();
-                            }
+                        function openModal(title, content) {
+                            modalTitle.textContent = title;
+                            modalContent.innerHTML = content;
+                            modal.classList.remove('hidden');
+                            modal.setAttribute('aria-hidden', 'false');
+                            document.body.style.overflow = 'hidden';
+
+                            // Focus trap
+                            closeModalBtn.focus();
                         }
 
                         function closeModal() {
@@ -649,18 +578,6 @@
                             modal.setAttribute('aria-hidden', 'true');
                             document.body.style.overflow = '';
                         }
-
-                        // Event listeners for Learn More buttons
-                        learnMoreButtons.forEach(button => {
-                            button.addEventListener('click', function () {
-                                const serviceCard = this.closest('.bg-gray-50');
-                                const serviceTitle = serviceCard.querySelector('h3').textContent;
-
-                                if (this.textContent === 'Learn More') {
-                                    openModal(serviceTitle);
-                                }
-                            });
-                        });
 
                         // Close modal event listeners
                         closeModalBtn.addEventListener('click', closeModal);
@@ -1225,45 +1142,51 @@
                         </div>
 
                         <!-- Contact Information -->
-                            <div>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div class="flex items-start space-x-4">
-                                        <div
-                                            class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <span class="material-symbols-outlined text-white text-2xl">mail</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-semibold text-gray-900">Email Us</h4>
-                                            <p class="text-gray-600">contact@tryar.in</p>
-                                            <p class="text-gray-600">tech@hirawat.in</p>
-                                        </div>
+                        <div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <span class="material-symbols-outlined text-white text-2xl">mail</span>
                                     </div>
-
-                                    <div class="flex items-start space-x-4">
-                                        <div
-                                            class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <span class="material-symbols-outlined text-white text-2xl">phone</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-semibold text-gray-900">WhatsApp Us</h4>
-                                            <p class="text-gray-600">+91 98303 01891</p>
-                                        </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Email Us</h4>
+                                        <p class="text-gray-600"><a href="mailto:contact@tryar.in"
+                                                class="hover:text-blue-600 transition-colors duration-300">contact@tryar.in</a>
+                                        </p>
+                                        <p class="text-gray-600"><a href="mailto:tech@hirawat.in"
+                                                class="hover:text-blue-600 transition-colors duration-300">tech@hirawat.in</a>
+                                        </p>
                                     </div>
+                                </div>
 
-                                    <div class="flex items-start space-x-4">
-                                        <div
-                                            class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <span class="material-symbols-outlined text-white text-2xl">schedule</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-semibold text-gray-900">Business Hours</h4>
-                                            <p class="text-gray-600">Mon - Fri: <br> 9:00 AM - 7:00 PM</p>
-                                        </div>
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <span class="material-symbols-outlined text-white text-2xl">phone</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">WhatsApp Us</h4>
+                                        <p class="text-gray-600"><a href="https://wa.me/919830301891" target="_blank"
+                                                class="hover:text-purple-600 transition-colors duration-300">+91 98303
+                                                01891</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <span class="material-symbols-outlined text-white text-2xl">schedule</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Business Hours</h4>
+                                        <p class="text-gray-600">Mon - Fri: <br> 9:00 AM - 7:00 PM</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
             </section>
         </div>

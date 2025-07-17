@@ -1,0 +1,52 @@
+{
+  "services": [
+    {
+      "id": "d2c-platform",
+      "title": "D2C Platform Development",
+      "items": [
+        "Custom Shopify & WooCommerce",
+        "Mobile-first responsive design",
+        "Payment gateway integration",
+        "Performance optimization"
+      ],
+      "buttonText": "Learn More",
+      "buttonClass": "bg-blue-600 hover:bg-blue-700",
+      "modalContent": {
+        "title": "D2C Platform Development",
+        "content": "<p class=\"mb-4\">Transform your direct-to-consumer business with our comprehensive e-commerce solutions. We build scalable, high-performance platforms that drive conversions and enhance customer experience.</p><h4 class=\"font-semibold mb-2\">What's Included:</h4><ul class=\"list-disc list-inside space-y-1 mb-4\"><li>Custom theme development</li><li>Advanced product catalog management</li><li>Multi-payment gateway integration</li><li>SEO optimization</li><li>Mobile-responsive design</li><li>Performance optimization</li></ul><h4 class=\"font-semibold mb-2\">Technologies:</h4><p>Shopify, WooCommerce, React, Node.js, MongoDB</p>"
+      }
+    },
+    {
+      "id": "3d-ar",
+      "title": "3D/AR Experiences",
+      "items": [
+        "Interactive 3D product models",
+        "AR try-on experiences",
+        "WebGL implementations",
+        "Virtual showrooms"
+      ],
+      "buttonText": "Learn More",
+      "buttonClass": "bg-purple-600 hover:bg-purple-700",
+      "modalContent": {
+        "title": "3D/AR Experiences",
+        "content": "<p class=\"mb-4\">Create immersive product experiences that allow customers to visualize and interact with your products before purchase, significantly reducing return rates and increasing engagement.</p><h4 class=\"font-semibold mb-2\">What's Included:</h4><ul class=\"list-disc list-inside space-y-1 mb-4\"><li>3D product modeling and optimization</li><li>AR try-on experiences</li><li>Interactive product configurators</li><li>Virtual showroom development</li><li>Cross-platform compatibility</li><li>Performance optimization</li></ul><h4 class=\"font-semibold mb-2\">Technologies:</h4><p>Three.js, WebGL, ARKit, ARCore, Blender, Unity</p>"
+      }
+    },
+    {
+      "id": "automation",
+      "title": "Smart Automation",
+      "items": [
+        "Workflow automation systems",
+        "AI-powered chatbots",
+        "Inventory management",
+        "Analytics & reporting"
+      ],
+      "buttonText": "Learn More",
+      "buttonClass": "bg-pink-600 hover:bg-pink-700",
+      "modalContent": {
+        "title": "Smart Automation",
+        "content": "<p class=\"mb-4\">Streamline your operations with intelligent automation solutions that reduce manual work, improve efficiency, and scale your business operations seamlessly.</p><h4 class=\"font-semibold mb-2\">What's Included:</h4><ul class=\"list-disc list-inside space-y-1 mb-4\"><li>Custom workflow automation</li><li>AI-powered customer support</li><li>Inventory management systems</li><li>Automated reporting and analytics</li><li>Integration with existing tools</li><li>24/7 monitoring and support</li></ul><h4 class=\"font-semibold mb-2\">Technologies:</h4><p>Python, TensorFlow, Zapier, AWS Lambda, Node.js</p>"
+      }
+    }
+  ]
+}
