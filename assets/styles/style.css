@@ -1,59 +1,128 @@
+@font-face {
+    font-family: 'Alata';
+    src: url('/assets/fonts/Alata-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Alata', sans-serif;
+}
+
 /* Navigation Links */
 .nav-link {
-    font-family: 'Inter', sans-serif;
-    color: rgb(255, 255, 255); /* text-white */
+    font-family: 'Alata', sans-serif;
+    color: rgb(255, 255, 255);
     transition-property: color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
-    font-size: 0.875rem; /* text-sm */
-    font-weight: 500; /* font-medium */
-    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.625rem 1.25rem;
 }
 .nav-link:hover {
-    color: rgb(59, 130, 246); /* hover:text-blue-500 */
+    color: rgb(59, 130, 246);
 }
 
 .nav-link-mobile {
     display: block;
-    padding-left: 0.75rem; /* px-3 */
-    padding-right: 0.75rem; /* px-3 */
-    padding-top: 0.5rem; /* py-2 */
-    padding-bottom: 0.5rem; /* py-2 */
-    font-size: 1rem; /* text-base */
-    font-weight: 500; /* font-medium */
-    color: rgb(55, 65, 81); /* text-gray-700 */
-    border-radius: 0.375rem; /* rounded-md */
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    border-radius: 0.375rem;
     transition-property: color, background-color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
 }
 .nav-link-mobile:hover {
-    color: rgb(37, 99, 235); /* hover:text-blue-600 */
-    background-color: rgb(249, 250, 251); /* hover:bg-gray-50 */
+    color: rgb(59, 130, 246);
+    background-color: rgba(30, 41, 59, 0.7);
+}
+
+/* Logo Text Styling */
+.logo-text {
+    font-family: 'Alata', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.logo-text .hirawat {
+    color: #3b82f6;
+}
+.logo-text .tech {
+    color: #10b981;
+}
+
+/* Sticky Banner */
+.sticky-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    background-color: rgba(17, 24, 39, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 /* Floating Navbar */
 .floating-navbar {
-    background-color: rgba(15, 23, 42, 0.65); /* bg-slate-900 with opacity */
+    background-color: rgba(15, 23, 42, 0.65);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
-    margin: 1rem auto;
-    max-width: 90%; /* More responsive on smaller screens */
-    width: 800px; /* Fixed width for larger screens */
+    border-radius: 24px;
+    margin: 3rem auto 1rem;
+    max-width: 90%;
+    width: 800px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    /* Mirror finish effect */
-    background-image: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.15) 0%,
-        rgba(255, 255, 255, 0.05) 100%
-    );
+    background-image: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.05) 100%);
+}
+
+/* Mobile Hero Adjustments */
+@media (max-width: 640px) {
+    .hero-content {
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+    .hero-headline {
+        font-size: 2.25rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        display: inline-block;
+    }
+    .animatedText {
+        height: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .animatedText span {
+        font-size: 2rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .hero-features {
+        padding-top: 1.5rem;
+    }
+    .hero-feature {
+        margin-bottom: 1rem;
+    }
+    .hero-cta {
+        padding-top: 1rem;
+    }
 }
 
 /* Animations */
@@ -67,7 +136,6 @@
         transform: translateY(0);
     }
 }
-
 .animate-fade-in-up {
     animation: fade-in-up 0.6s ease-out forwards;
 }
@@ -80,7 +148,6 @@
         opacity: 1;
     }
 }
-
 .animate-fade-in-opacity {
     animation: fade-in-opacity 0.4s ease-out forwards;
 }
@@ -93,7 +160,6 @@
         transform: translateX(-100%);
     }
 }
-
 .animate-scroll-logos {
     animation: scroll-logos 45s linear infinite;
 }
@@ -103,21 +169,20 @@
         transform: translate(calc(-50% - 1rem));
     }
 }
-
-.animate-scroll { /* Used by testimonials scroller */
+.animate-scroll {
     animation: scroll-testimonials 30s linear infinite;
 }
 
 .animatedText {
     position: relative;
     display: block;
-    height: 1.5em; /* Slightly increased height for better visibility */
+    height: 1.5em;
     text-align: center;
     margin: 0 auto;
     width: 100%;
-    overflow: hidden; /* Prevent any overflow */
+    overflow: hidden;
+    font-family: 'Alata', sans-serif;
 }
-
 .animatedText span {
     position: absolute;
     left: 0;
@@ -128,19 +193,18 @@
     white-space: nowrap;
     text-align: center;
     width: 100%;
-    display: block; /* Ensure block display */
-    transform: translateX(-50%); /* Center horizontally */
-    left: 50%; /* Center horizontally */
-    margin: 0 auto; /* Additional centering */
+    display: block;
+    transform: translateX(-50%);
+    left: 50%;
+    margin: 0 auto;
 }
-
 .animatedText span.visible {
     opacity: 1;
 }
 
 /* Define colors for each span */
-.animatedText .animate1 { color: #3b82f6; /* Tailwind blue-500 */ }
-.animatedText .animate2 { color: #8b5cf6; /* Tailwind purple-500 */ }
-.animatedText .animate3 { color: #ec4899; /* Tailwind pink-500 */ }
-.animatedText .animate4 { color: #f97316; /* Tailwind orange-500 */ }
-.animatedText .animate5 { color: #10b981; /* Tailwind emerald-500 */ }
+.animatedText .animate1 { color: #3b82f6; }
+.animatedText .animate2 { color: #8b5cf6; }
+.animatedText .animate3 { color: #ec4899; }
+.animatedText .animate4 { color: #f97316; }
+.animatedText .animate5 { color: #10b981; }

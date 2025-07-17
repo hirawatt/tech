@@ -58,8 +58,7 @@
 
 <body class="antialiased text-gray-800 min-h-screen flex flex-col">
     <!-- Banner -->
-    <div class="bg-gray-900 text-white py-2 px-4 flex justify-center items-center space-x-4">
-        <span class="material-symbols-outlined text-sm">launch</span>
+    <div class="sticky-banner text-white py-2 px-4 flex justify-center items-center space-x-2">
         Latest Product ➝
         <a href="https://tryar.in" target="_blank" class="hover:text-blue-400 transition-colors duration-300"> TryAR</a>
     </div>
@@ -105,13 +104,14 @@
                     <div class="flex justify-between items-center h-16 px-6">
                         <!-- Logo -->
                         <div class="flex-shrink-0 flex items-center">
-                            <img src="/assets/images/logos/hirawat-tech-500-logo.webp" alt="HirawatTech Logo"
-                                class="h-14 w-auto mr-2" width="32" height="32" fetchpriority="high">
-                            <span class="font-Inter text-xl font-bold text-white">HirawatTech</span>
+                            <a href="/" class="logo-text no-underline hover:opacity-80 transition-opacity duration-300"
+                                aria-label="HirawatTech Homepage">
+                                <span class="hirawat">Hirawat</span><span class="tech">Tech</span>
+                            </a>
                         </div>
 
                         <!-- Desktop Navigation -->
-                        <div class="hidden md:flex space-x-8 mx-auto">
+                        <div class="hidden md:flex space-x-8 mx-auto justify-center flex-grow">
                             <a href="#about" class="nav-link">About</a>
                             <a href="#services" class="nav-link">Services</a>
                             <a href="#portfolio" class="nav-link">Portfolio</a>
@@ -167,13 +167,13 @@
                 class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-900 to-black">
 
                 <!-- Content -->
-                <div class="relative z-10 max-w-7xl mx-auto px-4 py-16 sm:px-6 sm:py-20 lg:px-8 text-center">
-                    <div class="space-y-8">
+                <div class="relative z-10 max-w-7xl mx-auto px-4 py-10 sm:py-16 lg:py-20 lg:px-8 text-center hero-content">
+                    <div class="space-y-4 sm:space-y-8">
                         <!-- Main Headline -->
-                        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight content">
+                        <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight hero-headline">
                             Software Solutions for
                         </h1>
-                        <div class="animatedText text-4xl sm:text-5xl lg:text-7xl font-bold mt-4">
+                        <div class="animatedText text-3xl sm:text-5xl lg:text-7xl font-bold mt-2 sm:mt-4">
                             <span class="animate1">D2C Brands</span>
                             <span class="animate2">Augmented Reality</span>
                             <span class="animate3">3D Technology</span>
@@ -182,54 +182,48 @@
                         </div>
                     </div>
 
-
-                    <!-- Subheadline -->
-                    <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                        &nbsp;
-                    </p>
-
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-16">
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-6 sm:pt-16 hero-cta">
                         <button onclick="location.href='/#contact'"
-                            class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl w-full sm:w-auto">
                             <span class="material-symbols-outlined align-middle mr-2">rocket_launch</span>
                             Start Your Project
                         </button>
                         <button onclick="location.href='/#portfolio'"
-                            class="border-2 border-white text-white hover:bg-white hover:text-neutral-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
+                            class="border-2 border-white text-white hover:bg-white hover:text-neutral-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 w-full sm:w-auto">
                             <span class="material-symbols-outlined align-middle mr-2">work</span>
                             View Our Work
                         </button>
                     </div>
 
                     <!-- Key Features -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 max-w-4xl mx-auto">
-                        <div class="text-center space-y-3 relative">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-8 pt-4 sm:pt-16 max-w-4xl mx-auto hero-features">
+                        <div class="text-center space-y-1 sm:space-y-3 relative hero-feature">
                             <div
-                                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center">
-                                <img src="/assets/images/icons/3d-ar.svg" alt="3D/AR Icon" class="w-10 h-10 text-white">
+                                class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center">
+                                <img src="/assets/images/icons/3d-ar.svg" alt="3D/AR Icon" class="w-8 h-8 sm:w-10 sm:h-10 text-white">
                             </div>
-                            <h3 class="text-xl font-semibold text-white relative">3D/AR Experiences</h3>
-                            <p class="text-gray-400 relative">Immersive product visualization</p>
+                            <h3 class="text-lg sm:text-xl font-semibold text-white relative">3D/AR Experiences</h3>
+                            <p class="text-sm sm:text-base text-gray-400 relative">Immersive product visualization</p>
                         </div>
 
-                        <div class="text-center space-y-3 relative">
+                        <div class="text-center space-y-1 sm:space-y-3 relative hero-feature">
                             <div
-                                class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mx-auto flex items-center justify-center">
-                                <img src="/assets/images/icons/d2c.svg" alt="D2C Icon" class="w-10 h-10 text-white">
+                                class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mx-auto flex items-center justify-center">
+                                <img src="/assets/images/icons/d2c.svg" alt="D2C Icon" class="w-8 h-8 sm:w-10 sm:h-10 text-white">
                             </div>
-                            <h3 class="text-xl font-semibold text-white relative">D2C Brand Growth</h3>
-                            <p class="text-gray-400 relative">Direct-to-consumer excellence</p>
+                            <h3 class="text-lg sm:text-xl font-semibold text-white relative">D2C Brand Growth</h3>
+                            <p class="text-sm sm:text-base text-gray-400 relative">Direct-to-consumer excellence</p>
                         </div>
 
-                        <div class="text-center space-y-3 relative">
+                        <div class="text-center space-y-1 sm:space-y-3 relative hero-feature">
                             <div
-                                class="w-16 h-16 bg-gradient-to-br from-pink-500 to-orange-600 rounded-full mx-auto flex items-center justify-center">
+                                class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-pink-500 to-orange-600 rounded-full mx-auto flex items-center justify-center">
                                 <img src="/assets/images/icons/robot.svg" alt="Automation Icon"
-                                    class="w-10 h-10 text-white">
+                                    class="w-8 h-8 sm:w-10 sm:h-10 text-white">
                             </div>
-                            <h3 class="text-xl font-semibold text-white">Smart Automation</h3>
-                            <p class="text-gray-400">Intelligent workflow solutions</p>
+                            <h3 class="text-lg sm:text-xl font-semibold text-white">Smart Automation</h3>
+                            <p class="text-sm sm:text-base text-gray-400">Intelligent workflow solutions</p>
                         </div>
                     </div>
                 </div>
