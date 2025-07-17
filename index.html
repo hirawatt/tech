@@ -1235,53 +1235,6 @@
         }
     </style>
 
-    <!-- Core functionality scripts -->
-    <script>
-        // Initialize interactive elements
-        document.addEventListener('DOMContentLoaded', function () {
-            // Add interactive behaviors
-            const interactiveElements = document.querySelectorAll('.interactive-element');
-            interactiveElements.forEach(element => {
-                element.addEventListener('mouseenter', () => {
-                    element.classList.add('hover');
-                });
-                element.addEventListener('mouseleave', () => {
-                    element.classList.remove('hover');
-                });
-            });
-
-            // Initialize any dynamic content
-            const dynamicContent = document.querySelectorAll('[data-dynamic]');
-            dynamicContent.forEach(content => {
-                // Add fade-in animation
-                content.classList.add('fade-in');
-            });
-        });
-
-        // Handle navigation
-        function handleNavigation(event) {
-            const link = event.currentTarget;
-            if (link.hasAttribute('data-nav')) {
-                event.preventDefault();
-                const target = link.getAttribute('data-nav');
-                document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        // Initialize navigation
-        document.querySelectorAll('[data-nav]').forEach(link => {
-            link.addEventListener('click', handleNavigation);
-        });
-    </script>
-
-    <!-- Body Scripts -->
-    <script id="body-scripts">
-        // This script tag will be replaced with actual scripts.body content
-        if (window.scripts && window.scripts.body) {
-            document.getElementById('body-scripts').outerHTML = window.scripts.body;
-        }
-    </script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const animatedTextContainer = document.querySelector('.animatedText');
