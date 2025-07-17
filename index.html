@@ -1097,61 +1097,109 @@
 
     </main>
 
-    <footer class="bg-gray-900 text-white py-16" role="contentinfo" aria-label="Site footer">
+    <footer class="bg-gradient-to-b from-gray-900 to-black text-white py-12" role="contentinfo"
+        aria-label="Site footer">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Grid for Professional and Legal Links -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <!-- Logo and Tagline -->
+            <div class="flex flex-col items-center mb-10">
+                <a href="/" class="logo-text no-underline text-2xl mb-3" aria-label="HirawatTech Homepage">
+                    <span class="hirawat">Hirawat</span><span class="tech">Tech</span>
+                </a>
+                <p class="text-gray-400 text-center max-w-md">Transforming D2C brands through innovative 3D/AR
+                    experiences and intelligent automation</p>
+            </div>
+
+            <!-- Divider with gradient -->
+            <div class="relative h-px w-full max-w-3xl mx-auto mb-10">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
+            </div>
+
+            <!-- Links Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
                 <!-- Professional Links -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Professional</h3>
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-400">Professional</h3>
                     <div class="space-y-3">
                         <a href="https://www.linkedin.com/company/hirawat-tech" target="_blank"
-                            class="block hover:text-blue-400 transition-colors duration-300">Follow on LinkedIn</a>
+                            class="block hover:text-blue-400 transition-colors duration-300">
+                            <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                        </a>
                         <a href="https://contra.com/vhirawat" target="_blank"
-                            class="block hover:text-blue-400 transition-colors duration-300">Hire on Contra</a>
+                            class="block hover:text-blue-400 transition-colors duration-300">
+                            <i class="fas fa-briefcase mr-2"></i>Contra
+                        </a>
                         <a href="https://www.upwork.com/o/companies/~0163411dd2622fc83f/" target="_blank"
-                            class="block hover:text-blue-400 transition-colors duration-300">Hire on Upwork</a>
+                            class="block hover:text-blue-400 transition-colors duration-300">
+                            <i class="fas fa-laptop-code mr-2"></i>Upwork
+                        </a>
                     </div>
                 </div>
 
                 <!-- Legal Links -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-400">Legal</h3>
                     <div class="space-y-3">
-                        <a href="/pages/terms.html" target="_blank"
+                        <a href="/pages/terms.html"
                             class="block hover:text-blue-400 transition-colors duration-300">Terms of Service</a>
-                        <a href="/pages/privacy.html" target="_blank"
+                        <a href="/pages/privacy.html"
                             class="block hover:text-blue-400 transition-colors duration-300">Privacy Policy</a>
-                        <a href="/pages/refund.html" target="_blank"
-                            class="block hover:text-blue-400 transition-colors duration-300">Cancellation & Refund
-                            Policy</a>
+                        <a href="/pages/refund.html"
+                            class="block hover:text-blue-400 transition-colors duration-300">Refund Policy</a>
                     </div>
                 </div>
 
                 <!-- Contact Information -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Email Us</h3>
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-400">Contact</h3>
                     <div class="space-y-3">
-                        <a href="mailto:contact@tryar.in" target="_blank"
-                            class="block hover:text-blue-400 transition-colors duration-300">contact@tryar.in</a>
-                        <a href="mailto:tech@hirawat.in" target="_blank"
-                            class="block hover:text-blue-400 transition-colors duration-300">tech@hirawat.in</a>
+                        <a href="mailto:contact@tryar.in"
+                            class="block hover:text-blue-400 transition-colors duration-300">
+                            <i class="fas fa-envelope mr-2"></i>contact@tryar.in
+                        </a>
+                        <a href="mailto:tech@hirawat.in"
+                            class="block hover:text-blue-400 transition-colors duration-300">
+                            <i class="fas fa-envelope mr-2"></i>tech@hirawat.in
+                        </a>
+                        <a href="/pages/contact.html" class="block hover:text-blue-400 transition-colors duration-300">
+                            <i class="fas fa-map-marker-alt mr-2"></i>Contact Us
+                        </a>
                     </div>
                 </div>
 
-                <!-- Location -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Other</h3>
+                <!-- Company -->
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-400">Company</h3>
                     <div class="space-y-3">
-                        <a href="/pages/about.html" target="_blank"
-                            class="block hover:text-blue-400 transition-colors duration-300">Our Team</a>
-                        <a href="/pages/contact.html" target="_blank"
-                            class="block hover:text-blue-400 transition-colors duration-300">Contact Us</a>
+                        <a href="/pages/about.html"
+                            class="block hover:text-blue-400 transition-colors duration-300">About Us</a>
+                        <a href="/#services"
+                            class="block hover:text-blue-400 transition-colors duration-300">Services</a>
+                        <a href="/#portfolio"
+                            class="block hover:text-blue-400 transition-colors duration-300">Portfolio</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Cookie Notice moved to floating banner -->
+            <!-- Copyright and Social Media -->
+            <div class="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-gray-800">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 HirawatTech. All rights reserved.</p>
+
+                <!-- Social Media Icons -->
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/company/hirawat-tech" target="_blank"
+                        class="text-gray-400 hover:text-blue-400 transition-colors duration-300" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/hirawat" target="_blank"
+                        class="text-gray-400 hover:text-blue-400 transition-colors duration-300" aria-label="GitHub">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://instagram.com/tryar.in" target="_blank"
+                        class="text-gray-400 hover:text-blue-400 transition-colors duration-300" aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
