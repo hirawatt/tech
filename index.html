@@ -666,7 +666,7 @@
                                 Trusted By Global Companies</h3>
                         </div>
                         <div class="relative overflow-hidden w-full">
-                            <div id="client-logos-row" class="flex animate-scroll-logos gap-16 items-center min-w-full px-10" style="height: 96px;"></div>
+                            <div id="client-logos-row" class="flex animate-scroll-logos gap-16 items-center min-w-full px-10" style="height: 80px;"></div>
                         </div>
                         <div class="absolute left-0 w-40 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
                         <div class="absolute right-0 w-40 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
@@ -682,7 +682,7 @@
                                         row.innerHTML = data.logos.map(filename => {
                                             // Alt text from filename
                                             const alt = filename.replace(/[-_]/g, ' ').replace(/\.[a-zA-Z0-9]+$/, '').replace(/\b\w/g, l => l.toUpperCase());
-                                            return `<img src="/assets/images/client-logos/${filename}" alt="${alt}" class="h-24 w-auto object-contain mx-6" loading="lazy">`;
+                                            return `<img src="/assets/images/client-logos/${filename}" alt="${alt}" class="h-16 w-auto object-contain mx-6" loading="lazy">`;
                                         }).join('');
                                         // Duplicate for seamless scroll
                                         row.innerHTML += row.innerHTML;

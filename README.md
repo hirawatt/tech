@@ -1,5 +1,9 @@
 # All Services - HirawatTech
 
+## UI Changelog
+
+- 2025-07-18: Reduced client logo size from h-24 (96px) to h-16 (64px) for better visual balance in the client showcase section
+
 ## Web Development
 
 - Python Web Development - Streamlit, Flask, Django
