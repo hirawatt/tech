@@ -11,17 +11,13 @@
 
     <title>HirawatTech - D2C Brands, 3D/AR & Automation Solutions | India</title>
 
-    <!-- Resource Loading -->
+    <!-- Critical CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Alata&family=Material+Symbols+Outlined&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/assets/styles/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/scripts/main.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
 
     <!-- SEO -->
     <link rel="icon" href="/assets/images/logos/hirawat-tech-500-logo.webp" type="image/webp">
@@ -54,9 +50,134 @@
       ]
     }
     </script>
+
+    <!-- Loading Animation Styles -->
+    <style>
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+        }
+
+        .loading-spinner {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-top-color: #3b82f6;
+            animation: spin 1s linear infinite;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+
+        .loading-logo {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(15, 23, 42, 0.8);
+            border-radius: 50%;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hirawat {
+            color: #3b82f6;
+        }
+
+        .tech {
+            color: #f59e0b;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(90%);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: scale(110%);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(90%);
+                opacity: 0.7;
+            }
+        }
+
+        .loading-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
 </head>
 
 <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-logo">
+            <span class="logo-text">
+                <span class="hirawat">H</span><span class="tech">T</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- Deferred Scripts -->
+    <script defer src="/assets/scripts/main.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+
+    <!-- Loading Animation Script -->
+    <script>
+        // Hide loading overlay when page is fully loaded
+        window.addEventListener('load', function () {
+            const loadingOverlay = document.getElementById('loading-overlay');
+            if (loadingOverlay) {
+                // Add a small delay to ensure all assets are rendered
+                setTimeout(function () {
+                    loadingOverlay.classList.add('loading-hidden');
+                }, 500);
+            }
+        });
+
+        // Fallback to hide loading screen if it takes too long
+        setTimeout(function () {
+            const loadingOverlay = document.getElementById('loading-overlay');
+            if (loadingOverlay && !loadingOverlay.classList.contains('loading-hidden')) {
+                loadingOverlay.classList.add('loading-hidden');
+            }
+        }, 5000);
+    </script>
     <!-- Banner -->
     <div class="sticky-banner text-white py-2 px-4 flex justify-center items-center space-x-2">
         Latest Product ➝
@@ -1040,8 +1161,7 @@
                     <div class="text-center mb-16">
                         <h2 class="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
                         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Ready to transform your D2C brand? Let's discuss your project and create something
-                            amazing together.
+                            Ready to transform your D2C brand? Let's discuss your project.
                         </p>
                     </div>
 
@@ -1049,7 +1169,6 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <!-- Contact Form -->
                         <div class="bg-gray-50 rounded-lg p-8">
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Get Started Today</h3>
                             <form id="contact-form" class="space-y-6">
                                 <div>
                                     <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email
@@ -1059,55 +1178,55 @@
                                         placeholder="john@example.com" />
                                 </div>
 
-                                <div>
-                                    <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service
-                                        Interest</label>
-                                    <select id="service" name="service" required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
-                                        <option value="">Select a service</option>
-                                        <option value="d2c-platform">D2C Platform Development</option>
-                                        <option value="3d-ar">3D/AR Experiences</option>
-                                        <option value="automation">Smart Automation</option>
-                                        <option value="consultation">Consultation</option>
-                                        <option value="other">Other</option>
-                                    </select>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="service"
+                                            class="block text-sm font-medium text-gray-700 mb-1">Service
+                                            Interest</label>
+                                        <select id="service" name="service" required
+                                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
+                                            <option value="">Select a service</option>
+                                            <option value="d2c-platform">D2C Platform Development</option>
+                                            <option value="3d-ar">3D/AR Experiences</option>
+                                            <option value="automation">Smart Automation</option>
+                                            <option value="consultation">Consultation</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label for="budget" class="block text-sm font-medium text-gray-700 mb-1">Project
+                                            Budget</label>
+                                        <select id="budget" name="budget"
+                                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
+                                            <option value="">Select budget range</option>
+                                            <option value="under-50k">Under ₹50,000</option>
+                                            <option value="50k-1l">₹50,000 - ₹1,00,000</option>
+                                            <option value="1l-5l">₹1,00,000 - ₹5,00,000</option>
+                                            <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
+                                            <option value="above-10l">Above ₹10,00,000</option>
+                                        </select>
+                                    </div>
                                 </div>
 
                                 <div>
-                                    <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">Project
-                                        Budget</label>
-                                    <select id="budget" name="budget"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
-                                        <option value="">Select budget range</option>
-                                        <option value="under-50k">Under ₹50,000</option>
-                                        <option value="50k-1l">₹50,000 - ₹1,00,000</option>
-                                        <option value="1l-5l">₹1,00,000 - ₹5,00,000</option>
-                                        <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
-                                        <option value="above-10l">Above ₹10,00,000</option>
-                                    </select>
-                                </div>
-
-                                <div>
-                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Project
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Project
                                         Details</label>
-                                    <textarea id="message" name="message" rows="4" required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 resize-vertical"
+                                    <textarea id="message" name="message" rows="3" required
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 resize-vertical"
                                         placeholder="Tell us about your project requirements..."></textarea>
                                 </div>
 
                                 <button type="submit"
-                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors duration-300 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                                     Send Message
                                 </button>
                             </form>
                         </div>
 
                         <!-- Contact Information -->
-                        <div class="space-y-8">
-                            <!-- Contact Info -->
                             <div>
-                                <h3 class="text-2xl font-semibold text-gray-900 mb-6">Get In Touch</h3>
-                                <div class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div class="flex items-start space-x-4">
                                         <div
                                             class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -1126,21 +1245,8 @@
                                             <span class="material-symbols-outlined text-white text-2xl">phone</span>
                                         </div>
                                         <div>
-                                            <h4 class="font-semibold text-gray-900">Call Us</h4>
+                                            <h4 class="font-semibold text-gray-900">WhatsApp Us</h4>
                                             <p class="text-gray-600">+91 98303 01891</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex items-start space-x-4">
-                                        <div
-                                            class="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <span
-                                                class="material-symbols-outlined text-white text-2xl">location_on</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-semibold text-gray-900">Visit Us</h4>
-                                            <p class="text-gray-600">Malleshwaram <br> Bengaluru
-                                                560003<br>India</p>
                                         </div>
                                     </div>
 
@@ -1152,7 +1258,6 @@
                                         <div>
                                             <h4 class="font-semibold text-gray-900">Business Hours</h4>
                                             <p class="text-gray-600">Mon - Fri: <br> 9:00 AM - 7:00 PM</p>
-                                            <p class="text-gray-600">Sat: <br> 10:00 AM - 4:00 PM</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1217,21 +1322,23 @@
                     </div>
                 </div>
 
-                <!-- Cookie Notice -->
-                <div class="pt-8 border-t border-gray-800">
-                    <div class="flex items-center justify-center space-x-2 text-sm text-gray-400">
-                        <span>We use</span>
-                        <a href="pages/cookies.html" target="_blank"
-                            class="text-blue-400 hover:text-blue-300 transition-colors duration-300">cookies</a>
-                        <span>.</span>
-                        <a href="#" fs-cc="allow"
-                            class="text-green-400 hover:text-green-300 transition-colors duration-300" role="button"
-                            tabindex="0">Okay.</a>
-                    </div>
-                </div>
+                <!-- Cookie Notice moved to floating banner -->
             </div>
         </footer>
     </main>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner"
+        class="fixed bottom-0 left-0 right-0 bg-gray-900 bg-opacity-95 text-white py-3 px-4 shadow-lg z-50 flex items-center justify-center transition-transform duration-300 transform translate-y-0">
+        <div class="container mx-auto max-w-screen-lg flex flex-wrap items-center justify-center gap-3">
+            <span class="text-sm">We use <a href="/pages/cookies.html"
+                    class="text-blue-400 hover:text-blue-300 underline">cookies</a> to enhance your experience.</span>
+            <button id="accept-cookies"
+                class="bg-green-600 hover:bg-green-700 text-white text-sm py-1 px-4 rounded-full transition-colors duration-300">
+                Accept
+            </button>
+        </div>
+    </div>
 
     <!-- Back to Top Button -->
     <button id="back-to-top"
@@ -1240,9 +1347,10 @@
         <span class="material-symbols-outlined">arrow_upward</span>
     </button>
 
-    <!-- Back to Top Script -->
+    <!-- Back to Top and Cookie Banner Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Back to Top Button
             const backToTopButton = document.getElementById('back-to-top');
 
             // Show button when scrolling down 200px
@@ -1262,6 +1370,32 @@
                     top: 0,
                     behavior: 'smooth'
                 });
+            });
+
+            // Cookie Banner
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptCookiesBtn = document.getElementById('accept-cookies');
+
+            // Check if user has already accepted cookies
+            const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+
+            if (!cookiesAccepted) {
+                // Show the cookie banner if not accepted
+                cookieBanner.style.display = 'flex';
+            } else {
+                // Hide the banner if already accepted
+                cookieBanner.style.display = 'none';
+            }
+
+            // Handle accept button click
+            acceptCookiesBtn.addEventListener('click', function () {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.style.transform = 'translateY(100%)';
+
+                // Hide the banner after animation completes
+                setTimeout(function () {
+                    cookieBanner.style.display = 'none';
+                }, 300);
             });
         });
     </script>
