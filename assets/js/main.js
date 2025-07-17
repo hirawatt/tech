@@ -9,10 +9,10 @@ window.projectConfig = {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu elements
-    var mobileMenuButton = document.getElementById('mobile-menu-button');
-    var mobileMenu = document.getElementById('mobile-menu');
-    var hamburgerIcon = document.getElementById('hamburger-icon');
-    var closeIcon = document.getElementById('close-icon');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
 
     // Toggle mobile menu function
     function toggleMobileMenu(show) {
@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleMobileMenu(mobileMenuButton.getAttribute('aria-expanded') !== 'true');
     });
     
-    var mobileLinks = mobileMenu.querySelectorAll('a');
-    for (var i = 0; i < mobileLinks.length; i++) {
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    for (let i = 0; i < mobileLinks.length; i++) {
         mobileLinks[i].addEventListener('click', function() { 
             toggleMobileMenu(false);
         });
