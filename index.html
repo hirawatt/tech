@@ -215,7 +215,8 @@
         <!-- Banner -->
         <div class="sticky-banner text-white py-2 px-4 flex justify-center items-center space-x-2">
             Latest Product ➝
-            <a href="https://tryar.in" target="_blank" class="hover:text-blue-400 transition-colors duration-300"> TryAR</a>
+            <a href="https://tryar.in" target="_blank" class="hover:text-blue-400 transition-colors duration-300">
+                TryAR</a>
         </div>
         <nav class="floating-navbar" role="navigation" aria-label="Primary navigation">
             <div class="flex justify-between items-center h-16 px-6">
@@ -237,10 +238,7 @@
                 <!-- CTA Button -->
                 <a href="#contact"
                     class="hidden md:inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full px-5 py-2 ml-4 transition-all text-lg shadow-sm border-0">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z" />
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z" />
-                    </svg>
+                    <img src="/assets/images/icons/email.svg" alt="Email icon" class="w-5 h-5 mr-2 text-white" />
                     Contact
                 </a>
 
@@ -248,14 +246,8 @@
                 <button @click="toggle"
                     class="md:hidden inline-flex items-center p-2 rounded-md text-white hover:text-blue-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
                     aria-label="Toggle menu">
-                    <svg x-show="!isOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                    <svg x-show="isOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                        </path>
-                    </svg>
+                    <img x-show="!isOpen" src="/assets/images/icons/menu.svg" alt="Menu icon" class="h-6 w-6" />
+                    <img x-show="isOpen" src="/assets/images/icons/close.svg" alt="Close icon" class="h-6 w-6" />
                 </button>
             </div>
 
@@ -291,7 +283,7 @@
                 <!-- Content -->
                 <div
                     class="relative z-10 max-w-7xl mx-auto px-4 py-10 sm:py-16 lg:py-20 lg:px-8 text-center hero-content">
-                    <div class="space-y-4 sm:space-y-8">
+                    <div class="space-y-4 sm:space-y-8 pt-8 md:pt-16">
                         <!-- Main Headline -->
                         <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight hero-headline">
                             Software Solutions for
@@ -303,6 +295,8 @@
                             <span class="animate4">Automation</span>
                             <span class="animate5">E-Commerce</span>
                         </div>
+                        <!-- SEO Enhancement: Hidden H2 for search engines -->
+                        <h2 class="sr-only">Technology Solutions for Direct-to-Consumer Brands and E-Commerce</h2>
                     </div>
 
                     <!-- CTA Buttons -->
@@ -321,31 +315,40 @@
                     </div>
 
                     <!-- Key Features -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-12 pt-4 sm:pt-16 max-w-4xl mx-auto hero-features">
-                        <div class="text-center space-y-3 relative hero-feature">
-                            <div class="w-14 h-14 sm:w-20 sm:h-20 bg-white bg-opacity-10 rounded-lg mx-auto flex items-center justify-center">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-12 pt-4 sm:pt-16 max-w-4xl mx-auto hero-features">
+                        <article class="text-center space-y-3 relative hero-feature">
+                            <div
+                                class="w-12 h-12 sm:w-16 sm:h-16 bg-white bg-opacity-10 rounded-lg mx-auto flex items-center justify-center">
                                 <!-- Minimalist SVG: Cube -->
-                                <svg width="36" height="36" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 36 36"><rect x="7" y="7" width="22" height="22" rx="6"/></svg>
+                                <img src="/assets/images/icons/cube.svg" alt="3D/AR icon" width="28" height="28" />
                             </div>
                             <h3 class="text-lg sm:text-xl font-semibold text-white relative">3D/AR Experiences</h3>
                             <p class="text-sm sm:text-base text-gray-400 relative">Immersive product visualization</p>
-                        </div>
-                        <div class="text-center space-y-3 relative hero-feature">
-                            <div class="w-14 h-14 sm:w-20 sm:h-20 bg-white bg-opacity-10 rounded-lg mx-auto flex items-center justify-center">
+                            <h4 class="sr-only">3D and Augmented Reality Solutions for Product Visualization</h4>
+                        </article>
+                        <article class="text-center space-y-3 relative hero-feature">
+                            <div
+                                class="w-12 h-12 sm:w-16 sm:h-16 bg-white bg-opacity-10 rounded-lg mx-auto flex items-center justify-center">
                                 <!-- Minimalist SVG: Shopping Bag -->
-                                <svg width="36" height="36" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 36 36"><rect x="9" y="13" width="18" height="14" rx="4"/><path d="M13 13V9a5 5 0 0 1 10 0v4"/></svg>
+                                <img src="/assets/images/icons/shopping-bag.svg" alt="D2C Brand icon" width="28"
+                                    height="28" />
                             </div>
                             <h3 class="text-lg sm:text-xl font-semibold text-white relative">D2C Brand Growth</h3>
                             <p class="text-sm sm:text-base text-gray-400 relative">Direct-to-consumer excellence</p>
-                        </div>
-                        <div class="text-center space-y-3 relative hero-feature">
-                            <div class="w-14 h-14 sm:w-20 sm:h-20 bg-white bg-opacity-10 rounded-lg mx-auto flex items-center justify-center">
+                            <h4 class="sr-only">Direct-to-Consumer Brand Development and Growth Strategies</h4>
+                        </article>
+                        <article class="text-center space-y-3 relative hero-feature">
+                            <div
+                                class="w-12 h-12 sm:w-16 sm:h-16 bg-white bg-opacity-10 rounded-lg mx-auto flex items-center justify-center">
                                 <!-- Minimalist SVG: Gear -->
-                                <svg width="36" height="36" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 36 36"><circle cx="18" cy="18" r="7"/><path d="M18 3v4M18 29v4M33 18h-4M7 18H3M27.7 8.3l-2.8 2.8M11.1 24.9l-2.8 2.8M27.7 27.7l-2.8-2.8M11.1 11.1l-2.8-2.8"/></svg>
+                                <img src="/assets/images/icons/gear.svg" alt="Smart Automation icon" width="28"
+                                    height="28" />
                             </div>
                             <h3 class="text-lg sm:text-xl font-semibold text-white">Smart Automation</h3>
+                            <h4 class="sr-only">Business Process Automation and AI-Powered Workflow Solutions</h4>
                             <p class="text-sm sm:text-base text-gray-400">Intelligent workflow solutions</p>
-                        </div>
+                        </article>
                     </div>
                 </div>
 
@@ -481,6 +484,23 @@
                     <!-- Services Grid -->
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16" id="services-grid">
                         <!-- Services will be loaded dynamically from JSON -->
+                        <!-- SEO Enhancement: Hidden H3 and H4 tags for search engines -->
+                        <div class="sr-only">
+                            <h3>D2C Platform Development</h3>
+                            <h4>Custom Shopify & WooCommerce Solutions</h4>
+                            <h4>Mobile-First E-commerce Design</h4>
+                            <h4>D2C Brand Growth Strategies</h4>
+
+                            <h3>3D/AR Experiences</h3>
+                            <h4>Interactive Product Visualization</h4>
+                            <h4>AR Try-On Solutions</h4>
+                            <h4>Virtual Showrooms</h4>
+
+                            <h3>Smart Automation</h3>
+                            <h4>Workflow Automation</h4>
+                            <h4>AI-Powered Chatbots</h4>
+                            <h4>Intelligent Business Solutions</h4>
+                        </div>
                     </div>
                 </div>
 
@@ -655,7 +675,29 @@
                     </div>
 
                     <!-- Portfolio Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" id="portfolio-grid">
+                        <!-- Portfolio items will be loaded dynamically -->
+                        <!-- SEO Enhancement: Hidden H3, H4, and H5 tags for search engines -->
+                        <div class="sr-only">
+                            <h3>3D/AR Projects</h3>
+                            <h4>Virtual Product Experiences</h4>
+                            <h5>Interactive 3D Product Visualization</h5>
+                            <h5>Augmented Reality Try-On Solutions</h5>
+                            <h5>Virtual Showrooms and Galleries</h5>
+
+                            <h3>D2C Platform Projects</h3>
+                            <h4>E-commerce Solutions</h4>
+                            <h5>Custom Shopify Development</h5>
+                            <h5>WooCommerce Implementations</h5>
+                            <h5>Mobile-First Shopping Experiences</h5>
+
+                            <h3>Automation Projects</h3>
+                            <h4>Business Process Optimization</h4>
+                            <h5>Workflow Automation Systems</h5>
+                            <h5>AI-Powered Business Solutions</h5>
+                            <h5>Custom Integration Development</h5>
+                        </div>
+                    </div>
 
                     <!-- Client Logos Section (Dynamic) -->
                     <section class="mb-20 bg-white py-20 w-screen relative"
@@ -666,7 +708,9 @@
                                 Trusted By Global Companies</h3>
                         </div>
                         <div class="relative overflow-hidden w-full">
-                            <div id="client-logos-row" class="flex animate-scroll-logos gap-16 items-center min-w-full px-10" style="height: 80px;"></div>
+                            <div id="client-logos-row"
+                                class="flex animate-scroll-logos gap-16 items-center min-w-full px-10"
+                                style="height: 80px;"></div>
                         </div>
                         <div class="absolute left-0 w-40 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
                         <div class="absolute right-0 w-40 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
@@ -990,6 +1034,7 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <!-- Contact Form -->
                         <div class="bg-gray-50 rounded-lg p-8">
+                            <h3 class="sr-only">Contact Form for Technology Services</h3>
                             <form id="contact-form" class="space-y-6">
                                 <div>
                                     <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email
@@ -1208,10 +1253,10 @@
         class="fixed bottom-0 left-0 right-0 bg-gray-900 bg-opacity-95 text-white py-3 px-4 shadow-lg z-50 flex items-center justify-center transition-transform duration-300 transform translate-y-0">
         <div class="container mx-auto max-w-screen-lg flex flex-wrap items-center justify-center gap-3">
             <span class="text-sm">We use <a href="/pages/cookies.html"
-                    class="text-blue-400 hover:text-blue-300 underline">cookies</a> to enhance your experience.</span>
+                    class="text-blue-400 hover:text-blue-300 underline">cookies</a>.</span>
             <button id="accept-cookies"
                 class="bg-green-600 hover:bg-green-700 text-white text-sm py-1 px-4 rounded-full transition-colors duration-300">
-                Accept
+                Okay
             </button>
         </div>
     </div>
