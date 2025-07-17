@@ -236,8 +236,13 @@
                             <a href="#about" class="nav-link">About</a>
                             <a href="#services" class="nav-link">Services</a>
                             <a href="#portfolio" class="nav-link">Portfolio</a>
-                            <a href="#contact" class="nav-link">Contact</a>
                         </div>
+
+                        <!-- CTA Button -->
+                        <a href="#contact" class="hidden md:inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full px-5 py-2 ml-4 transition-all text-lg shadow-sm border-0">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"/></svg>
+                            Contact
+                        </a>
 
                         <!-- Mobile menu button -->
                         <button @click="toggle"
@@ -282,7 +287,7 @@
         </div>
         <div>
             <section id="hero"
-                class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-900 to-black">
+                class="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-900 pt-28 md:pt-0">
 
                 <!-- Content -->
                 <div
@@ -317,33 +322,27 @@
                     </div>
 
                     <!-- Key Features -->
-                    <div
-                        class="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-8 pt-4 sm:pt-16 max-w-4xl mx-auto hero-features">
-                        <div class="text-center space-y-1 sm:space-y-3 relative hero-feature">
-                            <div
-                                class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center">
-                                <img src="/assets/images/icons/3d-ar.svg" alt="3D/AR Icon"
-                                    class="w-8 h-8 sm:w-10 sm:h-10 text-white">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-12 pt-4 sm:pt-16 max-w-4xl mx-auto hero-features">
+                        <div class="text-center space-y-3 relative hero-feature">
+                            <div class="w-14 h-14 sm:w-20 sm:h-20 bg-white bg-opacity-10 rounded-lg mx-auto flex items-center justify-center">
+                                <!-- Minimalist SVG: Cube -->
+                                <svg width="36" height="36" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 36 36"><rect x="7" y="7" width="22" height="22" rx="6"/></svg>
                             </div>
                             <h3 class="text-lg sm:text-xl font-semibold text-white relative">3D/AR Experiences</h3>
                             <p class="text-sm sm:text-base text-gray-400 relative">Immersive product visualization</p>
                         </div>
-
-                        <div class="text-center space-y-1 sm:space-y-3 relative hero-feature">
-                            <div
-                                class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mx-auto flex items-center justify-center">
-                                <img src="/assets/images/icons/d2c.svg" alt="D2C Icon"
-                                    class="w-8 h-8 sm:w-10 sm:h-10 text-white">
+                        <div class="text-center space-y-3 relative hero-feature">
+                            <div class="w-14 h-14 sm:w-20 sm:h-20 bg-white bg-opacity-10 rounded-lg mx-auto flex items-center justify-center">
+                                <!-- Minimalist SVG: Shopping Bag -->
+                                <svg width="36" height="36" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 36 36"><rect x="9" y="13" width="18" height="14" rx="4"/><path d="M13 13V9a5 5 0 0 1 10 0v4"/></svg>
                             </div>
                             <h3 class="text-lg sm:text-xl font-semibold text-white relative">D2C Brand Growth</h3>
                             <p class="text-sm sm:text-base text-gray-400 relative">Direct-to-consumer excellence</p>
                         </div>
-
-                        <div class="text-center space-y-1 sm:space-y-3 relative hero-feature">
-                            <div
-                                class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-pink-500 to-orange-600 rounded-full mx-auto flex items-center justify-center">
-                                <img src="/assets/images/icons/robot.svg" alt="Automation Icon"
-                                    class="w-8 h-8 sm:w-10 sm:h-10 text-white">
+                        <div class="text-center space-y-3 relative hero-feature">
+                            <div class="w-14 h-14 sm:w-20 sm:h-20 bg-white bg-opacity-10 rounded-lg mx-auto flex items-center justify-center">
+                                <!-- Minimalist SVG: Gear -->
+                                <svg width="36" height="36" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 36 36"><circle cx="18" cy="18" r="7"/><path d="M18 3v4M18 29v4M33 18h-4M7 18H3M27.7 8.3l-2.8 2.8M11.1 24.9l-2.8 2.8M27.7 27.7l-2.8-2.8M11.1 11.1l-2.8-2.8"/></svg>
                             </div>
                             <h3 class="text-lg sm:text-xl font-semibold text-white">Smart Automation</h3>
                             <p class="text-sm sm:text-base text-gray-400">Intelligent workflow solutions</p>
@@ -659,144 +658,81 @@
                     <!-- Portfolio Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
 
-                    <!-- Client Logos Section -->
-                    <section class="mb-16 bg-white py-12 w-screen relative"
+                    <!-- Client Logos Section (Dynamic) -->
+                    <section class="mb-20 bg-white py-20 w-screen relative"
                         style="left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;"
                         aria-labelledby="trusted-clients-heading">
                         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <h3 id="trusted-clients-heading"
-                                class="text-2xl font-semibold text-gray-900 mb-8 text-center">Trusted By Global
-                                Companies</h3>
+                                class="text-3xl font-bold text-gray-900 mb-12 text-center">Trusted By Global Companies</h3>
                         </div>
                         <div class="relative overflow-hidden w-full">
-                            <div class="flex animate-scroll-logos">
-                                <!-- First set of logos -->
-                                <div class="flex items-center space-x-50 min-w-full px-15">
-                                    <img src="/assets/images/client-logos/appletech-soft.png" alt="AppleTech Soft"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/aws.png" alt="AWS"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/fidelity-investment.webp"
-                                        alt="Fidelity Investment" class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/fuzo.png" alt="Fuzo"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/gulpdata.png" alt="Gulp Data"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/jito-youth.jpg" alt="Jito Youth"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/jugni-lifestyle.webp" alt="Jugni Lifestyle"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/kairos-spark.png" alt="Kairos Spark"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/kyzaindia.webp" alt="Kyza India"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/rawrx.avif" alt="RawrX"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/seemore-data.svg" alt="Seemore Data"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/snowflake.png" alt="Snowflake"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/souf-and-school.png" alt="Souf and School"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/truelty.png" alt="Truelty"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/zeminix-uk.webp" alt="Zeminix UK"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                </div>
-                                <!-- Duplicate set for seamless scrolling -->
-                                <div class="flex items-center space-x-50 min-w-full px-15">
-                                    <img src="/assets/images/client-logos/appletech-soft.png" alt="AppleTech Soft"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/aws.png" alt="AWS"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/fidelity-investment.webp"
-                                        alt="Fidelity Investment" class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/fuzo.png" alt="Fuzo"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/gulpdata.png" alt="Gulp Data"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/jito-youth.jpg" alt="Jito Youth"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/jugni-lifestyle.webp" alt="Jugni Lifestyle"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/kairos-spark.png" alt="Kairos Spark"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/kyzaindia.webp" alt="Kyza India"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/rawrx.avif" alt="RawrX"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/seemore-data.svg" alt="Seemore Data"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/snowflake.png" alt="Snowflake"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/souf-and-school.png" alt="Souf and School"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/truelty.png" alt="Truelty"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/zeminix-uk.webp" alt="Zeminix UK"
-                                        class="h-8 w-32 object-contain" loading="lazy">
-                                </div>
-                            </div>
+                            <div id="client-logos-row" class="flex animate-scroll-logos gap-16 items-center min-w-full px-10" style="height: 96px;"></div>
                         </div>
                         <div class="absolute left-0 w-40 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
                         <div class="absolute right-0 w-40 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
                     </section>
+                    <script>
+                    // Dynamically load client logos from JSON
+                    document.addEventListener('DOMContentLoaded', function () {
+                        fetch('/assets/data/client-logos.json')
+                            .then(response => response.json())
+                            .then(data => {
+                                const row = document.getElementById('client-logos-row');
+                                if (row && data.logos) {
+                                    row.innerHTML = data.logos.map(filename => {
+                                        // Alt text from filename
+                                        const alt = filename.replace(/[-_]/g, ' ').replace(/\.[a-zA-Z0-9]+$/, '').replace(/\b\w/g, l => l.toUpperCase());
+                                        return `<img src="/assets/images/client-logos/${filename}" alt="${alt}" class="h-24 w-auto object-contain mx-6" loading="lazy">`;
+                                    }).join('');
+                                    // Duplicate for seamless scroll
+                                    row.innerHTML += row.innerHTML;
+                                }
+                            });
+                    });
+                    </script>
 
-                    <!-- CTA Section -->
-                    <div class="text-center">
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Ready to Start Your Project?</h3>
-                        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
-                            Let's create something amazing together. Get in touch to discuss your next D2C
-                            transformation.
-                        </p>
-                        <button onclick="location.href='/#contact'"
-                            class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
-                            Start Your Project
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Project Detail Modal -->
-                <div id="project-modal"
-                    class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
-                    aria-modal="true" aria-hidden="true">
-                    <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
-                        <div class="p-6">
-                            <div class="flex justify-between items-center mb-6">
-                                <h3 id="project-modal-title" class="text-2xl font-semibold text-gray-900"></h3>
-                                <button id="close-project-modal"
-                                    class="text-gray-400 hover:text-gray-600 text-2xl font-bold"
-                                    aria-label="Close modal">
-                                    &times;
-                                </button>
-                            </div>
-                            <div id="project-modal-content">
-                                <!-- Dynamic content will be inserted here -->
-                            </div>
-                            <div class="mt-6 flex gap-4">
-                                <button onclick="location.href='/#contact'"
-                                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
-                                    Start Similar Project
-                                </button>
-                                <button id="close-project-modal-btn"
-                                    class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg font-medium transition-colors duration-300">
-                                    Close
-                                </button>
+                    <!-- Project Detail Modal -->
+                    <div id="project-modal"
+                        class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
+                        aria-modal="true" aria-hidden="true">
+                        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+                            <div class="p-6">
+                                <div class="flex justify-between items-center mb-6">
+                                    <h3 id="project-modal-title" class="text-2xl font-semibold text-gray-900"></h3>
+                                    <button id="close-project-modal"
+                                        class="text-gray-400 hover:text-gray-600 text-2xl font-bold"
+                                        aria-label="Close modal">
+                                        &times;
+                                    </button>
+                                </div>
+                                <div id="project-modal-content">
+                                    <!-- Dynamic content will be inserted here -->
+                                </div>
+                                <div class="mt-6 flex gap-4">
+                                    <button onclick="location.href='/#contact'"
+                                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300">
+                                        Start Similar Project
+                                    </button>
+                                    <button id="close-project-modal-btn"
+                                        class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg font-medium transition-colors duration-300">
+                                        Close
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        // Fetch and render portfolio data from JSON
-                        fetch('/assets/data/portfolio-data.json')
-                            .then(response => response.json())
-                            .then(data => {
-                                // Render portfolio items
-                                const grid = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3.mb-16');
-                                if (grid) {
-                                    grid.innerHTML = data.projects.map(project => `
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            // Fetch and render portfolio data from JSON
+                            fetch('/assets/data/portfolio-data.json')
+                                .then(response => response.json())
+                                .then(data => {
+                                    // Render portfolio items
+                                    const grid = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3.mb-16');
+                                    if (grid) {
+                                        grid.innerHTML = data.projects.map(project => `
                                                 <article class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
                                                          data-category="${project.category}"
                                                          data-project="${project.id}"
@@ -816,151 +752,120 @@
                                                     </div>
                                                 </article>
                                             `).join('');
-                                }
-                                // Modal data
-                                window.projectDetails = data.details;
+                                    }
+                                    // Modal data
+                                    window.projectDetails = data.details;
 
-                                // --- FIX: Move filter and click handlers here ---
-                                const filterButtons = document.querySelectorAll('.filter-btn');
-                                const portfolioItems = document.querySelectorAll('.portfolio-item');
+                                    // --- FIX: Move filter and click handlers here ---
+                                    const filterButtons = document.querySelectorAll('.filter-btn');
+                                    const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-                                filterButtons.forEach(button => {
-                                    button.addEventListener('click', function () {
-                                        const filter = this.getAttribute('data-filter');
+                                    filterButtons.forEach(button => {
+                                        button.addEventListener('click', function () {
+                                            const filter = this.getAttribute('data-filter');
 
-                                        // Update active button
-                                        filterButtons.forEach(btn => {
-                                            btn.classList.remove('active', 'bg-blue-600', 'text-white');
-                                            btn.classList.add('text-gray-600', 'hover:text-blue-600');
+                                            // Update active button
+                                            filterButtons.forEach(btn => {
+                                                btn.classList.remove('active', 'bg-blue-600', 'text-white');
+                                                btn.classList.add('text-gray-600', 'hover:text-blue-600');
+                                            });
+                                            this.classList.add('active', 'bg-blue-600', 'text-white');
+                                            this.classList.remove('text-gray-600', 'hover:text-blue-600');
+
+                                            // Filter items
+                                            portfolioItems.forEach(item => {
+                                                const category = item.getAttribute('data-category');
+                                                if (filter === 'all' || category === filter) {
+                                                    item.style.display = 'block';
+                                                    item.classList.add('animate-fade-in');
+                                                } else {
+                                                    item.style.display = 'none';
+                                                }
+                                            });
                                         });
-                                        this.classList.add('active', 'bg-blue-600', 'text-white');
-                                        this.classList.remove('text-gray-600', 'hover:text-blue-600');
+                                    });
 
-                                        // Filter items
-                                        portfolioItems.forEach(item => {
-                                            const category = item.getAttribute('data-category');
-                                            if (filter === 'all' || category === filter) {
-                                                item.style.display = 'block';
-                                                item.classList.add('animate-fade-in');
-                                            } else {
-                                                item.style.display = 'none';
+                                    // Set initial active state
+                                    filterButtons[0].classList.add('bg-blue-600', 'text-white');
+
+                                    // Modal functionality
+                                    const modal = document.getElementById('project-modal');
+                                    const modalTitle = document.getElementById('project-modal-title');
+                                    const modalContent = document.getElementById('project-modal-content');
+                                    const closeModalBtn = document.getElementById('close-project-modal');
+                                    const closeModalBtnBottom = document.getElementById('close-project-modal-btn');
+
+                                    function openProjectModal(projectId) {
+                                        const project = window.projectDetails[projectId];
+                                        if (project) {
+                                            modalTitle.textContent = project.title;
+                                            modalContent.innerHTML = project.content;
+                                            modal.classList.remove('hidden');
+                                            modal.setAttribute('aria-hidden', 'false');
+                                            document.body.style.overflow = 'hidden';
+                                            closeModalBtn.focus();
+                                        }
+                                    }
+
+                                    function closeProjectModal() {
+                                        modal.classList.add('hidden');
+                                        modal.setAttribute('aria-hidden', 'true');
+                                        document.body.style.overflow = '';
+                                    }
+
+                                    // Portfolio item click handlers
+                                    portfolioItems.forEach(item => {
+                                        item.addEventListener('click', function () {
+                                            const projectId = this.getAttribute('data-project');
+                                            openProjectModal(projectId);
+                                        });
+
+                                        item.addEventListener('keydown', function (event) {
+                                            if (event.key === 'Enter' || event.key === ' ') {
+                                                event.preventDefault(); // Prevent space from scrolling page
+                                                const projectId = this.getAttribute('data-project');
+                                                openProjectModal(projectId);
                                             }
                                         });
                                     });
-                                });
 
-                                // Set initial active state
-                                filterButtons[0].classList.add('bg-blue-600', 'text-white');
+                                    // Close modal event listeners
+                                    closeModalBtn.addEventListener('click', closeProjectModal);
+                                    closeModalBtnBottom.addEventListener('click', closeProjectModal);
 
-                                // Modal functionality
-                                const modal = document.getElementById('project-modal');
-                                const modalTitle = document.getElementById('project-modal-title');
-                                const modalContent = document.getElementById('project-modal-content');
-                                const closeModalBtn = document.getElementById('close-project-modal');
-                                const closeModalBtnBottom = document.getElementById('close-project-modal-btn');
-
-                                function openProjectModal(projectId) {
-                                    const project = window.projectDetails[projectId];
-                                    if (project) {
-                                        modalTitle.textContent = project.title;
-                                        modalContent.innerHTML = project.content;
-                                        modal.classList.remove('hidden');
-                                        modal.setAttribute('aria-hidden', 'false');
-                                        document.body.style.overflow = 'hidden';
-                                        closeModalBtn.focus();
-                                    }
-                                }
-
-                                function closeProjectModal() {
-                                    modal.classList.add('hidden');
-                                    modal.setAttribute('aria-hidden', 'true');
-                                    document.body.style.overflow = '';
-                                }
-
-                                // Portfolio item click handlers
-                                portfolioItems.forEach(item => {
-                                    item.addEventListener('click', function () {
-                                        const projectId = this.getAttribute('data-project');
-                                        openProjectModal(projectId);
-                                    });
-
-                                    item.addEventListener('keydown', function (event) {
-                                        if (event.key === 'Enter' || event.key === ' ') {
-                                            event.preventDefault(); // Prevent space from scrolling page
-                                            const projectId = this.getAttribute('data-project');
-                                            openProjectModal(projectId);
+                                    // Close modal when clicking outside
+                                    modal.addEventListener('click', function (e) {
+                                        if (e.target === modal) {
+                                            closeProjectModal();
                                         }
                                     });
-                                });
 
-                                // Close modal event listeners
-                                closeModalBtn.addEventListener('click', closeProjectModal);
-                                closeModalBtnBottom.addEventListener('click', closeProjectModal);
-
-                                // Close modal when clicking outside
-                                modal.addEventListener('click', function (e) {
-                                    if (e.target === modal) {
-                                        closeProjectModal();
-                                    }
-                                });
-
-                                // Close modal on ESC key
-                                document.addEventListener('keydown', function (e) {
-                                    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                                        closeProjectModal();
-                                    }
-                                });
-
-                                // Intersection Observer for animations
-                                const observerOptions = {
-                                    threshold: 0.1,
-                                    rootMargin: '0px 0px -50px 0px'
-                                };
-
-                                const observer = new IntersectionObserver((entries) => {
-                                    entries.forEach(entry => {
-                                        if (entry.isIntersecting) {
-                                            entry.target.classList.add('animate-fade-in-up');
+                                    // Close modal on ESC key
+                                    document.addEventListener('keydown', function (e) {
+                                        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                                            closeProjectModal();
                                         }
                                     });
-                                }, observerOptions);
 
-                                // Observe portfolio items
-                                portfolioItems.forEach(item => observer.observe(item));
-                            });
-                    });
-                </script>
-            </section>
-        </div>
-        <div>
-            <section id="testimonials" class="py-20 bg-neutral-900 overflow-hidden">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-                    <div class="text-center">
-                        <h2 class="text-4xl font-bold text-white mb-4">Testimonials</h2>
-                        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                            Hear from D2C brands who've transformed their business with our innovative
-                            solutions.
-                        </p>
-                    </div>
-                </div>
+                                    // Intersection Observer for animations
+                                    const observerOptions = {
+                                        threshold: 0.1,
+                                        rootMargin: '0px 0px -50px 0px'
+                                    };
 
-                <!-- Full-width scrolling testimonials -->
-                <div class="w-full relative">
-                    <div class="scroller" data-speed="slow">
-                        <ul class="tag-list scroller__inner flex gap-8 animate-scroll"></ul>
-                    </div>
-                </div>
+                                    const observer = new IntersectionObserver((entries) => {
+                                        entries.forEach(entry => {
+                                            if (entry.isIntersecting) {
+                                                entry.target.classList.add('animate-fade-in-up');
+                                            }
+                                        });
+                                    }, observerOptions);
 
-                <!-- Bottom section with CTA -->
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 text-center">
-                    <h3 class="text-2xl font-semibold text-white mb-4">Join Our Success Stories</h3>
-                    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
-                        Ready to transform your D2C brand? Let's create your success story together.
-                    </p>
-                    <button onclick="location.href='/#contact'"
-                        class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
-                        Start Your Transformation
-                    </button>
+                                    // Observe portfolio items
+                                    portfolioItems.forEach(item => observer.observe(item));
+                                });
+                        });
+                    </script>
                 </div>
 
                 <script>
