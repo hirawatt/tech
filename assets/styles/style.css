@@ -1,15 +1,16 @@
 /* Navigation Links */
 .nav-link {
     font-family: 'Inter', sans-serif;
-    color: rgb(55, 65, 81); /* text-gray-700 */
+    color: rgb(255, 255, 255); /* text-white */
     transition-property: color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
     font-size: 0.875rem; /* text-sm */
     font-weight: 500; /* font-medium */
+    padding: 0.5rem 1rem;
 }
 .nav-link:hover {
-    color: rgb(37, 99, 235); /* hover:text-blue-600 */
+    color: rgb(59, 130, 246); /* hover:text-blue-500 */
 }
 
 .nav-link-mobile {
@@ -29,6 +30,30 @@
 .nav-link-mobile:hover {
     color: rgb(37, 99, 235); /* hover:text-blue-600 */
     background-color: rgb(249, 250, 251); /* hover:bg-gray-50 */
+}
+
+/* Floating Navbar */
+.floating-navbar {
+    background-color: rgba(15, 23, 42, 0.65); /* bg-slate-900 with opacity */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    margin: 1rem auto;
+    max-width: 90%; /* More responsive on smaller screens */
+    width: 800px; /* Fixed width for larger screens */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    /* Mirror finish effect */
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 255, 255, 0.05) 100%
+    );
 }
 
 /* Animations */
@@ -84,20 +109,29 @@
 }
 
 .animatedText {
-    position: relative; /* Or inline-block, depending on layout needs */
-    display: inline-block; /* Ensures the div only takes up the space of its content */
-    height: 1.2em; /* Adjust based on your font size and line height to prevent layout shifts */
-    vertical-align: bottom; /* Or adjust as needed */
-    align-items: center;
+    position: relative;
+    display: block;
+    height: 1.5em; /* Slightly increased height for better visibility */
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden; /* Prevent any overflow */
 }
 
 .animatedText span {
     position: absolute;
     left: 0;
+    right: 0;
     top: 0;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    white-space: nowrap; /* Prevent text from wrapping if it's too long */
+    transition: opacity 0.8s ease-in-out;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+    display: block; /* Ensure block display */
+    transform: translateX(-50%); /* Center horizontally */
+    left: 50%; /* Center horizontally */
+    margin: 0 auto; /* Additional centering */
 }
 
 .animatedText span.visible {

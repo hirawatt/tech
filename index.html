@@ -100,34 +100,28 @@
                 });
             </script>
 
-            <header x-data="mobileMenu" class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50"
-                role="banner" aria-label="Main site header">
-                <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Primary navigation">
-                    <div class="flex justify-between items-center h-16">
+            <header x-data="mobileMenu" class="sticky top-0 z-50" role="banner" aria-label="Main site header">
+                <nav class="floating-navbar" role="navigation" aria-label="Primary navigation">
+                    <div class="flex justify-between items-center h-16 px-6">
                         <!-- Logo -->
                         <div class="flex-shrink-0 flex items-center">
                             <img src="/assets/images/logos/hirawat-tech-500-logo.webp" alt="HirawatTech Logo"
                                 class="h-14 w-auto mr-2" width="32" height="32" fetchpriority="high">
-                            <span class="font-Inter text-xl font-bold text-gray-900">HirawatTech</span>
+                            <span class="font-Inter text-xl font-bold text-white">HirawatTech</span>
                         </div>
 
                         <!-- Desktop Navigation -->
-                        <div class="hidden md:flex space-x-8">
-                            <a href="#about" class="nav-link"><span
-                                    class="material-symbols-outlined text-sm align-middle mr-1">info</span>About</a>
-                            <a href="#services" class="nav-link"><span
-                                    class="material-symbols-outlined text-sm align-middle mr-1">build</span>Services</a>
-                            <a href="#portfolio" class="nav-link"><span
-                                    class="material-symbols-outlined text-sm align-middle mr-1">work</span>Portfolio</a>
-                            <a href="#testimonials" class="nav-link"><span
-                                    class="material-symbols-outlined text-sm align-middle mr-1">star</span>Testimonials</a>
-                            <a href="#contact" class="nav-link"><span
-                                    class="material-symbols-outlined text-sm align-middle mr-1">contact_mail</span>Contact</a>
+                        <div class="hidden md:flex space-x-8 mx-auto">
+                            <a href="#about" class="nav-link">About</a>
+                            <a href="#services" class="nav-link">Services</a>
+                            <a href="#portfolio" class="nav-link">Portfolio</a>
+                            <a href="#testimonials" class="nav-link">Testimonials</a>
+                            <a href="#contact" class="nav-link">Contact</a>
                         </div>
 
                         <!-- Mobile menu button -->
                         <button @click="toggle"
-                            class="md:hidden inline-flex items-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                            class="md:hidden inline-flex items-center p-2 rounded-md text-white hover:text-blue-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
                             aria-label="Toggle menu">
                             <svg x-show="!isOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -147,13 +141,20 @@
                         x-transition:leave="transition ease-in duration-150"
                         x-transition:leave-start="opacity-100 translate-y-0"
                         x-transition:leave-end="opacity-0 -translate-y-1" @click.away="close" class="md:hidden">
-                        <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-                            <a href="#hero" @click="close" class="nav-link-mobile">Home</a>
-                            <a href="#about" @click="close" class="nav-link-mobile">About</a>
-                            <a href="#services" @click="close" class="nav-link-mobile">Services</a>
-                            <a href="#portfolio" @click="close" class="nav-link-mobile">Portfolio</a>
-                            <a href="#testimonials" @click="close" class="nav-link-mobile">Testimonials</a>
-                            <a href="#contact" @click="close" class="nav-link-mobile">Contact</a>
+                        <div
+                            class="px-2 pt-2 pb-3 space-y-1 bg-slate-800 bg-opacity-90 backdrop-blur-md border-t border-slate-700 rounded-b-lg">
+                            <a href="#hero" @click="close"
+                                class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700">Home</a>
+                            <a href="#about" @click="close"
+                                class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700">About</a>
+                            <a href="#services" @click="close"
+                                class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700">Services</a>
+                            <a href="#portfolio" @click="close"
+                                class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700">Portfolio</a>
+                            <a href="#testimonials" @click="close"
+                                class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700">Testimonials</a>
+                            <a href="#contact" @click="close"
+                                class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700">Contact</a>
                         </div>
                     </div>
                 </nav>
@@ -163,23 +164,22 @@
         </div>
         <div>
             <section id="hero"
-                class="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-900">
+                class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-900 to-black">
 
                 <!-- Content -->
                 <div class="relative z-10 max-w-7xl mx-auto px-4 py-16 sm:px-6 sm:py-20 lg:px-8 text-center">
                     <div class="space-y-8">
                         <!-- Main Headline -->
                         <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight content">
-                            Software Solutions for&nbsp;
-                            <br>
-                            <div class="animatedText">
-                                <span class="animate1">D2C Brands</span>
-                                <span class="animate2">Augmented Reality</span>
-                                <span class="animate3">3D Technology</span>
-                                <span class="animate4">Automation</span>
-                                <span class="animate5">E-Commerce</span>
-                            </div>
+                            Software Solutions for
                         </h1>
+                        <div class="animatedText text-4xl sm:text-5xl lg:text-7xl font-bold mt-4">
+                            <span class="animate1">D2C Brands</span>
+                            <span class="animate2">Augmented Reality</span>
+                            <span class="animate3">3D Technology</span>
+                            <span class="animate4">Automation</span>
+                            <span class="animate5">E-Commerce</span>
+                        </div>
                     </div>
 
 
@@ -225,64 +225,66 @@
                         <div class="text-center space-y-3 relative">
                             <div
                                 class="w-16 h-16 bg-gradient-to-br from-pink-500 to-orange-600 rounded-full mx-auto flex items-center justify-center">
-                                <img src="/assets/images/icons/robot.svg" alt="Automation Icon" class="w-10 h-10 text-white">
+                                <img src="/assets/images/icons/robot.svg" alt="Automation Icon"
+                                    class="w-10 h-10 text-white">
                             </div>
                             <h3 class="text-xl font-semibold text-white">Smart Automation</h3>
                             <p class="text-gray-400">Intelligent workflow solutions</p>
                         </div>
                     </div>
                 </div>
-        </div>
 
-        <!-- Floating Animation Elements -->
-        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-            <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse" aria-hidden="true">
-            </div>
-            <div class="absolute top-3/4 right-1/4 w-3 h-3 bg-purple-400 rounded-full animate-bounce"
-                aria-hidden="true">
-            </div>
-            <div class="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-ping" aria-hidden="true">
-            </div>
-        </div>
+                <!-- Floating Animation Elements -->
+                <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+                    <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"
+                        aria-hidden="true">
+                    </div>
+                    <div class="absolute top-3/4 right-1/4 w-3 h-3 bg-purple-400 rounded-full animate-bounce"
+                        aria-hidden="true">
+                    </div>
+                    <div class="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-ping"
+                        aria-hidden="true">
+                    </div>
+                </div>
 
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
-            <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
-        </div>
-        </section>
+                <!-- Scroll Indicator -->
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
+                    <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
+                </div>
+            </section>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Parallax effect for background
-                window.addEventListener('scroll', function () {
-                    const scrolled = window.pageYOffset;
-                    const heroSection = document.querySelector('#hero');
-                    const backgroundImage = heroSection.querySelector('img');
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Parallax effect for background
+                    window.addEventListener('scroll', function () {
+                        const scrolled = window.pageYOffset;
+                        const heroSection = document.querySelector('#hero');
+                        const backgroundImage = heroSection.querySelector('img');
 
-                    if (backgroundImage && scrolled < heroSection.offsetHeight) {
-                        backgroundImage.style.transform = `translateY(${scrolled * 0.5}px)`;
-                    }
-                });
-
-                // Intersection Observer for animations
-                const observerOptions = {
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -50px 0px'
-                };
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('animate-fade-in');
+                        if (backgroundImage && scrolled < heroSection.offsetHeight) {
+                            backgroundImage.style.transform = `translateY(${scrolled * 0.5}px)`;
                         }
                     });
-                }, observerOptions);
 
-                // Observe hero elements
-                const heroElements = document.querySelectorAll('#hero h1, #hero p, #hero .grid > div');
-                heroElements.forEach(el => observer.observe(el));
-            });
-        </script>
+                    // Intersection Observer for animations
+                    const observerOptions = {
+                        threshold: 0.1,
+                        rootMargin: '0px 0px -50px 0px'
+                    };
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('animate-fade-in');
+                            }
+                        });
+                    }, observerOptions);
+
+                    // Observe hero elements
+                    const heroElements = document.querySelectorAll('#hero h1, #hero p, #hero .grid > div');
+                    heroElements.forEach(el => observer.observe(el));
+                });
+            </script>
         </div>
         <div>
             <section id="about" class="py-20 bg-gray-50">
@@ -640,12 +642,12 @@
                                 <div class="flex items-center space-x-50 min-w-full px-15">
                                     <img src="/assets/images/client-logos/appletech-soft.png" alt="AppleTech Soft"
                                         class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/aws.png" alt="AWS" class="h-8 w-32 object-contain"
-                                        loading="lazy">
-                                    <img src="/assets/images/client-logos/fidelity-investment.webp" alt="Fidelity Investment"
+                                    <img src="/assets/images/client-logos/aws.png" alt="AWS"
                                         class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/fuzo.png" alt="Fuzo" class="h-8 w-32 object-contain"
-                                        loading="lazy">
+                                    <img src="/assets/images/client-logos/fidelity-investment.webp"
+                                        alt="Fidelity Investment" class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/images/client-logos/fuzo.png" alt="Fuzo"
+                                        class="h-8 w-32 object-contain" loading="lazy">
                                     <img src="/assets/images/client-logos/gulpdata.png" alt="Gulp Data"
                                         class="h-8 w-32 object-contain" loading="lazy">
                                     <img src="/assets/images/client-logos/jito-youth.jpg" alt="Jito Youth"
@@ -673,12 +675,12 @@
                                 <div class="flex items-center space-x-50 min-w-full px-15">
                                     <img src="/assets/images/client-logos/appletech-soft.png" alt="AppleTech Soft"
                                         class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/aws.png" alt="AWS" class="h-8 w-32 object-contain"
-                                        loading="lazy">
-                                    <img src="/assets/images/client-logos/fidelity-investment.webp" alt="Fidelity Investment"
+                                    <img src="/assets/images/client-logos/aws.png" alt="AWS"
                                         class="h-8 w-32 object-contain" loading="lazy">
-                                    <img src="/assets/images/client-logos/fuzo.png" alt="Fuzo" class="h-8 w-32 object-contain"
-                                        loading="lazy">
+                                    <img src="/assets/images/client-logos/fidelity-investment.webp"
+                                        alt="Fidelity Investment" class="h-8 w-32 object-contain" loading="lazy">
+                                    <img src="/assets/images/client-logos/fuzo.png" alt="Fuzo"
+                                        class="h-8 w-32 object-contain" loading="lazy">
                                     <img src="/assets/images/client-logos/gulpdata.png" alt="Gulp Data"
                                         class="h-8 w-32 object-contain" loading="lazy">
                                     <img src="/assets/images/client-logos/jito-youth.jpg" alt="Jito Youth"

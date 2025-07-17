@@ -8,6 +8,27 @@ window.projectConfig = {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Animated text rotation
+    const animateTextElements = document.querySelectorAll('.animatedText span');
+    if (animateTextElements.length > 0) {
+        let currentIndex = 0;
+        
+        // Show the first text initially
+        animateTextElements[0].classList.add('visible');
+        
+        // Rotate through texts every 3 seconds
+        setInterval(() => {
+            // Hide current text
+            animateTextElements[currentIndex].classList.remove('visible');
+            
+            // Move to next text (loop back to start if at end)
+            currentIndex = (currentIndex + 1) % animateTextElements.length;
+            
+            // Show next text
+            animateTextElements[currentIndex].classList.add('visible');
+        }, 3000);
+    }
+    
     // Mobile menu elements
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -16,22 +37,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle mobile menu function
     function toggleMobileMenu(show) {
-        mobileMenu.classList.toggle('hidden', !show);
-        hamburgerIcon.classList.toggle('hidden', show);
-        closeIcon.classList.toggle('hidden', !show);
-        mobileMenuButton.setAttribute('aria-expanded', show);
+        if (mobileMenu) {
+            mobileMenu.classList.toggle('hidden', !show);
+            if (hamburgerIcon) hamburgerIcon.classList.toggle('hidden', show);
+            if (closeIcon) closeIcon.classList.toggle('hidden', !show);
+            if (mobileMenuButton) mobileMenuButton.setAttribute('aria-expanded', show);
+        }
     }
 
     // Mobile menu event listeners
-    mobileMenuButton.addEventListener('click', function() {
-        toggleMobileMenu(mobileMenuButton.getAttribute('aria-expanded') !== 'true');
-    });
-    
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    for (let i = 0; i < mobileLinks.length; i++) {
-        mobileLinks[i].addEventListener('click', function() { 
-            toggleMobileMenu(false);
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', function() {
+            toggleMobileMenu(mobileMenuButton.getAttribute('aria-expanded') !== 'true');
         });
+    }
+    
+    if (mobileMenu) {
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        for (let i = 0; i < mobileLinks.length; i++) {
+            mobileLinks[i].addEventListener('click', function() { 
+                toggleMobileMenu(false);
+            });
+        }
     }
 
     // Global click and escape handlers
