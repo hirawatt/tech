@@ -1,0 +1,30 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "- 2025-07-18: Reduced client logo size from h-24 (96px) to h-16 (64px) for better visual balance in the client showcase section",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hirawatt/tech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hirawatt/tech/issues"
+  },
+  "homepage": "https://github.com/hirawatt/tech#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.9",
+    "tailwindcss": "^4.2.2"
+  }
+}

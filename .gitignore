@@ -1,3 +1,5 @@
 test/
 .vscode
-.kiro/
+.kiro/node_modules/
+
+node_modules/
