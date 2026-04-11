@@ -138,7 +138,7 @@
           aria-label="Main site header"
           class="sticky top-0 z-50"
           role="banner"
-          x-data="mobileMenu"
+          x-data="{ isOpen: false }"
         >
           <!-- Banner -->
           <div
@@ -192,7 +192,7 @@
               </a>
               <!-- Mobile menu button -->
               <button
-                @click="toggle"
+                @click="isOpen = !isOpen"
                 aria-label="Toggle menu"
                 class="md:hidden inline-flex items-center p-2 rounded-md text-white hover:text-blue-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
               >
@@ -216,7 +216,7 @@
             </div>
             <!-- Mobile Navigation Menu -->
             <div
-              @click.away="close"
+              @click.away="isOpen = false"
               class="md:hidden"
               style="display: none"
               x-show="isOpen"
@@ -231,25 +231,25 @@
                 class="px-2 pt-2 pb-3 space-y-1 bg-slate-800 bg-opacity-90 backdrop-blur-md border-t border-slate-700 rounded-b-lg"
               >
                 <a
-                  @click="close"
+                  @click="isOpen = false"
                   class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700"
                   href="/"
                   >Home</a
                 >
                 <a
-                  @click="close"
+                  @click="isOpen = false"
                   class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700"
                   href="/#about"
                   >About</a
                 >
                 <a
-                  @click="close"
+                  @click="isOpen = false"
                   class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700"
                   href="/#services"
                   >Services</a
                 >
                 <a
-                  @click="close"
+                  @click="isOpen = false"
                   class="nav-link-mobile text-white hover:text-blue-400 hover:bg-slate-700"
                   href="/#portfolio"
                   >Portfolio</a
