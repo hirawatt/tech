@@ -305,13 +305,13 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 const row = document.getElementById('client-logos-row');
                 if (row && data.logos) {
-                    row.innerHTML = data.logos.map(filename => {
+                    const logosHtml = data.logos.map(filename => {
                         // Alt text from filename
                         const alt = filename.replace(/[-_]/g, ' ').replace(/\.[a-zA-Z0-9]+$/, '').replace(/\b\w/g, l => l.toUpperCase());
                         return `<img src="/assets/images/client-logos/${filename}" alt="${alt}" class="h-16 w-auto object-contain mx-6" loading="lazy">`;
                     }).join('');
-                    // Duplicate for seamless scroll
-                    row.innerHTML += row.innerHTML;
+                    // Construct full HTML (duplicated for seamless scroll) before single DOM write
+                    row.innerHTML = logosHtml + logosHtml;
                 }
             })
             .catch(error => console.error('Error loading client logos:', error));
